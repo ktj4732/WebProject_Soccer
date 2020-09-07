@@ -1,0 +1,78 @@
+body {
+	font-size: 17;
+}
+#centerbox7 {
+    width:300px;
+    float: right;
+}
+	
+	#centerbox7 input {
+		width:70px;
+		height:30px;
+		margin:0px 5px;
+	}
+
+
+#centerbox8 {
+    width:403px;
+	float: right;
+	position: relative;
+	left: 250px;
+	top: 45px;
+}
+
+#centerbox9 {
+    width:1200px;
+    margin: 0px auto;
+}
+
+	#centerbox9 td {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	#centerbox9 th {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+#outerBox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#outerBox {
+    position: relative;
+    border-bottom: 2px solid black;
+    height: auto;
+    width:1200px;
+    margin: 20px auto;
+}
+
+#searchbox {
+	width: 1200px;
+	margin: 120px auto 15px auto;
+	text-align: right;
+}
+
+#verticalTable {
+    color: white;
+    width:1200px;
+}
+#verticalTable thead tr:first-child {
+    background-color: #92daec;
+}
+#verticalTable tbody tr:nth-child(odd) {
+    background-color: #0c1a22;
+}
+#verticalTable tbody tr:nth-child(even) {
+    background-color: #254150;
+}
+
+
+#centerMainBox::after {
+    content: "";
+    clear: both;
+    display: block;
+}

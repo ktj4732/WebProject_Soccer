@@ -1,0 +1,114 @@
+#centerMainBox {
+    /* border: 1px solid black; */
+    width: 1200px;
+    /* height: 950px; */
+    margin: 0px auto;            
+}
+
+#centerbox1 {
+    /* border-bottom: 1px solid black;             */
+    height: 50px;   
+    margin-bottom: 10px;         
+    display: inline-block;
+    width: 1200px;
+}
+
+#centerbox2 {
+    /* border: 1px solid black; */                        
+}
+
+#centerbox3 {
+    /* border: 1px solid red; */
+    width: 1200px;
+    height: 50px;
+    /* margin-top: 40px; */
+}
+
+#centerbox4 {
+    /* border: 1px solid blue; */
+    /* width: 1200px; */
+    float: right;
+    /* display: inline-block;             */
+    margin-bottom: 25px;
+}
+
+#centerbox1 span, #centerbox1 select  {
+    /* border: 1px solid red; */
+    display: inline-block;    
+}
+
+#verticalTable {
+    /* border: 1px solid blue; */
+}
+
+#pagination {            
+    /* border: 1px solid gold; */
+}
+
+#sortform, #selectrow {
+    float: right;     
+    /* border: 1px solid gold; */
+}
+
+#sortform {
+    margin-right: 10px;
+    margin-top: 17px;
+}
+
+#selectrow {
+    margin-top: 10px;
+    /* background-color: #1E3440; */
+    /* color: white; */
+}
+
+#verticalTable {
+    font-size: 1.1em;
+}
+
+#verticalTable th:nth-child(1) {width: 65px;}
+#verticalTable th:nth-child(2) {width: 480px;}
+#verticalTable th:nth-child(3) {width: 120px;}
+#verticalTable th:nth-child(4) {width: 100px;}
+#verticalTable th:nth-child(5) {width: 65px;}
+
+/* #verticalTable th, #verticalTable td { text-align: center; color: white; }         */
+#verticalTable th {border: 1px solid black}
+#verticalTable tr th, #verticalTable tr td {height: 38px; border: 1px solid black; text-align: center;} 
+#verticalTable td:nth-child(2){ text-align: left;}
+#verticalTable td:nth-child(2) a {color: black; }
+
+
+
+#verticalTable tr{            
+    /* background-color: #1E3440;                 */
+}
+
+#verticalTable tr:nth-child(even){
+    /* background-color: #0C1B23 */
+}
+
+#verticalTable td {
+    border: 0px;    
+}
+
+#searchbtn, #writebtn, #centerMainBox #centerbox4 select, #selectrow {
+    /* color: white;    */
+    height: 25px;
+    line-height: 0.8em;
+    /* background-color: #1E3440 ; */
+}
+
+#pagination li > a {
+    /* color: white; */
+    /* background-color: #1E3440;           */
+    height: 25px;
+    line-height: 0.8em;  
+}
+
+#sortform a {
+    color: black;         
+}
+
+#pagination .nowPage {
+    background-color: #92DAEC;
+}

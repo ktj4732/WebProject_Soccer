@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #box1 {
+                border: 10px solid black;
+                width: 200px;
+                height: 200px;
+
+                background-color: gold;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ex05_effect.html -->
+        <h1>jQuery Effect - 애니메이션 효과(transition, animate)</h1>
+        <input type="button" value="버튼1" id="btn1" />
+        <input type="button" value="버튼2" id="btn2" />
+        <input type="button" value="버튼3" id="btn3" />
+        <input type="button" value="버튼4" id="btn4" />
+        <input type="button" value="버튼5" id="btn5" />
+        <hr />
+
+        <div id="box1">상자</div>
+        aaa
+
+        <script src="js/jquery-1.12.4.js"></script>
+        <script>
+            //화살표함수 사용시 this 참조가 맘같지않다.
+
+            //jQUery Effect Function
+            //1. hide(), show(), toggle()
+            //2. fadeOut(), fadeIn(), fadeToggle()
+            //3. slideUp(), slideDOwn(), slideToggle()
+            //4. animate() //***********
+
+            // jQuery("btn1")
+            $("#btn1").click(function () {
+                // $("#box1").hide("fast");
+                // $("#box1").fadeOut(1000);
+                $("#box1").slideUp();
+            });
+            $("#btn2").click(function () {
+                // $("#box1").show(1000);
+                // $("#box1").fadeIn(1000);
+                $("#box1").slideDown();
+            });
+            $("#btn3").click(function () {
+                // $("#box1").toggle();
+                // $("#box1").fadeToggle();
+                $("#box1").slideToggle(3000);
+            });
+            $("#btn4").click(function () {
+                // $("#box1").fadeOut(2000);
+                // setTimeout(function () {
+                //     $("#btn4").css("color", "red");
+                // }, 2000);
+
+                // $("#box1").fadeOut(2000, function () {
+                //     $("#box1").fadeIn(2000, function () {
+                //         $("#box1").slideUp(2000, function () {
+                //             $("#box1").slideDown(2000);
+                //         });
+                //     });
+                // });
+
+                $("#box1")
+                    .fadeOut(1000)
+                    .fadeIn(1000)
+                    .slideUp(1000)
+                    .slideDown(1000, function () {
+                        alert("end");
+                    });
+            });
+            $("#btn5").click(function () {
+                //animate() : 모든 CSS 제어 가능
+                var obj = {
+                    width: 0,
+                    height: 0,
+                    opacity: 0,
+                    "margin-left": "500px",
+                };
+                // $("#box1").animate(obj, 1000);
+                // $("#box1").animate(
+                //     {
+                //         width: "toggle",
+                //         height: "toggle",
+                //         opacity: "toggle",
+                //     },
+                //     1000
+
+                $("#box1").animate(
+                    {
+                        width: "+=50px",
+                    },
+                    1000
+                );
+            });
+        </script>
+    </body>
+</html>

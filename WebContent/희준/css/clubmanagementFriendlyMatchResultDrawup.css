@@ -1,0 +1,120 @@
+#centerMainBox {
+    /* border: 1px solid black; */
+    width: 1200px;
+    /* height: 950px; */
+    margin: 0px auto;     
+}
+
+#centerbox1 {
+    border-bottom: 1px solid black;            
+    height: 50px;   
+    margin-bottom: 10px;         
+}
+
+#centerbox2 {
+    /* border: 1px solid black; */            
+}
+#centerbox4 {
+    /* border: 1px solid blue;             */
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 25px;   
+    /* margin-top: 15px; */
+}
+
+#centerbox1 span, #centerbox1 select  {
+    /* border: 1px solid red; */
+    display: inline-block;
+}
+
+#verticalTable {
+    /* border: 1px solid blue; */
+}
+
+#pagination {            
+    /* border: 1px solid gold; */
+}
+
+#sortform, #selectrow {
+    float: right;     
+    /* border: 1px solid gold; */
+}
+
+#sortform {
+    margin-right: 10px;                  
+}
+
+#sortform {
+    margin-right: 10px;
+    margin-top: 19px;
+}
+
+#selectrow {
+    margin-top: 10px;
+    background-color: #1E3440;
+    color: white;            
+}
+
+#selectrow {            
+    background-color: #1E3440;
+    color: white;            
+}
+
+#verticalTable {
+    width: 1200px;                         
+}
+
+#verticalTable th:nth-child(1) {width: 40px;}
+#verticalTable th:nth-child(2) {width: 40px;}
+#verticalTable th:nth-child(3) {width: 100px;}
+#verticalTable th:nth-child(4) {width: 100px;}
+#verticalTable th:nth-child(5) {width: 80px;}
+#verticalTable th:nth-child(6) {width: 100px;}
+
+
+#verticalTable th, #verticalTable td { text-align: center; color: white; border: 0px;}        
+#verticalTable td:nth-child(3) a {color: white; }
+
+#verticalTable thead tr th{            
+    background-color: #92DAEC;
+    color: #0C1B23;           
+    /* border: 3px solid white */            
+}
+
+#verticalTable tr{
+    background-color: #1E3440;      
+    border: 1px solid white;        
+}
+
+#verticalTable tr:nth-child(even){
+    background-color: #0C1B23
+}
+
+#centerbox2 table tr{
+    border: 0px;   
+}
+
+#verticalTable td {
+    border: 0px;              
+    
+}
+
+#centerbox4Btn {
+    color: white;   
+    background-color: #1E3440 ;
+}
+
+#sortform a {
+    color: #1E3440;         
+}
+
+#centerbox4 input{
+    color: white; 
+    background-color: #1E3440 ;
+}
+
+#centerbox1 select, #centerbox4 input {
+    height: 25px;
+    font-size: 1.1em;
+    line-height: 0.8em;
+}

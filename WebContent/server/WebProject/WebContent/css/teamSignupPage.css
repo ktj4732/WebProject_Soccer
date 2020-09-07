@@ -1,0 +1,60 @@
+
+#signupForm {
+	width: 385px;
+	margin:0 auto;
+}
+
+h3{
+    margin-top: -70px;
+    font-weight: bold;
+}
+
+.inputSmth{
+    opacity: .7;
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+#outerBox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#selectrow {
+    position: absolute;
+    right: 0;
+    height: 40px;
+}
+
+#selectrow::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#outerBox {
+    position: relative;
+    border-bottom: 2px solid black;
+    height: 50px;
+    width:1200px;
+    margin: 0px auto;
+}
+
+#clickbox {
+    height: 30px;
+    width: 313px;
+    margin: 0px auto;
+}
+
+#clickbox input {
+	width:70px;
+	height:30px;
+	margin:0px 15px;
+}
+
+#centerMainBox::after {
+    content: "";
+    clear: both;
+    display: block;
+}

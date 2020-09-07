@@ -1,0 +1,73 @@
+body {
+    background-color: #eee;      
+}
+
+#mainBox {    
+    /* border: 1px solid black; */
+    margin-top: 20px;    
+    font-size: 1.1em;        
+    font-weight: bold;               
+}
+
+#box1 {
+    /* border: 1px solid black; */
+    width: 300px;
+    margin: 0px auto;   
+}
+
+#box2 {
+    /* border: 1px solid black; */
+    width: 120px;
+    float: right;
+    margin-right: 275px;
+    font-weight: bold;
+}
+
+#box1 table {
+   /* border: 1px solid #1E3440; */
+   width: 630px;
+   height: 100px;                    
+}
+
+table th {
+    /* border: 1px solid #1E3440; */
+    text-align: center;  
+}
+
+table tr, table td {
+   /* border: 1px solid #1E3440; */
+   text-align: center;             
+   padding: 5px;
+}
+
+
+table th {
+   background-color: black;
+   color: white;
+}
+
+table tr{
+   background-color: #0C1B23;
+   color: white;
+}
+
+table tr:nth-child(1){
+    background-color: #92DAEC;
+    color: black;
+}
+
+table tr:nth-child(even){
+    width: 800px;
+    background-color: #1E3440;
+}
+
+#box2 input {
+    color: white; 
+    background-color: #1E3440 ;
+    height: 25px;
+    line-height: 0.8em;
+}
+
+#mainBox #box1 table td, #mainBox #box1 table th {
+    border: 0px;
+}

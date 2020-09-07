@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 목록</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="css/submain_Admin_1.css" />
+    <link rel="stylesheet" href="css/submain_Admin_2.css" />
+    
+    <style>
+        .pageContentTitle{
+            /* border: 1px solid green; */
+            position: relative;
+            top: 80px;
+          
+            
+        }
+              #searchBox{
+           position: relative;
+           margin-left: 70%;
+           bottom: 7px;
+           
+       }
+       .btnOption{
+           position: relative;
+           width: 70px;
+           height: 35px;
+       }
+       #btnOption{
+           position: relative;
+           margin-left: 81.8%;
+           bottom: 5px;
+       }
+
+       #tbl1{
+           width: 1200px;
+           margin: 50px;
+           font-size: 1.1em;
+           text-align: center;
+       }
+       #tbl1 th{
+           text-align: center;
+           background-color: #92DAEC;
+            color: #0C1B23;    
+            font-weight: bold;
+            font-size: 1.1em;
+       }
+       #tbl1 tr{
+            width: 800px;
+            background-color: #1E3440;                
+        }
+       #tbl1 td { padding-top: 20px;}
+       .selectbox{
+           height: 25px;
+       }
+       .searchKeyword{
+           height: 25px;
+       }
+       #searchBtn{
+           height: 25px;
+           text-align: center;
+           position: relative;
+           bottom: 0px;
+       }
+        #centerbox1{
+            position: relative;
+            margin: 0px auto;
+            width: 1200px;
+            height: 45px;
+         
+            /* border: 1px solid red; */
+            border-bottom: 1px solid black;
+        }
+       #centerbox2{
+        /* border: 1px solid orange; */
+
+           height: 650px;
+       }
+       #centerbox3 {
+            /* border: 1px solid red; */
+            width: 1200px;
+            height: 50px;
+            margin: 0px auto;
+            /* border: 1px solid green; */
+           
+        }
+
+        #centerbox4 {
+            /* border: 1px solid blue; */
+            position: relative;
+            width: 1200px;
+            height: 50px;
+            display: inline-block;   
+            margin: 0px auto;
+            left: 52px;
+            /* border: 1px solid indianred; */
+
+                   
+        }
+        #pagination .nowPage {
+            background-color: #92DAEC;
+        }
+        #searchbtn, #writebtn {
+            color: white;   
+            height: 30px;
+            background-color: #1E3440 ;
+        }
+
+        #pagination li > a {
+            color: white;
+            background-color: #1E3440;            
+        } 
+     
+        #centerbox4 select {
+            color: white; 
+            background-color: #1E3440 ;
+        }
+
+        #tbl1 td { padding-top: 20px; padding-bottom: 15px; border: none;}
+        #tbl1 td { text-align: center; color: white; } 
+        #tbl1 tr:nth-child(even){
+            width: 800px;
+            background-color: #0C1B23
+        }
+
+        #searchbtn{
+            position: relative;
+            left: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+    <!-- 상단부 -->
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;">
+                    <img src="../images/rogo.png" alt="" id="mainrogo" />
+                </td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu menu1"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu menu2"><span class="menuLabel">구단현황</span></td>
+                <td class="menu menu3"><span class="menuLabel">선수현황</span></td>
+                <td class="menu menu4"><span class="menuLabel">전력분석</span></td>
+                <td class="menu menu5"><span class="menuLabel">문자중계</span></td>
+                <td class="menu menu6"><span class="menuLabel">게시판</span></td>
+                <td class="menu menu7"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard"></div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">관리자 메뉴</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>관리자 메뉴</span>
+                    <span>></span>
+                    <span>공지사항</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="subMenuItem"><a href="#">경기 결과(리그)</a></li>
+                            <li class="subMenuItem"><a href="#">경기 결과(친선)</a></li>
+                            <li class="subMenuItem"><a href="#">공지사항</a></li>
+                            <li class="subMenuItem"><a href="#">블랙리스트</a></li>
+                            <li class="subMenuItem"><a href="#">경기장 관리</a></li>
+                            <li class="subMenuItem"><a href="#">정규리그 일정</a></li>
+                            <li class="subMenuItem"><a href="#">구단관리</a></li>
+                            <li class="subMenuItem"><a href="#">선수검색</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 상단부 끝 -->
+   
+    
+    <div class="center">
+        <div class="pageContentTitle">
+            <img src="../images/rogowithoutletter.png" class="contentTitleImg" />
+                <span class="contentTitle">공지사항</span>           
+        </div>   
+        <br><br><br>
+        <div id="centerbox1">
+            
+        </div> 
+        <br>
+
+        <div id="centerbox2">
+        <table class="table table-hover" id="tbl1" style="margin-top: 0px;">
+            <tr>
+                <th><input type="checkbox" name="" id="checkbox" ></th>
+                <th>번호</th>
+                <th>날짜</th>
+                <th>제목</th>
+                <th>관리자</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>1</td>
+                <td>2020-03-03</td>
+                <td>2020 스프링리그 오픈 공지</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>2</td>
+                <td>2020-05-01</td>
+                <td>매너플레이 부탁드립니다</td>
+                <td>관리자3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>1</td>
+                <td>2020-03-03</td>
+                <td>2020 스프링리그 오픈 공지</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>2</td>
+                <td>2020-05-01</td>
+                <td>매너플레이 부탁드립니다</td>
+                <td>관리자3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr><tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>1</td>
+                <td>2020-03-03</td>
+                <td>2020 스프링리그 오픈 공지</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>2</td>
+                <td>2020-05-01</td>
+                <td>매너플레이 부탁드립니다</td>
+                <td>관리자3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr>
+        </table>
+        </div>
+
+        <div id="centerbox3">      
+            <span id="btnOption">
+                <input type="button" value="추가" class="btn btn-default btnOption">
+                <input type="button" value="수정"class="btn btn-default btnOption">
+                <input type="button" value="삭제"class="btn btn-default btnOption">
+                </span>          
+            <ul id="pagination" class="pagination" style="float: right; margin: 0;">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a class="nowPage" href="#" name="page">1</a></li>
+                <li><a href="#" name="page">2</a></li>
+                <li><a href="#" name="page">3</a></li>
+                <li><a href="#" name="page">4</a></li>
+                <li><a href="#" name="page">5</a></li>
+                <li><a href="#" name="page">6</a></li>
+                <li><a href="#" name="page">7</a></li>
+                <li><a href="#" name="page">8</a></li>
+                <li><a href="#" name="page">9</a></li>         
+                <li><a href="#" name="page">10</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>   
+        </div>
+
+        <div id="centerbox4">
+            <div style="float: right; font-size: 15px; margin: 5px;">                
+                <select style=" height: 30px;">
+                    <option value="">지역</option>
+                    <option value="">시설명</option>
+                </select>
+                <input id="searchkeyword" type="text" size="35" style="height: 30px;">
+                <a href=""><input id="searchbtn" type="button" value="검색" ></a>
+            </div>
+        </div>
+    
+    
+    </div>
+   <!-- 하단부  -->
+
+   <nav class="sitemap">
+    <ul class="siteList">
+        <h2 class="listName"><a href="#">경기정보조회</a></h2>
+        <li><a href="#">2020 정규리그 일정조회</a></li>
+        <li><a href="#">정규리그 결과 조회</a></li>
+        <li><a href="#">지난 정규리그 조회</a></li>
+        <li><a href="#">친선경기 결과 조회</a></li>
+    </ul>
+    <ul class="siteList">
+        <h2 class="listName"><a href="#">구단현황</a></h2>
+        <li><a href="#">구단 정보</a></li>
+        <li><a href="#">구단 선수 정보 조회</a></li>
+        <li><a href="#">구단 경기 전적</a></li>
+    </ul>
+    <ul class="siteList">
+        <h2 class="listName"><a href="#">선수현황</a></h2>
+        <li><a href="#">선수 검색</a></li>
+        <li><a href="#">선수 정보</a></li>
+        <li><a href="#">선수 응원댓글</a></li>
+        <li><a href="#">선수 DM</a></li>
+    </ul>
+    <ul class="siteList">
+        <h2 class="listName"><a href="#">전력분석</a></h2>
+        <li><a href="#">팀분석</a></li>
+        <li><a href="#">선수분석</a></li>
+        <li><a href="#">시뮬레이션</a></li>
+    </ul>
+    <ul class="siteList">
+        <h2 class="listName"><a href="#">게시판</a></h2>
+        <li><a href="#">질문게시판</a></li>
+        <li><a href="#">갤러리</a></li>
+        <li><a href="#">자유게시판</a></li>
+        <li><a href="#">강의게시판</a></li>
+        <li><a href="#">친선경기모집</a></li>
+        <li><a href="#">용병모집</a></li>
+    </ul>
+    <ul class="siteList">
+        <h2 class="listName"><a href="#">공지사항</a></h2>
+    </ul>
+    <ul class="siteList">
+        <h2 class="listName"><a href="#">문자중계</a></h2>
+    </ul>
+</nav>
+
+<div class="footer">
+    <div class="footerBox">
+        <div><a href="#">협회소개</a></div>
+        <div><a href="#">이용약관</a></div>
+        <div><a href="#">개인정보 취급방침</a></div>
+        <div><a href="#">제휴문의</a></div>
+        <div><a href="#">관리자 페이지</a></div>
+    </div>
+</div>
+<div class="footerBox2">
+    <div class="footerInfo">
+        <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+        <div class="info">정성원(010-3151-5582)</div>
+    </div>
+    <div class="footerInfo">
+        <div class="infoItem">리그운영 및 사무업무</div>
+        <div class="info">김준형(010-2370-2061)</div>
+    </div>
+    <div class="footerInfo">
+        <div class="infoItem">선수등록 및 기록문의</div>
+        <div class="info">정미선(010-9066-9495)</div>
+    </div>
+    <div class="footerInfo">
+        <div class="infoItem">리그일정 조정</div>
+        <div class="info">정성원(010-3151-5582)</div>
+    </div>
+    <div class="footerInfo">
+        <div class="infoItem">시스템개발문의</div>
+        <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+    </div>
+    <div class="footerInfo">
+        <div class="infoItem">한독빌딩</div>
+        <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+    </div>
+    <div class="footerInfo">
+        <div class="infoItem">TEL</div>
+        <div class="info">070)4322-2918</div>
+    </div>
+    <div class="footerInfo">
+        <div class="infoItem">FAX</div>
+        <div class="info" style="clear: both;">070)4322-2919</div>
+    </div>
+</div>
+<div class="footerBox3">
+    <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+    <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+</div>
+
+<!-- 하단부  끝 -->
+
+<!-- 스크립트------------------------------------------------------------- -->
+<script>
+    var flag = false;
+    $(document).scroll(function () {
+        if ($(document).scrollTop() > $("#main").position().top) {
+            if (!flag) {
+                $("#main").css({
+                    position: "fixed",
+                    top: -$("#main").outerHeight(),
+                    bottom: "",
+                });
+
+                $("#main").animate(
+                    {
+                        top: "0px",
+                    },
+                    1000,
+                    function () {
+                        //alert();
+                        flag = true;
+                    }
+                );
+            }
+        }
+    });
+    // 메뉴 클릭시 발생하는 이벤트
+    $(".menu")
+        .click(function () {
+            // 어떤 메뉴를 눌렀는지 알려준다.
+
+            var menu = $(this).children().text();
+            console.log(menu);
+        })
+        .mouseover(function () {
+            // 호버. CSS 효과 줌
+            $(this).children().css({
+                // "text-shadow": "1px 1px 2px",
+                // color: "#F6BE0D",
+                // transform: "scale(1, 1)",
+                "background-color": "#0077C8",
+            });
+        })
+        .mouseout(function () {
+            // 토글
+            $(this).children().css({
+                "text-shadow": "",
+                color: "",
+                transform: "",
+                "background-color": "#25282A",
+            });
+        });
+</script>
+<script src="js/eventAdmin.js"></script>
+<script src="js/submain.js"></script>
+</body>
+</html>

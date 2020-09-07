@@ -1,0 +1,236 @@
+#centerMainBox {
+    /* border: 1px solid black; */
+    width: 1200px;
+    height: 1075px;
+    margin: 0px 50px;         
+    /* font-size: 1.1em; */
+    display: inline-block;
+    
+}     
+
+#centerbox2 {    
+    /* border: 2px solid blue; */
+    width: 1200px;      
+    float: left;
+    /* background-color: red;    */
+}
+
+#centerbox2Left {
+    /* border: 2px solid green; */
+    width: 390px;
+    /* height: 850px; */
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#centerbox2Right {
+    /* border: 1px solid black; */
+    /* width: 790px; */
+    height: 850px;
+    float: left;
+    margin-left: 95px;         
+    margin-top: 10px;        
+}
+
+#centerbox2Left table{
+    /* border: 1px solid blue; */
+    /* height: 880px; */
+    width: 380px;            
+}
+
+#centerbox2Left table th, #centerbox2Left table tr td{
+    border: 1px solid black;     
+    /* color: white;        */
+    height: 38px;
+}
+
+#centerbox2Left table th {                    
+    text-align: center;
+    /* background-color: #92DAEC; */
+    /* color: #0C1B23;            */
+    /* border: 0px;               */
+ 
+}
+
+#formation {
+    /* border: 3px solid #0C1B23; */
+}
+
+table tr{                    
+    /* background-color: #1E3440;            */
+}   
+
+table tr:nth-child(even){                    
+    /* background-color: #0C1B23;                            */
+}
+
+#centerbox2Left table td {                    
+    text-align: center;
+    border: 0px;
+}
+
+#centerbox2Left th:nth-child(1) {
+    width: 25px;
+}
+
+#centerbox2Left th:nth-child(2) {
+    width: 50px;
+}
+
+#centerbox2Left th:nth-child(3) {
+    width: 50px;
+}
+
+#centerbox2Left th:nth-child(4) {
+    width: 50px;
+}
+
+#centerbox2Left th:nth-child(5) {
+    width: 50px;
+}
+
+#centerbox2LeftButton{
+    float: right;                    
+    margin-right: 10px;
+}
+
+#centerbox2LeftButton input {
+    /* color: white;  */
+    /* background-color: #1E3440 ; */
+    height: 25px;
+    line-height: 0.8em;
+}
+
+#formation {
+    /* border: 1px solid hotpink; */
+    height: 930px;
+    width: 680px;
+}
+
+#formationSelect {
+    float: right;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+}
+
+#formation {
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    background-size: 680px 930px;
+}
+
+/* 442 */
+#formation div {
+    position: relative;
+}
+
+/* FW 지역 */
+#formation div:nth-child(1) {
+    /* border: 3px solid red; */
+    height: 170px;
+    text-align: center;
+    top: 200px;
+    width: 640px;
+    left: 20px;
+    /* padding: 0px 20px 0px 20px; */
+}
+
+/* MF 지역 */
+#formation div:nth-child(2) {
+    /* border: 3px solid blue; */
+    height: 170px;
+    text-align: center;
+    top: 220px;
+    width: 640px;
+    left: 20px;
+    /* padding: 0px 20px 0px 20px; */
+}
+
+/* DF 지역 */
+#formation div:nth-child(3) {
+    /* border: 3px solid greenyellow; */
+    height: 170px;
+    text-align: center;
+    top: 230px;
+    width: 640px;
+    left: 20px;
+    /* padding: 0px 20px 0px 20px; */
+}
+
+/* GK 지역 */
+#formation div:nth-child(4) {
+    /* border: 1px solid red; */
+    /* text-align: center; */
+    top: 235px;
+    left: 260px;
+    width: 160px;
+    height: 130px;
+    
+}
+
+#formation img {
+    position: absolute;   
+    width: 100px;      
+    height: 100px;           
+    /* border: 3px solid red; */
+}
+
+/* FW 선수들 */
+#formation div:nth-child(1) img {
+    /* left: 20px; */
+    /* top: 30px; */
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    left: 0px;
+    border-radius: 50px;
+    /* border: 1px solid red; */
+}
+
+#formation div:nth-child(1) img:nth-child(1) {
+    /* left: 229px; */
+    /* top: 23px; */
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    /* border: 1px solid red; */
+}
+
+#formation div:nth-child(1) img:nth-child(2) {
+    /* left: 529px; */
+    /* top: 50px;  */
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    /* border: 1px solid red; */
+}
+
+/* MF 선수들 */
+#formation div:nth-child(2) img {                    
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    /* top: 30px; */
+    left: 0px;
+    border-radius: 50px;    
+        /* border: 1px solid blue; */
+}
+
+/* DF 선수들 */
+#formation div:nth-child(3) img {                    
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    /* top: 30px; */
+    left: 0px;
+    border-radius: 50px;
+        /* border: 1px solid greenyellow; */
+}
+
+#formation div:nth-child(4) img {                    
+    top: 10px;
+    left: 30px;
+    border-radius: 50px;
+    
+}
+#formationSelect select {
+    /* color: white;  */
+    /* background-color: #1E3440 ; */
+}
+                

@@ -1,0 +1,189 @@
+/* 전체박스 */
+#centerMainBox {
+    /* border: 1px solid red; */
+    width: 1200px;
+    /* height: 1100px; */
+    margin: 0px auto;      
+    font-size: 1.1em;                 
+}  
+
+/* 글목록 보는 방식, 10개씩 보기 */
+#centerBox1 {
+    /* border: 1px solid #0C1B23;  */
+    height: 40px;   
+    float: right;          
+    padding-top: 5px;              
+}
+
+/* 게시판 목록 전체 박스 */
+#centerBox2 {
+    border-top: 1px solid #0C1B23; 
+}
+
+/* 페이지 박스 */
+#centerBox3 {
+    /* border: 1px solid red;  */            
+    float: right;          
+}
+
+/* 제목, 검색창, 검색 & 글쓰기 버튼 */
+#centerBox4 {
+    /* border: 1px solid blue;  */            
+    float: right;
+    margin-bottom: 25px;                                
+}
+
+/* 게시판 목록 박스(이미지 + 내용) */
+.centerBox2List {
+    border-bottom: 1px solid #0C1B23;
+    width: 1195px;
+    height: 170px; 
+    padding-top: 8px;        
+    padding-left: 5px;            
+}
+
+/* 이미지 사진 */
+.centerBox2List #box2li1 {
+    /* border: 1px solid #0C1B23; */
+    width: 150px;     
+    height: 150px;
+    float: left;
+}
+
+/* 이미지 옆 내용 박스 */
+.centerBox2List #box2li2 {            
+    /* border: 1px solid blue; */
+    height: 150px;
+    width: 900px;
+    float: left;
+    padding-left: 10px;     
+}
+
+/* 목록 제목, 글쓴이 */
+.centerBox2List #box2li2 span:nth-child(1){            
+    font-weight: bold;              
+}
+
+/* 목록에 글 제목 */
+#box2li2 div:nth-child(1) {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* 목록에 글쓴이 날짜 조회 */
+#box2li2 div:nth-child(2) {
+    margin-top: 95px;                        
+    /* background-color: red; */
+}
+
+/* 날짜 */
+#box2li2 div:nth-child(2) span:nth-child(2){
+    margin-right: 15px;
+    margin-left: 15px;
+    /* background-color: red; */
+}
+
+/* 조회수, 댓글수, 좋아요 불릿 */
+#box2li2 div:nth-child(2) a {
+    margin-left: 5px;
+    /* background-color: red; */
+}
+
+/* 페이지 버튼 */
+#pagination li a{            
+    background-color: #1E3440;
+    color: white;            
+    font-size: 1.1em;          
+    height: 25px;             
+    padding-top: 1px;
+    padding-left: 10px;
+}
+
+/* 모든 버튼 */
+#centerBox4 select {                        
+    background-color: #1E3440;
+    color: white;        
+    /* font-size: 1.1em; */
+}
+
+#writebtn, #searchbtn{                        
+    background-color: #1E3440;
+    color: white;        
+    height: 25px;            
+    line-height: 0.8em;
+}
+
+/* 이미지 보는 형식 3가지 */
+#centerBox1 span a{            
+    color: #0C1B23;            
+    font-size: 1.1em;                 
+}
+
+/* 10개 씩 보기 */
+#centerBox1 select {
+    background-color: #1E3440;
+    color: white;
+    margin-left: 15px;            
+    height: 25px;                   
+}
+
+/* 글제목 */
+#box2li2 a{
+    color:  black;              
+}
+
+/* 페이지에 누른버튼에 색깔 입히기 */
+#pagination .nowPage {
+    background-color: #92DAEC;
+}
+
+/* 갤러리 이미지 넣기 1~10번 */
+#centerBox2List1 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List2 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List3 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List4 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List5 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List6 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List7 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List8 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List9 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}
+
+#centerBox2List10 #box2li1 {
+    background-image: url(../images/soccer3.jpg);background-position: center center;
+     background-size: cover;
+}

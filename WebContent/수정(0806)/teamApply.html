@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/submain_1.css">
+    <link rel="stylesheet" href="css/submain_2.css">
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+        .topContent{
+            /* float: left; */
+            /* border: 1px solid black; */
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .center div{
+            float: left;
+        }
+        /* 팀검색,결과 */
+        .topContent:nth-child(1){
+            padding-top: 30px;
+        }
+        /* 팀로고 */
+        .topContent:nth-child(2){
+            margin-left: 100px;
+            /* border: 3px dashed gray; */
+        }
+
+        #searchTable{
+            margin-top: 30px;
+        }
+
+        #bottomContent{
+            width: 100%;
+            border: 1px solid gray;
+            /* background-color: rgb(37, 40, 42); */
+            /* color: rgb(226, 226, 226); */
+;
+        }
+        h2{
+            /* margin-top: 150px; */
+            font-weight: bold;
+            width: 80%;
+        }
+
+        #rogobox div{
+            float: none;
+        }
+
+        #teamrogo{
+            /* border: 1px solid black; */
+        }
+        #teaminfo{
+            /* border-left: 1px solid rgb(190, 190, 190); */
+            float: none;
+            width: 640px;
+            margin-left: 302px;
+            height: 302px;
+
+        }
+        #teaminfo div{
+            border: 1px solid rgb(223, 216, 216);
+            float: none;
+            width: 998px;
+            height: 16.6666666666%;
+            font-size: 1.2em;
+        }
+
+        hr{
+            border : 1px solid black;
+            width: 1300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+    <!-- 상단부 -->
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;"><img src="../images/rogo_2.png" alt="" id="mainrogo"></td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu menu1"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu menu2"><span class="menuLabel">구단현황</span></td>
+                <td class="menu menu3"><span class="menuLabel">선수현황</span></td>
+                <td class="menu menu4"><span class="menuLabel">전력분석</span></td>
+                <td class="menu menu5"><span class="menuLabel">문자중계</span></td>
+                <td class="menu menu6"><span class="menuLabel">게시판</span></td>
+                <td class="menu menu7"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard">
+    </div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">선수등록/이적신청</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>선수등록/이적신청</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 상단부 끝 -->
+
+    <div class="center" >
+        <div class="pageContentTitle" style="border-bottom: 1px solid black;">
+            <img src="../images/rogowithoutletter.png" class="contentTitleImg"><span
+                class="contentTitle">선수등록/이적신청</span>
+        </div>
+        
+        <!-- 상단 컨텐츠 내용 -->
+        <div>
+            <div >
+                <div class="topContent">
+                <!-- 팀 검색 -->
+                <input type="text" class="input" value="팀이름을 검색하세요" style="opacity: .7;">
+                <input type="button" value="검색"> 
+                <!-- 팀 검색 결과 -->
+                <table class="table table-bordered" id="searchTable">
+                    <tr>
+                        <th>팀번호</th>
+                        <th>팀명</th>
+                        <th>주소</th>
+                        <th>구단주</th>
+                        <th>창단일</th>
+                        <th>슬로건</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>쌍용FC</td>
+                        <td>서울특별시 강남구 역삼동</td>
+                        <td>홍길동</td>
+                        <td>2015-06-07</td>
+                        <td>재밌게 공차는사람들 입니다.</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 팀로고 -->
+            <div class="topContent" id="rogobox">
+                <img src="../images/rogo.png" alt="" style="width: 400px; margin-top: -100px;">
+            </div>
+        </div>
+
+        <h2>팀정보</h2>
+        <hr>
+        <div id="bottomContent" >
+            <div id="teamrogo"><img src="../images/rogo.png" alt="" style="width: 300px;"></div>
+            <div id="teaminfo">
+                <div>팀번호:</div>
+                <div>팀명:</div>
+                <div>주소:</div>
+                <div>창설일:</div>
+                <div>연락처:</div>
+                <div>슬로건:</div>
+            </div>
+
+        </div>
+
+        <hr style="margin-top: 345px;">
+        <button type="button" class="btn btn-primary" id="agreeButton">등록신청</button>
+    </div>
+
+
+    </div>
+    <!-- 하단부  -->
+
+    <nav class="sitemap">
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">경기정보조회</a></h2>
+            <li><a href="#">2020 정규리그 일정조회</a></li>
+            <li><a href="#">정규리그 결과 조회</a></li>
+            <li><a href="#">지난 정규리그 조회</a></li>
+            <li><a href="#">친선경기 결과 조회</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">구단현황</a></h2>
+            <li><a href="#">구단 정보</a></li>
+            <li><a href="#">구단 선수 정보 조회</a></li>
+            <li><a href="#">구단 경기 전적</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">선수현황</a></h2>
+            <li><a href="#">선수 검색</a></li>
+            <li><a href="#">선수 정보</a></li>
+            <li><a href="#">선수 응원댓글</a></li>
+            <li><a href="#">선수 DM</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">전력분석</a></h2>
+            <li><a href="#">팀분석</a></li>
+            <li><a href="#">선수분석</a></li>
+            <li><a href="#">시뮬레이션</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">게시판</a></h2>
+            <li><a href="#">질문게시판</a></li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">자유게시판</a></li>
+            <li><a href="#">강의게시판</a></li>
+            <li><a href="#">친선경기모집</a></li>
+            <li><a href="#">용병모집</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">공지사항</a></h2>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">문자중계</a></h2>
+        </ul>
+
+    </nav>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <div><a href="#">협회소개</a></div>
+            <div><a href="#">이용약관</a></div>
+            <div><a href="#">개인정보 취급방침</a></div>
+            <div><a href="#">제휴문의</a></div>
+            <div><a href="#">관리자 페이지</a></div>
+        </div>
+    </div>
+    <div class="footerBox2">
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 사무업무</div>
+            <div class="info">김준형(010-2370-2061)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">선수등록 및 기록문의</div>
+            <div class="info">정미선(010-9066-9495)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그일정 조정</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">시스템개발문의</div>
+            <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">한독빌딩</div>
+            <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">TEL</div>
+            <div class="info">070)4322-2918</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">FAX</div>
+            <div class="info" style="clear: both;">070)4322-2919</div>
+        </div>
+    </div>
+    <div class="footerBox3">
+        <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+        <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+    </div>
+
+
+    <!-- 하단부  끝 -->
+
+
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+
+        var flag = false;
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > $
+                ("#main").position().top) {
+
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: ""
+                    });
+
+                    $("#main").animate({
+                        top: "0px"
+                    }, 1000, function () {
+                        //alert();
+                        flag = true;
+                    });
+                }
+
+            }
+
+        });
+
+        // 이적신청 버튼
+        $("#agreeButton").click(function () {
+            window.open("application.html", "apply", "width=812, height = 1300, left = 500 ")
+        });
+
+
+
+
+
+    </script>
+    <script src="js/event.js"></script>
+    <script src="js/submain.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/submain_1.css">
+    <link rel="stylesheet" href="css/submain_2.css">
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+    <!-- 상단부 -->
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;"><img src="images/rogo.png" alt="" id="mainrogo"></td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu"><span class="menuLabel">구단현황</span></td>
+                <td class="menu"><span class="menuLabel">선수현황</span></td>
+                <td class="menu"><span class="menuLabel">전력분석</span></td>
+                <td class="menu"><span class="menuLabel">문자중계</span></td>
+                <td class="menu"><span class="menuLabel">게시판</span></td>
+                <td class="menu"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard">
+    </div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">커뮤니티</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>커뮤니티</span>
+                    <span>></span>
+                    <span>자유게시판</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="subMenuItem"><a href="communityQuestionBulletinBoard.html">질문게시판</a></li>
+                            <li class="subMenuItem"><a href="communityGalleryBulletinBoard.html">갤러리</a></li>
+                            <li class="subMenuItem"><a href="communityFreeBulletinBoard.html">자유게시판</a></li>
+                            <li class="subMenuItem"><a href="communityLectureBulletinBoard.html">강의게시판</a></li>
+                            <li class="subMenuItem"><a href="#">친선경기모집</a></li>
+                            <li class="subMenuItem"><a href="#">용병모집</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 상단부 끝 -->
+
+    <!-- Center -------------------------------------------- -->
+
+    <div class="center">
+        <div class="pageContentTitle"><img src="images/rogowithoutletter.png" class="contentTitleImg"><span
+                class="contentTitle">자유게시판</span></div>
+
+        <div id="centerBoxMain">
+            
+            <!-- 질문한 글 -->
+            <div id="centerBox2" class="centerBox">
+                <div>
+                    <span>제목: [등록/이적]구단 등록 어떻게 하나요?</span>
+                    <span>작성시간: 2020.07.18 21:35</span>
+                    <span>작성자 | hejun</span>
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="content">새로 가입했는데 <br>
+                    구단 등록 하려면 어떻게 해야 되나요?
+                </div>
+            </div>
+            <!-- 답변목록 -->
+            <div id="centerBox3" class="centerBox">                
+                <div id="centerBox6">
+                    <span>댓글</span>
+                    <a href="">최신순</a>
+                    <a href="">등록순</a>
+                </div>
+                <div>                    
+                    <span>이수지</span>
+                </div>
+                <div class="content">홈화면에서 등록하기 누르시면 됩니다~</div>
+                <div>
+                    <span>2020.07.18 21:40</span>
+                    <span><input type="button" value="답글쓰기" class="btn"></span>
+                </div>
+            </div>       
+            <!-- 답변하기 -->
+            <div id="centerBox4" class="centerBox">
+                <div>글쓴이 이름</div>
+                <div><textarea name="" id="" cols="103" rows="1"> 댓글을 남겨보세요</textarea></div>
+                <div>
+                    <span><input type="button" value="이모티콘" class="btn"></span>
+                    <span><input type="button" value="등록" class="btn"></span>
+                </div>
+            </div>
+            <!-- 목록, Top -->
+            <div id="centerBox5" class="centerBox">
+                <span><input type="button" value="▲TOP" class="btn"></span>
+                <span><input type="button" value="목록" class="btn"></span>
+            </div>
+
+        </div>   
+
+    </div>
+
+    <style>
+
+        .center {            
+            padding-top: 50px;
+            background-color: #eee;     
+        }
+
+        /* 박스전체 */
+        #centerBoxMain{
+            /* border: 1px solid black;             */
+            width: 1250px;
+            /* height: 1000px; */
+            margin: 0px auto;          
+            font-size: 1.1em;     
+        }
+
+        /* 질문내용 박스 */
+        #centerBox2 {
+            margin-top: 25px;
+            border-bottom: 1px solid #0C1B23; 
+            border-top: 1px solid #0C1B23; 
+            border-bottom-style: dashed;
+            width: 1150px;            
+        }
+
+        /* 답글내용 박스 */
+        #centerBox3 {            
+            /* border: 1px solid red; */
+            border-bottom: 1px solid #0C1B23; 
+            border-bottom-style: dashed;
+            width: 1150px;               
+        }
+
+        /* 답글쓰기 박스 */
+        #centerBox4 {
+            /* border: 1px solid #0C1B23;  */
+            border-bottom: 1px solid #0C1B23; 
+            border-bottom-style: dashed;
+            width: 1150px;            
+        }
+
+        /* 목록버튼 , TOP버튼 박스 */
+        #centerBox5 {
+            /* border: 1px solid #0C1B23;  */
+            width: 1150px;            
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* 박스전체의 박스*/
+        .centerBox {          
+            margin-left: 25px;
+        }
+
+        /* 질문박스 span들 */
+        #centerBox2 span {
+            /* border: 1px solid blue;                         */
+            padding-top: 5px;            
+            margin-left: 5px;   
+            float: right;                 
+            margin-right: 5px;   
+            font-weight: bold;                 ;                 
+        }
+
+        /* 질문박스 제목 */
+        #centerBox2 span:nth-child(1) {
+            /* background-color: red; */
+            float: left;            
+            padding-left: 5px;                        
+        }
+
+        /* 질문박스 내용 */
+        #centerBox2 .content {
+            /* border: 1px solid blue; */
+            height: 250px;            
+            margin-left: 5px;            
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        /* 답글박스 div들 */
+        #centerBox3 div {
+            /* border: 1px solid green;                         */
+            margin-left: 5px;                     
+            font-weight: bold; 
+            padding-left: 5px;   
+        }
+
+        /* 답글쓰기 글쓴이 */
+        #centerBox3 div:nth-child(1) {
+            padding-top: 8px;            
+        }
+
+        /* 답글 내용 */
+        #centerBox3 .content {
+            height: 100px;
+            font-weight: normal;
+            padding-top: 5px;                        
+        }
+
+        /* 답글내용 3번째 dvi */
+        #centerBox3 div:nth-child(4) {
+            /* border: 1px solid green;                 */
+            margin-bottom: 5px;
+        }
+
+        /* 댓글 박스 div들 */
+        #centerBox4 div {
+            /* border: 1px solid indigo;                         */
+            padding: 5px;
+            font-weight: bold;            
+            padding-left: 10px;
+            
+        }
+        
+        /* 이미티콘버튼, 등록버튼 */
+        #centerBox4 div span input {
+            /* border: 1px solid indigo;                         */
+            /* background-color: red; */
+        }
+
+        /* 댓글쓰기 내용 */
+        #centerBox4 textarea {
+            resize:none;
+        }
+
+        /* 목록버튼, TOP버튼 */
+        #centerBox5 > span {
+            /* border: 1px solid red; */
+            width: 50px;
+            float: right;     
+            margin-right: 15px;
+            margin-left: 5px;                                                       
+        }
+
+        /* 모든 버튼들 */
+        #centerBox5 > span input, #centerBox4 span input, #centerBox3 input {            
+            background-color: #1E3440;
+            color: white;  
+            height: 25px;
+            line-height: 0.8em;
+        }
+
+        #centerBox6 {
+            /* border: 1px solid red; width: 150px; */
+            margin-left: 33px;
+            margin-top: 7px;
+            margin-bottom: 15px;
+        }
+
+        #centerBox6 span {
+            background-color: #1E3440;
+            font-size: 1.1em;
+            color: white;  
+            padding: 3px;
+            font-weight: bold;
+        }
+
+        #centerBox6 a {
+            color: black;
+        }
+       
+       
+    </style>
+
+    <script>
+
+        $("#centerBox5 > span input, #centerBox4 span input, #centerBox3 input ").mouseover(function() {
+
+        // alert($(this).text());
+        $(this).css("background-color", "#92DAEC").css("color", "black");
+
+        })
+
+        $("#centerBox5 > span input, #centerBox4 span input, #centerBox3 input ").mouseout(function() {
+
+        // alert($(this).text());
+        $(this).css("background-color", "").css("color", "");
+
+        })
+
+    </script>
+
+    <!-- Center -------------------------------------------- -->
+
+    <!-- 하단부  -->
+
+    <nav class="sitemap">
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">경기정보조회</a></h2>
+            <li><a href="#">2020 정규리그 일정조회</a></li>
+            <li><a href="#">정규리그 결과 조회</a></li>
+            <li><a href="#">지난 정규리그 조회</a></li>
+            <li><a href="#">친선경기 결과 조회</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">구단현황</a></h2>
+            <li><a href="#">구단 정보</a></li>
+            <li><a href="#">구단 선수 정보 조회</a></li>
+            <li><a href="#">구단 경기 전적</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">선수현황</a></h2>
+            <li><a href="#">선수 검색</a></li>
+            <li><a href="#">선수 정보</a></li>
+            <li><a href="#">선수 응원댓글</a></li>
+            <li><a href="#">선수 DM</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">전력분석</a></h2>
+            <li><a href="#">팀분석</a></li>
+            <li><a href="#">선수분석</a></li>
+            <li><a href="#">시뮬레이션</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="community.html">게시판</a></h2>
+            <li><a href="communityQuestionBulletinBoard.html">질문게시판</a></li>
+            <li><a href="communityGalleryBulletinBoard.html">갤러리</a></li>
+            <li><a href="communityFreeBulletinBoard.html">자유게시판</a></li>
+            <li><a href="communityLectureBulletinBoard.html">강의게시판</a></li>
+            <li><a href="#">친선경기모집</a></li>
+            <li><a href="#">용병모집</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="NoticeBoard.html">공지사항</a></h2>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">문자중계</a></h2>
+        </ul>
+
+    </nav>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <div><a href="#">협회소개</a></div>
+            <div><a href="#">이용약관</a></div>
+            <div><a href="#">개인정보 취급방침</a></div>
+            <div><a href="#">제휴문의</a></div>
+            <div><a href="#">관리자 페이지</a></div>
+        </div>
+    </div>
+    <div class="footerBox2">
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 사무업무</div>
+            <div class="info">김준형(010-2370-2061)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">선수등록 및 기록문의</div>
+            <div class="info">정미선(010-9066-9495)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그일정 조정</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">시스템개발문의</div>
+            <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">한독빌딩</div>
+            <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">TEL</div>
+            <div class="info">070)4322-2918</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">FAX</div>
+            <div class="info" style="clear: both;">070)4322-2919</div>
+        </div>
+    </div>
+    <div class="footerBox3">
+        <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+        <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+    </div>
+
+
+    <!-- 하단부  끝 -->
+
+
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+
+        var flag = false;
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > $
+                ("#main").position().top) {
+
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: ""
+                    });
+
+                    $("#main").animate({
+                        top: "0px"
+                    }, 1000, function () {
+                        //alert();
+                        flag = true;
+                    });
+                }
+
+            }
+
+        });
+
+
+
+    </script>
+    <script src="js/event.js"></script>
+    <script src="js/submain.js"></script>
+</body>
+
+</html>

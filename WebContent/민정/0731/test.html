@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블랙리스트</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/admin_1.css">
+    <link rel="stylesheet" href="css/submain_Admin_2.css">
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+
+        /* html,body{ height: 1500px%; overflow: hidden;}        */
+        
+        #searchBox{
+           
+            margin-left: 60%;
+            margin-right: auto;
+        }
+ 
+        .selectbox{
+            height: 30px;
+            width: 140px;
+            font-size: 15px;
+        }
+        #searchbtn{
+            position: relative;
+            left: 4px;
+        }
+        #btnOption{
+            
+            /* border: 1px solid orange;
+            position: relative;
+            left: 90%;
+            
+            width: 80px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border: 0; */
+            
+           position: relative;
+           margin-left: 94.2%;
+           width: 70px;
+           height: 30px;
+           bottom: 5px;
+       
+        }
+
+        #tbl1{
+            width: 1200px;
+             margin: 0px auto;
+            font-size: 1.1em;
+            /* text-align: center; */
+            border: none;
+            
+        }
+        
+        
+       .selectbox{
+           height: 25px;
+       }
+       
+        #searchbtn, #writebtn {
+            
+            height: 30px;
+        }
+
+        
+
+        
+
+        .pageContentTitle{
+            width: 1200px;
+            /* border: 1px solid green; */
+            position: relative;
+            top: 80px;
+            height: 150px; margin: 0px auto;
+            
+        }
+        #centerbox1{
+            position: relative;
+            margin: 0px auto;
+            width: 1200px;
+            height: 45px;
+            border-bottom: 1px solid black;
+            /* margin-left: 50px; */
+        }
+        #centerbox2{
+            /* border: 1px solid tomato; */
+            width: 1200px;
+            height: 550px;
+            margin: 0px auto;
+        }
+
+        #centerbox3 {
+            /* border: 1px solid red; */
+            width: 1200px;
+            height: 70px;
+            margin: 0px auto;
+            /* margin-top: 40px; */
+           
+        }
+
+        #centerbox4 {
+            width: 1200px;
+            height: 50px;
+            /* display: inline-block;  */
+            margin: 0px auto;
+            /* border: 1px solid red;                    */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="adminPage">
+        <ul id="ul1">
+            <li style="background-color: white; text-align: center;"><img src="../images/rogowithoutletter.png" alt="" style="width: 80px; height: 80px;  text-align:center;"></li>
+            <li><a href="#">경기결과(리그)</a></li>
+            <li><a href="#">경기결과(친선)</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">블랙리스트</a></li>
+            <li><a href="#">경기장 관리</a></li>
+            <li><a href="#">경기장 일정</a></li>
+            <li><a href="#">구단관리</a></li>
+            <li><a href="#">선수관리</a></li>
+
+
+        </ul>
+    </div>
+    <header>
+
+    </header>
+    <div class="center">
+        <div class="pageContentTitle">
+            <img src="../images/rogowithoutletter.png" class="contentTitleImg" />
+            <span class="contentTitle">블랙리스트</span>
+        </div>        
+            
+            
+            
+            
+             <div id="centerbox1">
+                   
+                </div> 
+            <br>
+            <div id="centerbox2">
+            <table class="table table-striped tbl-lg" id="tbl1" style="margin-top: 0px;">
+                <thead class="thead-dark">
+                <tr>
+                    <th><input type="checkbox" name="" id="th_checkAll" onclick="checkAll();"></th>
+                    <th>번호</th>
+                    <th>구단명/유저이름</th>
+                    <th>날짜</th>
+                    <th>타입</th>
+                    <th>제재</th>
+                    <th>제재횟수</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>1</td>
+                    <td>헤헤헤</td>
+                    <td>2020-06-06</td>
+                    <td>구단명</td>
+                    <td>경기 출전 금지(1달)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>2</td>
+                    <td>엉엉엉</td>
+                    <td>2020-06-10</td>
+                    <td>구단명</td>
+                    <td>경기 출전 금지(1달)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>3</td>
+                    <td>월요일</td>
+                    <td>2020-06-10</td>
+                    <td>유저이름</td>
+                    <td>게시글 작성 제한(1주)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>4</td>
+                    <td>헤헤헤</td>
+                    <td>2020-06-06</td>
+                    <td>구단명</td>
+                    <td>경기 출전 금지(1달)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>5</td>
+                    <td>엉엉엉</td>
+                    <td>2020-06-10</td>
+                    <td>구단명</td>
+                    <td>경기 출전 금지(1달)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>6</td>
+                    <td>월요일</td>
+                    <td>2020-06-10</td>
+                    <td>유저이름</td>
+                    <td>게시글 작성 제한(1주)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>7</td>
+                    <td>헤헤헤</td>
+                    <td>2020-06-06</td>
+                    <td>구단명</td>
+                    <td>경기 출전 금지(1달)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>8</td>
+                    <td>엉엉엉</td>
+                    <td>2020-06-10</td>
+                    <td>구단명</td>
+                    <td>경기 출전 금지(1달)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>9</td>
+                    <td>월요일</td>
+                    <td>2020-06-10</td>
+                    <td>유저이름</td>
+                    <td>게시글 작성 제한(1주)</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="checkRow" id="checkbox"></td>
+                    <td>10</td>
+                    <td>헤헤헤</td>
+                    <td>2020-06-06</td>
+                    <td>구단명</td>
+                    <td>경기 출전 금지(1달)</td>
+                    <td>1</td>
+                </tr>
+                
+    
+            </table>            
+            </div>
+               
+            <div id="centerbox3">                 
+                <input type="button" value="삭제"class="btn btn-default btnOption"id="btnOption">
+                <ul id="pagination" class="pagination" style="float: right; margin: 0;">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a class="nowPage" href="#" name="page">1</a></li>
+                    <li><a href="#" name="page">2</a></li>
+                    <li><a href="#" name="page">3</a></li>
+                    <li><a href="#" name="page">4</a></li>
+                    <li><a href="#" name="page">5</a></li>
+                    <li><a href="#" name="page">6</a></li>
+                    <li><a href="#" name="page">7</a></li>
+                    <li><a href="#" name="page">8</a></li>
+                    <li><a href="#" name="page">9</a></li>         
+                    <li><a href="#" name="page">10</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>   
+            </div> 
+            <div id="centerbox4">
+                <div style="float: right; font-size: 15px; margin: 5px;">                
+                    <select style=" height: 30px;">
+                        <option value="">구단명/유저이름</option>
+                        <option value="">날짜</option>
+                        <option value="">타입</option>
+                    </select>
+                    <input id="searchkeyword" type="text" size="35" style="height: 30px;">
+                    <a href=""><input id="searchbtn" type="button" value="검색" ></a>
+                </div>
+            </div>    
+    </div>
+    <script>
+        function checkAll(){
+                 if( $("#th_checkAll").is(':checked') ){
+                 $("input[name=checkRow]").prop("checked", true);
+                }else{
+                $("input[name=checkRow]").prop("checked", false);
+                    }
+                }
+    </script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+.centerInner {
+    border: 1px solid black;
+    width: 1300px;
+    background-color: #0b1216;
+    margin: 0px auto;
+}
+.outerbox {
+    width: 1300px;
+    height: 100px;
+}
+
+.teamOuter {
+    margin-top: 1.5%;
+    width: 44%;
+
+    height: 40px;
+    float: left;
+    position: relative;
+    background-color: #92daec;
+}
+.score {
+    margin-top: 1.5%;
+
+    float: left;
+    text-align: center;
+    height: 50px;
+    width: 12%;
+    background-color: #fef9ce;
+    font-size: 2.4em;
+}
+.insidescore {
+    position: relative;
+    /* top: 30%; */
+}
+
+.teamOuter img {
+    width: 80px;
+    height: 80px;
+    background-color: #92daec;
+    display: inline-block;
+    position: absolute;
+    border: 7px solid #92daec;
+    border-radius: 50%;
+    top: -14px;
+}
+#teamOuterA img {
+    right: -10px;
+}
+#teamOuterB img {
+    left: -10px;
+}
+.teamName {
+    width: 86%;
+    height: 25px;
+    /* border: 1px solid red; */
+    position: absolute;
+    color: white;
+    font-size: 1.7em;
+    font-style: italic;
+}
+#teamNameA {
+    text-align: right;
+    right: 14%;
+    top: 20%;
+}
+#teamNameB {
+    top: 20%;
+    left: 14%;
+}
+.underLine {
+    height: 52px;
+    border-bottom: 5px solid #a33;
+}
+
+/*  */
+.middle {
+    background-color: #0b1216;
+    border-bottom: 2px solid #eee;
+    width: 1300px;
+    height: 150px;
+    margin: 0px auto;
+    position: relative;
+    color: white;
+    font-size: 1.2em;
+}
+.gameSummary {
+    /* border: 1px solid gold; */
+    width: 640px;
+    height: 100%;
+    position: absolute;
+    left: 25.6%;
+    background-color: #254150;
+}
+.evts {
+    position: relative;
+    width: 100%;
+}
+.teamA {
+    display: inline-block;
+    /* position: absolute; */
+}
+.teamB {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+.time {
+    display: inline-block;
+    position: absolute;
+    left: 45%;
+    height: 148px;
+    padding: 0px 15px 0px 15px;
+    border-left: #fef9ce 1px solid;
+    border-right: #fef9ce 1px solid;
+}
+.evtMinute {
+    display: inline-block;
+    width: 30px;
+    position: relative;
+    /* left: -10px; */
+}
+
+#teamBSum::after {
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+/* 선수 엔트리 및 문자 중계 */
+.middle2 {
+    /* background-color: #0b1216; */
+    /* border: 1px solid red; */
+    width: 1300px;
+    margin: 0px auto;
+}
+.menuTitle2 {
+    color: black;
+    font-size: 2em;
+}
+.entryOuter {
+    /* border: 10px solid gold; */
+    position: relative;
+    width: 100%;
+    margin: 15px 0px;
+    height: 1000px;
+}
+.entry {
+    overflow-y: scroll;
+    height: 1000px;
+    border-top: 1px solid #dddddd;
+    width: 26%;
+    position: relative;
+    top: 40px;
+}
+.entry::-webkit-scrollbar {
+    border: 0px;
+    width: 0px;
+}
+#contentBox {
+    position: relative;
+    top: 600px;
+    left: 400px;
+    width: 510px;
+    height: 30px;
+    border: 2px solid RGB(238, 238, 238);
+}
+#action {
+    position: absolute;
+    top: 650px;
+    left: 400px;
+    width: 510px;
+    height: 240px;
+    border: 2px solid RGB(238, 238, 238);
+}
+#timer {
+    position: absolute;
+    left: 29%;
+    width: 550px;
+    height: 70px;
+    border: 4px solid black;
+}
+.textBroadcast {
+    /* border: 1px solid tomato; */
+    text-align: center;
+    width: 43%;
+    height: 500px;
+    position: absolute;
+    left: 28.6%;
+    top: 10%;
+    overflow-y: scroll;
+    border: 2px solid #eee;
+}
+.textBroadcast::-webkit-scrollbar {
+    border: 0px;
+    width: 0px;
+}
+
+.textBroadcast ul {
+    position: absolute;
+    left: 5%;
+    /* border: 2px solid #eee; */
+}
+
+.textBroadcast li {
+    list-style-type: none;
+    padding-top: 7px;
+    padding: 7px;
+    border: 1px solid black;
+    width: 500px;
+}
+.textBroadcast li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+.textBroadcast li:nth-child(even) {
+}
+#teamAEntry {
+    position: absolute;
+    left: 0%;
+}
+#teamBEntry {
+    position: relative;
+    left: 74%;
+    top: 0%;
+}
+.player {
+    position: relative;
+    width: 50%;
+    font-size: 1em;
+    width: 90%;
+    padding: 8px 15px 0px 15px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    height: 37px;
+}
+.player:last-child {
+    border-bottom: 1px solid #ddd;
+}
+.player:nth-child(even) {
+    /* background-color: #0c1b23; */
+    background-color: #f9f9f9;
+}
+.backNum {
+    color: turquoise;
+    display: inline-block;
+    left: 3%;
+    font-size: 1.3em;
+    position: relative;
+}
+.playerName {
+    display: inline-block;
+    position: absolute;
+    right: 40%;
+    color: black;
+}
+.position {
+    display: inline-block;
+    position: absolute;
+    right: 10%;
+    color: gold;
+}
+
+.playerHeader .backNum {
+    left: -10px;
+}
+.playerHeader .playerName {
+    left: 110px;
+    font-size: 1.2em;
+}
+.playerHeader .position {
+    right: 6%;
+    font-size: 1.2em;
+}

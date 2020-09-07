@@ -1,0 +1,249 @@
+create table tblLeagueresult(
+    seq number primary key,
+    league_seq number not null,
+    homegoal number not null,
+    awaygoal number not null
+);
+
+
+create table tblLeague(
+    seq number primary key,
+    name varchar2(100) not null,
+    startdate date not null,
+    enddate date not null
+    );
+    
+create table tblHome(
+    seq number primary key,
+    home varchar2(30) not null
+);
+
+create table tblGround(
+    seq number primary key,
+    name varchar2(100) not null,
+    address varchar2(500) not null,
+    lat number not null,
+    lng number not null,
+    home_seq number not null
+);
+
+create table tblPersonalLeagueRecord(
+    seq number primary key,
+    goal number not null,
+    assist number not null,
+    tackle number not null,
+    save number not null,
+    yellowCard number not null,
+    redCard number not null,
+    foul number not null,
+    leaguegame_seq number not null,
+    playerentry_seq number not null
+);
+
+create table tblLeagueGame(
+    seq number primary key,
+    gamedate date not null,
+    ground_seq number not null,
+    homeTeam_seq number not null,
+    awayTeam_seq number not null
+);
+
+
+create table TblBroadCast(
+    seq number primary key,
+    time date not null,
+    broadCastact_seq number not null,
+    leaguegame_seq number not null,
+    playerEntry_seq number not null
+);
+
+create table TblBroadcastAct(
+    seq number primary key,
+    shortcout varchar2(20) not null,
+    event varchar2(200) not null
+);
+
+create table TblFormation(
+    seq number primary key,
+    formation varchar2(30) not null,
+    position_X number not null,
+    position_Y number not null,
+    playerEntry_seq number not null,
+    position_seq number not null
+);
+
+create table TblPlayerEntry(
+    seq number primary key,
+    member_team_seq number not null
+);
+
+create table TblTeamEntry(
+    seq number primary key,
+    team_seq number not null,
+    league_seq number not null
+);
+
+create table TblTeam(
+    seq number primary key,
+    name varchar2(60) not null,
+    logo varchar2(1000),
+    birth date not null,
+    slogan varchar2(200) not null,
+    TEAMhomnumber not null
+);
+create table tblteamground(
+    seq number primary key,
+    name varchar2(100) not null,
+    address varchar2(500) not null,
+    lat number not null,
+    lng number not null,
+    home_seq number not null
+
+)
+create table TblCoach(
+    seq number primary key,
+    team_seq number not null,
+    member_seq number not null
+);
+
+create table TblPosition(
+    seq number primary key,
+    position varchar2(30) not null
+);
+
+create table tblMember_Team(
+    seq number primary key,
+    member_seq number not null,
+    team_seq number not null,
+    position_seq number not null,
+    regdate date not null,
+    backnumber number not null,
+    height number not null,
+    weight number  not null,
+    state number not null
+);
+
+create table tblTransfer(
+    seq number primary key,
+    team_seq number not null,
+    member_seq number not null,
+    regdate date default sysdate not null,
+    completedate date,
+    state varchar2(20) not null
+);
+
+create table TblMatchResult(
+    seq number primary key,
+    match_seq number not null,
+    homegoal number not null,
+    awaygoal number not null
+);
+
+create table tblMatch(
+    seq number primary key,
+    matchDate date not null,
+    hometeam_seq number not null,
+    awayteam_seq number not null
+);
+
+create table tblMember(
+    seq number primary key,
+    name varchar2(40) not null,
+    id varchar2(60) not null,
+    pw varchar2(60) not null,
+    tel varchar2(60) not null,
+    birth date not null,
+    address varchar2(500) not null,
+    regdate date default sysdate not null,
+    image varchar2(500) not null,
+    home_seq number not null   
+);
+
+create table TblBlackList(
+    seq number primary key,
+    member_seq number not null,
+    reason varchar2(200) not null,
+    startdate date not null,
+    enddate date not null
+);
+
+create table tblPersonalMatchRecord(
+    seq number primary key,
+    member_team_seq number not null,
+    match_seq number not null,
+    goal number not null
+);
+
+create table tblSupportComment(
+    seq number primary key,
+    commentContent varchar2(300) not null,
+    read_member_seq number not null,
+    writer_member_seq number not null,
+    regdate date default sysdate not null
+);
+
+create table tblBoard(
+    seq number primary key,
+    title varchar2(100) not null,
+    content varchar2(4000) not null,
+    regdate date default sysdate not null,
+    readcount number not null,
+    image varchar2(1000),
+    member_seq number not null,
+    category_seq number not null
+);
+
+create table tblCategory(
+    seq number primary key,
+    category varchar2(50) not null
+);
+
+create table tblComment(
+    seq number primary key,
+    content varchar2(1000) not null,
+    board_seq number not null,
+    member_seq number not null
+);
+
+create table tblLog(
+    seq number primary key,
+    member_team_seq number not null,
+    commentContent varchar2(1000) not null,
+    regdate date default sysdate not null
+);
+
+create table TblDM(
+    seq number primary key,
+    content varchar2(1000) not null,
+    regdate date default sysdate  not null,
+    read_member_seq number not null,
+    writer_member_seq number not null
+);
+
+create table TblNotice(
+    seq number primary key,
+    admin_seq number not null,
+    title varchar2(500) not null,
+    content varchar2(4000) not null,
+    regdate date default sysdate not null,
+    readcount number not null
+);
+
+create table tblAdmin(
+    seq number primary key,
+    name varchar2(40) not null,
+    id varchar2(60) not null,
+    pw varchar2(60) not null
+);
+
+create table tblHeart(
+    seq number primary key,
+    member_seq number not null,
+    board_seq number not null
+);
+
+create table tblfriends(
+	seq number primary key,
+	FOLLOW__MEMBER_SEQ number not null,
+	FOLLOWER__MEMBER_SEQ number not null,	
+)

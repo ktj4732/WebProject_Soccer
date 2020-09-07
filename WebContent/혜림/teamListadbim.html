@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="jquery-ui.css" />
+        <link rel="stylesheet" href="bootstrap.css" />
+        <link rel="stylesheet" href="css/submain_1.css">
+        <link rel="stylesheet" href="css/submain_2.css">
+        <link rel="stylesheet" href="teamList.css" />
+        <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+        <script src="../bootstrap/js/bootstrap.js"></script>
+        <style></style>
+    </head>
+
+    <body>
+        <script src="../jquery/js/jquery-1.12.4.js"></script>
+        <script src="../jquery/js/jquery-ui.js"></script>
+        <!-- 상단부 -->
+        <nav id="main">
+            <table class="table table-default" id="mainMenu">
+                <tr id="menuTop">
+                    <td colspan="3"></td>
+                    <td rowspan="2" id="rogo" style="width: 1px;">
+                        <img src="../images/rogo_2.png" alt="" id="mainrogo" />
+                    </td>
+                    <td colspan="4">
+                        <button type="button" class="btn btn-default">로그인</button>
+                        <button type="button" class="btn btn-default">마이페이지</button>
+                    </td>
+                </tr>
+                <tr id="menuTr">
+                    <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                    <td class="menu"><span class="menuLabel">구단현황</span></td>
+                    <td class="menu"><span class="menuLabel">선수현황</span></td>
+                    <td class="menu"><span class="menuLabel">전력분석</span></td>
+                    <td class="menu"><span class="menuLabel">문자중계</span></td>
+                    <td class="menu"><span class="menuLabel">게시판</span></td>
+                    <td class="menu"><span class="menuLabel">공지사항</span></td>
+                </tr>
+            </table>
+        </nav>
+
+        <div id="topBoard"></div>
+
+        <div id="scoreBoard">
+            <div id="subOuter">
+                <div class="menuTitleBox">
+                    <div class="menuTitle">검색</div>
+                    <div class="breadcrumb">
+                        <span>구단 관리</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 상단부 끝 -->
+
+        <div class="center">
+            <div class="pageContentTitle">
+                <img src="../webproject/images/rogowithoutletter.png" class="contentTitleImg" /><span class="contentTitle">구단 관리</span >
+            </div>
+                <div id="centerbox9">
+                    <table class="table table-hover" id="verticalTable" style="margin-top: 0px;">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>번호</th>
+								<th>팀 로고</th> 
+                                <th>팀명</th>
+                                <th>홈 구장</th>
+                                <th>구단주</th>
+                                <th>연고지</th>
+                                <th>팀원 수</th>
+                            </tr>
+                        </thead>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>1</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>2</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="chk_tree" value="0" onclick="checkTree(this);" /></td>
+                                <td>3</td>
+                                <td><img src="328550.bmp"></td> 
+                                <td>스파이스 가이스</td>
+                                <td>정왕시장</td>
+                                <td>조원준</td>
+                                <td>서울</td>  
+                                <td>25명</td>                                   
+                            </tr>
+
+                    </table>                     
+                </div>
+
+                <div id="centerbox7">
+                    <input id="registBtn" type="button" value="등록" onclick="confirmTeamSignUp();">
+                    <input id="modifyBtn" type="button" value="수정" onclick="confirmModify();">
+                    <input id="deleteBtn" type="button" value="삭제" onclick="confirmDelete();">
+                </div>
+
+                <div id="centerbox8">
+					<ul id="pagination" class="pagination" style="float: right; margin: 0;">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li><a class="nowPage" href="#" name="page">1</a></li>
+						<li><a href="#" name="page">2</a></li>
+						<li><a href="#" name="page">3</a></li>
+						<li><a href="#" name="page">4</a></li>
+						<li><a href="#" name="page">5</a></li>
+						<li><a href="#" name="page">6</a></li>
+						<li><a href="#" name="page">7</a></li>
+						<li><a href="#" name="page">8</a></li>
+						<li><a href="#" name="page">9</a></li>
+						<li><a href="#" name="page">10</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+            	</div>
+
+                <div style="clear: both;"></div>
+            </div>
+            <div id="centerbox10">
+                <div>
+                    <select>
+                        <option value="">팀명</option>
+                    </select>
+                    <input id="searchkeyword" type="text" size="35">
+                    <a href=""><input id="searchbtn" type="button" value="검색" ></a>                           
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <!-- 하단부  -->
+
+        <nav class="sitemap">
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">경기정보조회</a></h2>
+                <li><a href="#">2020 정규리그 일정조회</a></li>
+                <li><a href="#">정규리그 결과 조회</a></li>
+                <li><a href="#">지난 정규리그 조회</a></li>
+                <li><a href="#">친선경기 결과 조회</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">구단현황</a></h2>
+                <li><a href="#">구단 정보</a></li>
+                <li><a href="#">구단 선수 정보 조회</a></li>
+                <li><a href="#">구단 경기 전적</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">선수현황</a></h2>
+                <li><a href="#">선수 검색</a></li>
+                <li><a href="#">선수 정보</a></li>
+                <li><a href="#">선수 응원댓글</a></li>
+                <li><a href="#">선수 DM</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">전력분석</a></h2>
+                <li><a href="#">팀분석</a></li>
+                <li><a href="#">선수분석</a></li>
+                <li><a href="#">시뮬레이션</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">게시판</a></h2>
+                <li><a href="#">질문게시판</a></li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">강의게시판</a></li>
+                <li><a href="#">친선경기모집</a></li>
+                <li><a href="#">용병모집</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">공지사항</a></h2>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">문자중계</a></h2>
+            </ul>
+        </nav>
+
+        <div class="footer">
+            <div class="footerBox">
+                <div><a href="#">협회소개</a></div>
+                <div><a href="#">이용약관</a></div>
+                <div><a href="#">개인정보 취급방침</a></div>
+                <div><a href="#">제휴문의</a></div>
+                <div><a href="#">관리자 페이지</a></div>
+            </div>
+        </div>
+        <div class="footerBox2">
+            <div class="footerInfo">
+                <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+                <div class="info">정성원(010-3151-5582)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">리그운영 및 사무업무</div>
+                <div class="info">김준형(010-2370-2061)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">선수등록 및 기록문의</div>
+                <div class="info">정미선(010-9066-9495)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">리그일정 조정</div>
+                <div class="info">정성원(010-3151-5582)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">시스템개발문의</div>
+                <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">한독빌딩</div>
+                <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">TEL</div>
+                <div class="info">070)4322-2918</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">FAX</div>
+                <div class="info" style="clear: both;">070)4322-2919</div>
+            </div>
+        </div>
+        <div class="footerBox3">
+            <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+            <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+        </div>
+
+        <!-- 하단부  끝 -->
+
+        <!-- 스크립트------------------------------------------------------------- -->
+        <script>
+            var flag = false;
+            $(document).scroll(function () {
+                if ($(document).scrollTop() > $("#main").position().top) {
+                    if (!flag) {
+                        $("#main").css({
+                            position: "fixed",
+                            top: -$("#main").outerHeight(),
+                            bottom: "",
+                        });
+
+                        $("#main").animate(
+                            {
+                                top: "0px",
+                            },
+                            1000,
+                            function () {
+                                //alert();
+                                flag = true;
+                            }
+                        );
+                    }
+                }
+            });
+        </script>
+
+<script type="text/javascript">
+function checkTree(chk){
+	//체크박스 중복 선택 방지 코
+    var chkNum=0
+    var obj = document.getElementsByName("chk_tree");
+    for(var i=0; i<obj.length; i++){
+        if(obj[i].checked == true){
+            chkNum++;
+            if(chkNum==2) {
+                chkNum=0;
+                chk.checked= false;
+                alert("하나만 선택할 수 있습니다.");
+                break;
+            }
+        }
+    }
+}
+</script>
+    </body>
+</html>
+
+
+<script type = "text/javascript">
+	function confirmTeamSignUp() {
+        var link = 'teamSignupPage.html';
+        window.location.href = link;
+	}
+</script>
+
+
+<script type = "text/javascript">
+	function confirmModify() {
+		var retVal = confirm("수정하시겠습니까?");
+		if(retVal == true) {
+			var link = 'teamSignupPage.html';
+			window.location.href = link;
+				return true;
+		}
+		else {
+			return false;
+		}
+	}
+</script>
+
+<script type = "text/javascript">
+	function confirmDelete() {
+		var retVal = confirm("삭제하시겠습니까?");
+		if(retVal == true) {
+			var link = 'teamSignupPage.html';
+			window.location.href = link;
+				return true;
+		}
+		else {
+			return false;
+		}
+	}
+</script>

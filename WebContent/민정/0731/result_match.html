@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 목록</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="css/admin_1.css" />
+    <link rel="stylesheet" href="css/submain_Admin_2.css" />
+    <style>
+
+        .pageContentTitle{
+            width: 1200px;
+            /* border: 1px solid green; */
+            position: relative;
+            top: 80px;
+            height: 150px;
+            /* height: 150px;  */
+            margin: 0px auto;
+            
+        }
+        .center{
+            width: 1300px;
+            margin: 0px auto;
+        }
+        .btnOption{
+           position: relative;
+           width: 70px;
+           height: 35px;
+       }
+       #btnOption{
+           position: relative;
+           margin-left: 81.8%;
+       }
+
+       #tbl1{
+           width: 1200px;
+           margin: 50px;
+           font-size: 1.1em;
+           text-align: center;
+           
+       }
+       #tbl1 th{
+           text-align: center;
+           /* background-color: #92DAEC; */
+            /* color: #0C1B23;     */
+            font-weight: bold;
+            font-size: 1.1em;
+       }
+       #tbl1 tr{
+            /* width: 800px; */
+            /* background-color: #1E3440;                 */
+        }
+       /* #tbl1 td { padding-top: 20px;} */
+
+       .selectbox{
+           height: 25px;
+       }
+       .searchKeyword{
+           height: 25px;
+       }
+       #searchBtn{
+           height: 25px;
+           text-align: center;
+           position: relative;
+           bottom: 0px;
+       }
+
+       #centerbox1{
+            position: relative;
+            margin: 0px auto;
+            width: 1200px;
+            height: 45px;
+            margin-bottom: 20px;
+         
+            
+            border-bottom: 1px solid black;
+        }
+       
+       #centerbox3 {
+            /* border: 1px solid red; */
+            width: 1200px;
+            height: 50px;
+            margin-top: 40px;
+           
+        }
+
+        #centerbox4 {
+            /* border: 1px solid blue; */
+            width: 1200px;
+            height: 50px;
+            display: inline-block;   
+                   
+        }
+        #pagination .nowPage {
+            /* background-color: #92DAEC; */
+        }
+        #searchbtn, #writebtn {
+            /* color: white;    */
+            height: 30px;
+            /* background-color: #1E3440 ; */
+        }
+
+        #pagination li > a {
+            /* color: white; */
+            /* background-color: #1E3440;             */
+        } 
+
+        #centerbox4 select {
+            /* color: white;  */
+            /* background-color: #1E3440 ; */
+        }
+
+/*         
+         #tbl1 td { text-align: center; color: white; } 
+        #tbl1 tr:nth-child(even){
+            width: 800px;
+            background-color: #0C1B23
+        } */
+
+       
+
+    </style>
+</head>
+<body>
+<script src="../jquery/js/jquery-1.12.4.js"></script>
+<script src="../jquery/js/jquery-ui.js"></script>
+    <div class="adminPage">
+        <ul id="ul1">
+            <li style="background-color: white; text-align: center;"><img src="../images/rogowithoutletter.png" alt="" style="width: 80px; height: 80px;  text-align:center;"></li>
+            <li><a href="#">경기결과(리그)</a></li>
+            <li><a href="#">경기결과(친선)</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">블랙리스트</a></li>
+            <li><a href="#">경기장 관리</a></li>
+            <li><a href="#">경기장 일정</a></li>
+            <li><a href="#">구단관리</a></li>
+            <li><a href="#">선수관리</a></li>
+
+
+        </ul>
+    </div>
+    <header>
+
+    </header>
+  
+    <div class="center"> 
+            <div class="pageContentTitle">
+                <img src="../images/rogowithoutletter.png" class="contentTitleImg" />
+                    <span class="contentTitle">경기 결과(친선)</span>           
+            </div>   
+        <div id="centerbox1">    
+           
+        </div> 
+    <table id="tbl1" class="table table-hover"  style="margin-top: 0px;">
+        <tr>
+            <th></th>
+            <th>날짜</th>
+            <th>시간</th>
+            <th>장소</th>
+            <th>경기</th>
+            <th>스코어</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>06.13(토)</td>
+            <td>10:00</td>
+            <td>수원 월드컵경기장</td>
+            <td>홍길동팀 VS 하하하팀</td>
+            <td>3-2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>06.13(토)</td>
+            <td>16:00</td>
+            <td>수원 월드컵경기장</td>
+            <td>아무개팀 VS 하하하팀</td>
+            <td>0-1</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>06.14(일)</td>
+            <td>13:00</td>
+            <td>잠실경기장</td>
+            <td>아무개팀 VS 홍길동팀</td>
+            <td>4-5</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>06.17(수)</td>
+            <td>15:00</td>
+            <td>의왕 축구장</td>
+            <td>하하하팀 VS 호호호팀</td>
+            <td>3-7</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>06.17(수)</td>
+            <td>19:00</td>
+            <td>잠실경기장</td>
+            <td>호호호팀 VS 아무개팀</td>
+            <td>6-4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>06.18(목)   </td>
+            <td>17:00</td>
+            <td>주암 체육공원</td>
+            <td>호호호팀 VS 홍길동팀</td>
+            <td>5-2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>06.19(금)</td>
+            <td>18:00</td>
+            <td>주암 체육공원</td>
+            <td>쌍용팀 VS 아무개팀</td>
+            <td>7-4</td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="centerbox3">        
+             <span id="btnOption">
+                <input type="button" value="추가" class="btn btn-default btnOption">
+                <input type="button" value="수정"class="btn btn-default btnOption">
+                <input type="button" value="삭제"class="btn btn-default btnOption">
+            </span>        
+        <ul id="pagination" class="pagination" style="float: right; margin: 0;">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a class="nowPage" href="#" name="page">1</a></li>
+            <li><a href="#" name="page">2</a></li>
+            <li><a href="#" name="page">3</a></li>
+            <li><a href="#" name="page">4</a></li>
+            <li><a href="#" name="page">5</a></li>
+            <li><a href="#" name="page">6</a></li>
+            <li><a href="#" name="page">7</a></li>
+            <li><a href="#" name="page">8</a></li>
+            <li><a href="#" name="page">9</a></li>         
+            <li><a href="#" name="page">10</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>   
+    </div> 
+    </div>
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+        var flag = false;
+        $(document).scroll(function () {
+            if ($(document).scrollTop() > $("#main").position().top) {
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: "",
+                    });
+
+                    $("#main").animate(
+                        {
+                            top: "0px",
+                        },
+                        1000,
+                        function () {
+                            //alert();
+                            flag = true;
+                        }
+                    );
+                }
+            }
+        });
+        // 메뉴 클릭시 발생하는 이벤트
+        $(".menu")
+            .click(function () {
+                // 어떤 메뉴를 눌렀는지 알려준다.
+
+                var menu = $(this).children().text();
+                console.log(menu);
+            })
+            .mouseover(function () {
+                // 호버. CSS 효과 줌
+                $(this).children().css({
+                    // "text-shadow": "1px 1px 2px",
+                    // color: "#F6BE0D",
+                    // transform: "scale(1, 1)",
+                    "background-color": "#0077C8",
+                });
+            })
+            .mouseout(function () {
+                // 토글
+                $(this).children().css({
+                    "text-shadow": "",
+                    color: "",
+                    transform: "",
+                    "background-color": "#25282A",
+                });
+            });
+    </script>
+    
+    <script src="js/eventAdmin.js"></script>
+    <script src="js/submain.js"></script>
+</body>
+</html>

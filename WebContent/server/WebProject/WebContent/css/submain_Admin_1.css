@@ -1,0 +1,119 @@
+ /* 서브메인------------------------------------------------------------ */
+
+ .center {
+    width: 1300px;
+    height: 1000px;
+    background-color: #eee;
+    margin: 0px auto;
+}
+
+#subOuter {
+
+    background-color: #00BF88;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 370px;
+
+}
+
+.menuTitleBox {
+    border: 0px solid red;
+    width: 100%;
+    height: 90px;
+    z-index: 1;
+}
+
+.menuTitle {
+    color: white;
+    font-size: 40px;
+    width: 280px;
+    height: 90px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 80px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 30px;
+}
+
+
+
+.subMenuBox {
+    width: 100%;
+    height: 60px;
+    background-color: #25282A;
+    float: left;
+}
+
+.subMenuBox .subMenu>ul {
+    float: left;
+    margin-left: 50px;
+}
+
+.subMenuBox .subMenu>ul>li {
+    width: 150px;
+    height: 60px;
+    float: left;
+    color: #92DAEC;
+    font-size: 18px;
+    text-align: center;
+    line-height: 55px;
+
+}
+
+.subMenuBox .subMenu>ul>li>a {
+    list-style-type: none;
+    padding-left: 10px;
+    color: white;
+
+}
+
+.subMenuBox .subMenu>ul>li>a:link {
+    text-decoration: none;
+}
+
+.subMenuBox .subMenu>ul>li>a:hover {
+    text-decoration: none;
+}
+
+.breadcrumb {
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    left: 1500px;
+    background-color: none;
+    background-color: #00BF88;
+    padding: 35px;
+}
+
+.breadcrumb>span {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    color: white;
+
+}
+.pageContentTitle {
+    width: 1300px;
+    height: 100px;
+    margin-left: 50px;
+    /* float: left;
+    padding: 40px 40px; */
+    position: relative;
+    top: 50px;
+}
+
+.contentTitleImg {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.contentTitle {
+    float: left;
+    width: 400px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}

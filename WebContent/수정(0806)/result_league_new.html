@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기결과(리그) 추가</title>
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        #result_league_new{
+            width: 1300px;
+            margin: 0px auto;
+        }
+
+        #team1{
+            display: inline-block;
+            width: 645px;
+        }
+        #team2{
+            display: inline-block;
+            width: 645px;
+        }
+        
+        #tbl1{
+            
+            width: 630px;
+            font-size: 12px;
+            border-bottom: 1px solid dimgray;
+        }
+       
+        #tbl2{
+            display: in;
+            width: 630px;
+            font-size: 12px;
+            border-bottom: 1px solid dimgray;
+        }
+        
+        #tbl1 th{
+            border-top: 1px solid dimgray;
+            border-bottom: 1px solid dimgray;
+        }
+        #tbl2 th{
+            border-top: 1px solid dimgray;
+            border-bottom: 1px solid dimgray;
+        }
+        #match{
+            
+            text-align: center;
+        }
+
+        .commonBtn{
+            margin-right: 0;
+            margin-left: 85%;
+            font-size: 20px;
+            width: 100px;
+            height: 40px;
+            border: 0px;
+        }
+
+        .inputText{
+            width: 32px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="result_league_new">
+        <h3>● 경기 결과(리그) 추가</h3>
+        <br>
+        <h4>+ 세부 경기 내용</h4>
+        <br>
+        <form action="result_league.html" method="GET" >
+        <div id="match">
+        <div id="team1">
+            <h5 style="font-weight: bold;">홍길동팀</h5>
+            <br>
+            <table id="tbl1" class="table">
+                <tr>
+                    <th >선수이름</th>
+                    <th>도움</th>
+                    <th>득점</th>
+                    <th>태클 성공횟수</th>
+                    <th>패스 성공횟수</th>
+                    <th>선방횟수</th>
+                    <th>경고</th>
+                    <th>퇴장</th>
+                    <th>파울</th>
+                </tr>
+                <tr>
+                    <td>선수1</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수2</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수3</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수4</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수5</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                
+                <tr>
+                    <td>선수6</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수7</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수8</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수9</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수10</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수11</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수12</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수13</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="team2">
+            <h5 style="font-weight: bold;">하하하팀</h5>
+            <br>
+            <table id="tbl2" class="table">
+                <tr>
+                    <th>선수이름</th>
+                    <th>도움</th>
+                    <th>득점</th>
+                    <th>태클 성공횟수</th>
+                    <th>패스 성공횟수</th>
+                    <th>선방횟수</th>
+                    <th>경고</th>
+                    <th>퇴장</th>
+                    <th>파울</th>
+                </tr>
+                <tr>
+                    <td>선수1</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수2</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수3</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수4</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수5</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                
+                <tr>
+                    <td>선수6</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수7</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수8</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수9</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수10</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수11</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수12</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+                <tr>
+                    <td>선수13</td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                    <td><input type="text" class="inputText"></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+        <br><br><br>
+        <input type="submit" value="등록" class="commonBtn">
+        <br><br><br>
+    </form>
+    </div>
+    
+</body>
+</html>

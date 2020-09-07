@@ -1,0 +1,99 @@
+#mainBox {
+    /* border: 1px solid black; */
+    width: 1800px;            
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+#box1 {
+    border: 1px solid black;                        
+    float: left;
+    margin: 0 auto;
+}
+
+#box1L {
+    border-right: 1px solid black;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+#box1R {
+    /* border: 1px solid blue; */
+    width: 400px;
+    height: 300px;
+    float: left;
+}
+
+#box2 {
+    /* border: 1px solid black; */
+    width: 700px;            
+}
+
+#box3 {
+    /* border: 1px solid black; */
+    width: 702px;            
+    float: left;
+}
+
+#box1R table {
+    text-align: center;
+    font-weight: bold;            
+}
+
+#box1R td {
+    /* border: 1px solid blue; */
+    padding-top: 20px;
+    width: 250px;
+    height: 60px;            
+}
+
+#box1L {
+    background-image: url(../images/man_02.png);background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
+#box2 table {
+    /* font-size: 1.1em; */
+    width: 702px;
+    height: 400px;
+    text-align: center;
+    /* color: white;          */
+    /* border-left: 1px solid black;    */
+    /* border-right: 1px solid black;    */
+}
+
+#box2 table thead th {
+    height: 45px;
+    text-align: center;            
+    /* background-color: #92DAEC; */
+    /* color: black; */
+    border: 1px solid black
+}
+
+#box2 table tr:nth-child(odd) {            
+    /* background-color: #1E3440; */
+    border: 1px solid black
+}
+
+#box2 table tr:nth-child(even) {            
+    /* background-color: #0C1B23; */
+    border: 1px solid black
+}
+
+#box2 table td {
+    border: 1px solid black
+}
+
+#box3 input {
+    /* border: 1px solid red; */
+    float: right;
+    font-size: 1.1em;            
+    height: 25px;            
+    margin-left: 5px;
+    margin-top: 5px;
+    /* background-color: #1E3440; */
+    /* color: white;          */
+    line-height: 0.8em;       
+}

@@ -1,0 +1,157 @@
+.center {
+    margin: 0px auto;
+    width: 1300px;
+    padding-left: 50px;
+}
+.leftSideBox {
+    width: 30%;
+    float: left;
+    /* border: 1px solid green; */
+}
+.rightSideBox {
+    width: 70%;
+    float: left;
+    height: 900px;
+    /* border: 1px solid green; */
+}
+.entry {
+    overflow-y: scroll;
+    height: 820px;
+    border-top: 1px solid #dddddd;
+    width: 70%;
+}
+.entry::-webkit-scrollbar {
+    border: 0px;
+    width: 0px;
+}
+.entryOuter {
+    margin-top: 0%;
+    margin-bottom: 50px;
+}
+.center::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.playerImg {
+    float: left;
+    height: 150px;
+    margin-right: 4%;
+    width: 15%;
+}
+
+.playerDetailedInfo {
+    float: left;
+    border: 2px solid black;
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 10%;
+}
+.infoLine {
+    width: 100%;
+}
+.infoLine:nth-child(odd) {
+    background-color: #254150;
+}
+.infoLine:nth-child(even) {
+    background-color: #0c1b23;
+}
+.infoTag {
+    /* border: 1px solid rebeccapurple; */
+    display: inline-block;
+    width: 100px;
+}
+.info {
+    /* border: 1px solid rebeccapurple; */
+    display: inline-block;
+    width: 200px;
+}
+.playerImgAndDetailedInfo::after {
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+
+.teamName {
+    font-size: 2em;
+    width: 160px;
+    font-style: italic;
+}
+
+.player {
+    position: relative;
+    width: 50%;
+    font-size: 1em;
+    width: 100%;
+    padding: 8px 15px 0px 15px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    height: 37px;
+}
+.player:last-child {
+    border-bottom: 1px solid #ddd;
+}
+.player:nth-child(even) {
+    /* background-color: #0c1b23; */
+    background-color: #f9f9f9;
+}
+.backNum {
+    color: turquoise;
+    display: inline-block;
+    left: 3%;
+    font-size: 1.3em;
+    position: relative;
+}
+.playerName {
+    display: inline-block;
+    position: absolute;
+    right: 40%;
+    color: black;
+}
+.position {
+    display: inline-block;
+    position: absolute;
+    right: 10%;
+    color: gold;
+}
+
+.ttl {
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.leagueAndGameInfo {
+    padding-top: 0px;
+    position: relative;
+    top: -70px;
+}
+/* 우측박스내용들 */
+
+.title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+input {
+    margin-right: 10px;
+}
+.pageContentTitle {
+    /* border-bottom: 1px solid black; */
+}
+#playerHeader .backNum {
+    left: -10px;
+}
+#playerHeader .playerName {
+    left: 44%;
+    font-size: 1.2em;
+}
+#playerHeader .position {
+    right: 6%;
+    font-size: 1.2em;
+}
+
+.subMenuItem:nth-child(2) {
+    background-color: #0f0d0d;
+}

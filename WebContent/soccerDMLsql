@@ -1,0 +1,62 @@
+------------------------DML------------------------
+
+------------------------DML------------------------
+
+----teamlist(전체팀목록)
+--순번, 로고, 팀명, 감독, 창단일, 팀원수 홈구장
+select*from tbltransfer;
+select*from tblmember order by seq;
+select*from tblcoach;
+select*from tblmember_team;
+select*from tblteam;
+select * from tblteamentry;
+
+----------------------------------------------------------------------------------------
+-- 리그에 참여한 팀들의 승점과 리그번호(불참도 나옴...)
+----------------------------------------------------------------------------------------
+--순번, 로고, 팀명, 감독, 창단일, 팀원수 홈구장, 위도, 경고
+--seq, logo, name, coachname, birth, count, ground, lat,lng, points,league_seq
+select*from teamlist; -- 어디서 만든건지 기억나지 않지만 decode 된거임
+select*from(select rownum rnum, team_seq, logo, name, coachname, to_char(birth,'yyyymmdd') birth, count, ground, lat,lng from teamlist2) where rnum between 1 and 10;
+select*from(select rownum rnum, team_seq, logo, name, coachname, to_char(birth,'yyyymmdd') birth, count, ground, lat,lng from teamlist2) where rnum between ? and ?;
+----------------------------------------------------------------------------------------
+-- teamlist2 -> null로 나옴
+----------------------------------------------------------------------------------------
+create or replace view teamlist3 as
+select distinct team.seq team_seq, team.logo logo, team.name name, (select name from tblmember member where coach.member_seq=member.seq and coach.team_seq=team.seq) coachname, team.birth birth,(select count(*) from tblmember_team mt1 inner join tbltransfer tf1 on mt1.transfer_seq=tf1.seq where mt1.state=1 and tf1.team_seq=tf.team_seq group by tf.team_seq) count,ground.name ground, ground.lat lat, ground.lng lng, entry.points points, entry.league_seq league_seq from tblmember_team mt
+    inner join tbltransfer tf on mt.transfer_seq=tf.seq
+        inner join tblteam team on tf.team_seq=team.seq
+            inner join tblmember member on member.seq=tf.member_seq
+                inner join (select*from tblcoach where state=1) coach on coach.team_seq=team.seq
+                    inner join tblteamground ground on ground.seq=team.teamground_seq
+                    ------------------여기부터는 신규내역
+                        left outer join tblteamentry entry on entry.team_seq = team.seq
+                    where mt.state=1 order by seq;
+----------------------------------------------------------------------------------------
+select
+    tf.team_seq, count(*)
+    from tblmember_team mt
+        inner join tbltransfer tf on mt.transfer_seq=tf.seq
+            where mt.state=1
+                group by tf.team_seq
+                    order by tf.team_seq;
+----------------------------------------------------------------------------------------
+-- 80개의 팀 리스트를 보여주는 뷰
+----------------------------------------------------------------------------------------
+select*From teamlist2;
+create or replace view teamlist2 as
+select distinct team.seq team_seq, team.logo logo, team.name name, (select name from tblmember member where coach.member_seq=member.seq and coach.team_seq=team.seq) coachname, team.birth birth,(select count(*) from tblmember_team mt1 inner join tbltransfer tf1 on mt1.transfer_seq=tf1.seq where mt1.state=1 and tf1.team_seq=tf.team_seq group by tf.team_seq) count,ground.name ground, ground.lat lat, ground.lng lng from tblmember_team mt
+    inner join tbltransfer tf on mt.transfer_seq=tf.seq
+        inner join tblteam team on tf.team_seq=team.seq
+            inner join tblmember member on member.seq=tf.member_seq
+                inner join (select*from tblcoach where state=1) coach on coach.team_seq=team.seq
+                    inner join tblteamground ground on ground.seq=team.teamground_seq
+                    ------------------여기부터는 신규내역
+                        left outer join tblteamentry entry on entry.team_seq = team.seq
+                    where mt.state=1 order by count;
+commit;
+
+select * from(select rownum rnum, team_seq, logo, name, coachname, to_char(birth,'yyyymmdd') birth, count, ground, lat,lng from teamlist2) where rnum between 1 and 10;
+select count(*) cnt from tbllist2;
+select*from tblleaguegame;
+select*from home;

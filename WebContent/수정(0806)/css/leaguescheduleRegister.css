@@ -1,0 +1,124 @@
+
+#outerBox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#selectrow {
+    position: absolute;
+    height: 40px;
+}
+
+#selectrow::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#outerBox {
+    position: relative;
+    border-bottom: 2px solid black;
+    height: 50px;
+    width:1200px;
+    margin: 0px auto;
+}
+
+#clickbox {
+    height: 30px;
+    width: 205px;
+    margin-top: 45px;
+	float:right;
+}
+
+#clickbox input {
+	width:70px;
+	height:30px;
+	margin-left:30px;
+}
+
+#centerMainBox::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+#wrap{
+	width:610px;
+	position: relative;
+	margin:0 auto;
+	padding:0;
+}
+
+#wrap select{
+	width:250px;
+	margin-bottom: 20px;
+}
+
+#wrap hr{
+	border:0;
+	height:1px;
+	background-color: black;
+	margin:30px 0px 50px 0px;
+}
+
+#wrapper1{
+}
+
+#wrapper2{
+	
+}
+
+#wrapper3{
+	width:250px;
+	display:inline-block;
+	margin:0;
+	padding:0;
+	vertical-align: top;
+	text-align: center;
+	font-weight: bold;
+}
+
+	#teamNum1Logo{
+		width:150px;
+		height:150px;
+		margin:15px auto;
+		background-image: url("team0.png");
+	}
+
+#wrapper4{
+	width:80px;
+	display:inline-block;
+	margin:0 10px;
+	padding:0;
+	vertical-align: top;
+	text-align: center;
+	font-weight: bold;
+}
+
+#wrapper5{
+	width:250px;
+	display:inline-block;
+	margin:0;
+	padding:0;
+	vertical-align: top;
+	text-align: center;
+	font-weight: bold;
+}
+
+	#teamNum2Logo{
+		width:150px;
+		height:150px;
+		margin:15px auto;
+		background-image: url("team0.png");
+	}
+
+.teamText{
+	width: 70px;
+	height: 30px;
+	background-color: #E8E8E8;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+}

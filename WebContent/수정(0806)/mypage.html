@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/submain_1.css">
+    <link rel="stylesheet" href="css/submain_2.css">
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+
+
+    <style>
+        /* -----------------------------마이페이지------------------------------------- */
+        .center {
+            height: 1100px;
+        }
+
+        .myPageInfoBox {
+            border: 1px solid rgb(239, 239, 239);
+            width: 505px;
+            height: 350px;
+            position: relative;
+            float: left;
+            margin-left: 110px;
+            /* background-color: #254150; */
+            margin-bottom: 60px;
+            margin-top: 50px;
+
+        }
+
+        #memberpic {
+            width: 220px;
+            height: 220px;
+            padding: 30px;
+            margin-left: 40px;
+            float: left;
+        }
+
+        #memberpic>img {
+            width: 170px;
+            height: 170px;
+        }
+
+        #membername {
+            float: left;
+            margin: 35px 0 0 7px;
+            width: 200px;
+            height: 80px;
+            text-align: left;
+            font-weight: 600;
+            line-height: 30px;
+            font-size: 16px;
+        }
+
+        #infoUpdate {
+            width: 435px;
+            height: 30px;
+            float: left;
+            position: relative;
+            left: 80px;
+        }
+
+        #infoUpdate>.btn {
+            width: 120px;
+            font-weight: bold;
+            margin-left: 35px;
+        }
+
+        #moreBtn {
+            width: 120px;
+            font-weight: bold;
+            margin-left: 200px;
+        }
+
+        #moreBtn2 {
+            width: 120px;
+            font-weight: bold;
+            margin-left: 200px;
+            margin-top: -5px;
+        }
+
+
+        #dmImgBox>img {
+            width: 30px;
+            height: 30px;
+            float: left;
+            border-radius: 50%;
+            margin-left: 40px;
+        }
+
+        .dmInfo {
+            float: left;
+            position: relative;
+            left: 12px;
+            height: 20px;
+            line-height: 16px;
+        }
+
+        .mypageContents {
+            width: 1300px;
+            height: 800px;
+        }
+
+        .dmInfo>div>span {
+            position: absolute;
+            left: 320px;
+        }
+
+        .DM>tbody>tr>td {
+            /* border: 1px; */
+        }
+
+        .DM>tbody>tr:nth-child(odd) {
+            font-size: 10px;
+            /* background-color: #254150; */
+        }
+
+        .DM>tbody>tr:nth-child(even) {
+            font-size: 10px;
+            /* background-color: #0C1B23; */
+        }
+
+        #container {
+            width: 400px;
+            height: 290px;
+            margin: 10px;
+            padding-left: 45px;
+        }
+
+        .topTitle {
+            border-bottom: 3px solid;
+            width: 502px;
+            height: 40px;
+            background-color: #25282a;
+            text-align: center;
+            line-height: 40px;
+            color: #92daec;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .topTitle i {
+            margin-right: 10px;
+        }
+
+        .matchTable {
+            max-width: 502px;
+            font-size: 0.9em;
+        }
+
+        .DM {
+            max-width: 502px;
+        }
+
+        .matchTable>tbody>tr {
+            height: 30px;
+
+        }
+    </style>
+    <!-- 모달  -->
+    <style>
+        .modal-body {
+            text-align: center;
+            font-size: 1.2em;
+
+        }
+
+        .modal {
+            text-align: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .modal:before {
+                display: inline-block;
+                vertical-align: middle;
+                content: " ";
+                height: 100%;
+            }
+        }
+
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;"><img src="images/rogo.png" alt="" id="mainrogo"></td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu"><span class="menuLabel">구단현황</span></td>
+                <td class="menu"><span class="menuLabel">선수현황</span></td>
+                <td class="menu"><span class="menuLabel">전력분석</span></td>
+                <td class="menu"><span class="menuLabel">문자중계</span></td>
+                <td class="menu"><span class="menuLabel">게시판</span></td>
+                <td class="menu"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard">
+    </div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">마이페이지</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>마이페이지</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="subMenuItem" style="background-color:rgb(15, 13, 13);"><a href=" mypage.html">
+                                    마이페이지</a></li>
+                            <li class="subMenuItem"><a href="clubSummary.html">구단정보관리</a>
+                            </li>
+                            <li class="subMenuItem"><a href="friends.html">친구관리</a></li>
+                            <li class="subMenuItem"><a href="dm.html">DM</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="center">
+
+        <div class="pageContentTitle"><img src="images/rogowithoutletter.png" class="contentTitleImg"><span
+                class="contentTitle">마이페이지</span></div>
+        <div class="mypageContents">
+            <div class="myPageInfoBox">
+                <div class="topTitle"><i class="glyphicon glyphicon-user"></i>회원정보</div>
+                <div id="memberpic"><img src="images/man_02.png"></div>
+                <div id="membername">
+                    <div>이선웅</div>
+                    <div>Double Dragon FC</div>
+                    <div>Striker</div>
+                    <div>185cm</div>
+                    <div>84kg</div>
+                </div>
+                <div id="infoUpdate">
+                    <input type="button" class="btn" id="updateBtn" value="정보 수정하기">
+                    <input type="button" class="btn" id="withdrawalbtn" value="탈퇴하기">
+                </div>
+
+            </div>
+            <div class="myPageInfoBox">
+                <div class="topTitle"><i class="glyphicon glyphicon-send"></i>DM</div>
+                <table class="DM table table-bordered table-striped " style="border:0px;">
+                    <tr>
+                        <td>
+                            <div id="dmImgBox"><img src="images/movie_image6.jpg"></div>
+                            <div class="dmInfo">
+                                <div>권택진</div>
+                                <div>안녕하세요 권택진입니다.<span>2020.07.20</span></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="dmImgBox"><img src="images/rogowithoutletter.png"></div>
+                            <div class="dmInfo">
+                                <div>오희준</div>
+                                <div>안녕하세요<span>2020.07.20</span></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="dmImgBox"><img src="images/고양이.jpg"></div>
+                            <div class="dmInfo">
+                                <div>이수지</div>
+                                <div>안녕<span>2020.07.20</span></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="dmImgBox"><img src="images/movie_image6.jpg"></div>
+                            <div class="dmInfo">
+                                <div>최재성</div>
+                                <div>안녕하세요.<span>2020.07.20</span></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="dmImgBox"><img src="images/movie_image6.jpg"></div>
+                            <div class="dmInfo">
+                                <div>유민정</div>
+                                <div>친구해요<span>2020.07.20</span></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" class="btn" value="더보기" id="moreBtn">
+
+            </div>
+            <div class="myPageInfoBox">
+                <div class="topTitle"><i class="glyphicon glyphicon-calendar"></i>경기일정</div>
+                <table class="matchTable table table-bordered table-striped">
+                    <tr>
+                        <th>경기</th>
+                        <th>일시</th>
+                        <th>장소</th>
+                    </tr>
+                    <tr>
+                        <td>vs Bears FC</td>
+                        <td>2020.07.25</td>
+                        <td>서울시 강남구 역삼동 역삼초등학교</td>
+
+                    </tr>
+                    <tr>
+                        <td>vs Lions</td>
+                        <td>2020.08.01</td>
+                        <td>서울시 강남구 역삼동 역삼초등학교</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <input type="button" class=" btn" value="더보기" id="moreBtn2">
+
+            </div>
+
+            <div class="myPageInfoBox">
+                <div class="topTitle"><i class="glyphicon glyphicon-king"></i>구단 순위, 개인순위</div>
+                <figure class="highcharts-figure">
+                    <div id="container"></div>
+                    <p class="highcharts-description">
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- 탈퇴신청 Modal-->
+    <div class="modal fade" id="withdrawalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #25282A;">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: #92DAEC; display: inline;">탈퇴신청</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>비밀번호를 입력해주세요.</div>
+                    <input type="password">
+                </div>
+                <div class="modal-footer">
+                    <!-- 비밀번호를 입력하고 ok버튼 누르면 회원 비밀번호와 비교하여 일치했을시 다시 물어보기  -->
+                    <a class="btn" id="modalY" href="mypage.html">ok</a>
+                    <button class="btn" type="button" data-dismiss="modal">cancle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 차트 -->
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                // backgroundColor: "#254150"
+            },
+            title: {
+                text: '리그 및 구단 개인 순위',
+
+            },
+
+            subtitle: {
+                // text: 'Source: thesolarfoundation.com'
+            },
+
+            yAxis: {
+                title: {
+                    text: '순위',
+
+                },
+                allowDecimals: false,
+                reversed: true,
+                // min: 0.5,
+                startOnTick: false,
+                endOnTick: false,
+                // max: 3.5
+            },
+
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Range: 1 to 12'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 1
+                }
+            },
+
+            series: [{
+                color: '#0077C8',
+                name: '리그 개인 순위',
+                data: [4, 2, 5, 1, 4, 2, 1, 2, 3, 1, 5, 1]
+            },
+            {
+                color: '#00BF88',
+                name: '팀 내 순위',
+                data: [1, 2, 3, 1, 5, 1, 4, 2, 5, 1, 4, 2,]
+            },
+            ],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+        $("text").css("fill", "black");
+
+    </script>
+
+
+    </script>
+
+
+    </script>
+    <nav class="sitemap">
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">경기정보조회</a></h2>
+            <li><a href="#">2020 정규리그 일정조회</a></li>
+            <li><a href="#">정규리그 결과 조회</a></li>
+            <li><a href="#">지난 정규리그 조회</a></li>
+            <li><a href="#">친선경기 결과 조회</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">구단현황</a></h2>
+            <li><a href="#">구단 정보</a></li>
+            <li><a href="#">구단 선수 정보 조회</a></li>
+            <li><a href="#">구단 경기 전적</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">선수현황</a></h2>
+            <li><a href="#">선수 검색</a></li>
+            <li><a href="#">선수 정보</a></li>
+            <li><a href="#">선수 응원댓글</a></li>
+            <li><a href="#">선수 DM</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">전력분석</a></h2>
+            <li><a href="#">팀분석</a></li>
+            <li><a href="#">선수분석</a></li>
+            <li><a href="#">시뮬레이션</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">게시판</a></h2>
+            <li><a href="#">질문게시판</a></li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">자유게시판</a></li>
+            <li><a href="#">강의게시판</a></li>
+            <li><a href="#">친선경기모집</a></li>
+            <li><a href="#">용병모집</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">공지사항</a></h2>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">문자중계</a></h2>
+        </ul>
+
+    </nav>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <div><a href="#">협회소개</a></div>
+            <div><a href="#">이용약관</a></div>
+            <div><a href="#">개인정보 취급방침</a></div>
+            <div><a href="#">제휴문의</a></div>
+            <div><a href="#">관리자 페이지</a></div>
+        </div>
+    </div>
+    <div class="footerBox2">
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 사무업무</div>
+            <div class="info">김준형(010-2370-2061)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">선수등록 및 기록문의</div>
+            <div class="info">정미선(010-9066-9495)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그일정 조정</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">시스템개발문의</div>
+            <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">한독빌딩</div>
+            <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">TEL</div>
+            <div class="info">070)4322-2918</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">FAX</div>
+            <div class="info" style="clear: both;">070)4322-2919</div>
+        </div>
+    </div>
+    <div class="footerBox3">
+        <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+        <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+    </div>
+
+
+
+
+
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+
+        var flag = false;
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > $
+                ("#main").position().top) {
+
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: ""
+                    });
+
+                    $("#main").animate({
+                        top: "0px"
+                    }, 1000, function () {
+                        //alert();
+                        flag = true;
+                    });
+                }
+
+            }
+
+        });
+
+        //하이차트 로고 없애기
+        $(".highcharts-credits").remove();
+    </script>
+
+
+
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script>
+        // 정보수정 버튼 클릭
+        $("#updateBtn").click(function () {
+            location.href = "../webproject/mypageinfoupdate.html"
+        });
+
+
+        // 탈퇴하기 모달
+        $("#withdrawalbtn").click(function (e) {
+            e.preventDefault();
+            $("#withdrawalModal").modal("show");
+        });
+
+        $("#modalY").click(function (e) {
+            e.preventDefault();
+            $("#withdrawalModal").modal("show");
+        });
+
+    </script>
+
+    <!-- dm페이지로 이동 -->
+    <script>
+        $("#moreBtn").click(function () {
+            location.href = "../webproject/dm.html";
+        });
+    </script>
+    <!-- 경기 일정 페이지로 이동 -->
+    <script>
+        $("#moreBtn2").click(function () {
+            location.href = "../webproject/leagueschedule.html";
+        });
+    </script>
+
+
+    <script src="../webproject/js/submain.js"></script>
+    <script src="../webproject/js/event.js"></script>
+
+
+
+</body>
+
+</html>

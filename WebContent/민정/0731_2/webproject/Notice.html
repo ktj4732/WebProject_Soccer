@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 목록</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="css/admin_111.css" />
+    <link rel="stylesheet" href="css/submain_Admin_2.css" />
+    
+    <style>
+      
+        .pageContentTitle{
+            width: 1200px;
+            /* border: 1px solid green; */
+            position: relative;
+            top: 80px;
+            height: 150px;
+            /* height: 150px;  */
+            margin: 0px auto;
+            
+        }
+        #searchBox{
+           position: relative;
+           margin-left: 70%;
+           bottom: 7px;
+           
+       }
+       .btnOption{
+           position: relative;
+           width: 70px;
+           height: 35px;
+       }
+       #btnOption{
+           position: relative;
+           margin-left: 81.8%;
+           bottom: 45px;
+           /* border: 1px solid red; */
+       }
+       #tbl1{
+            width: 1200px;
+             margin: 0px auto;
+            font-size: 1.1em;
+            /* text-align: center; */
+            border: none;
+            
+        }
+      
+      
+       
+       .selectbox{
+           height: 25px;
+       }
+       .searchKeyword{
+           height: 25px;
+       }
+       #searchBtn{
+           height: 25px;
+           text-align: center;
+           position: relative;
+           bottom: 0px;
+       }
+        #centerbox1{
+            /* font-size: 1.1em; */
+            position: relative;
+            margin: 0px auto;
+            width: 1200px;
+            /* height: 45px; */
+         
+            /* border: 1px solid red; */
+            border-bottom: 1px solid black;
+        }
+        
+       
+       #centerbox2{
+            /* border: 1px solid tomato; */
+            width: 1200px;
+            height: 550px;
+            margin: 0px auto;
+        }
+
+      
+        #centerbox3 {
+            /* border: 1px solid red; */
+            width: 1200px;
+            height: 70px;
+            margin: 0px auto;
+            /* margin-top: 40px; */
+           
+        }
+        #centerbox4 {
+            width: 1200px;
+            height: 50px;
+            /* display: inline-block;  */
+            margin: 0px auto;
+            /* border: 1px solid red;                    */
+        }
+       
+        #searchbtn, #writebtn {
+            /* color: white;    */
+            height: 30px;
+            /* background-color: #1E3440 ; */
+        }
+
+      
+        #searchbtn{
+            position: relative;
+            left: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+        <script src="../jquery/js/jquery-ui.js"></script>
+        <div class="adminPage">
+            <ul id="ul1">
+                <li style=" text-align: center;"><img id="admin_img" src="../webproject/images/rogo5.png"></li>
+                <li><a href="#">경기결과(리그)</a></li>
+                <li><a href="#">경기결과(친선)</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">블랙리스트</a></li>
+                <li><a href="#">경기장 관리</a></li>
+                <li><a href="#">경기장 일정</a></li>
+                <li><a href="#">구단관리</a></li>
+                <li><a href="#">선수관리</a></li>
+    
+    
+            </ul>
+        </div>
+        <header>
+    
+        </header>
+    <div class="center">
+        <div class="pageContentTitle">
+            <img src="../images/rogowithoutletter.png" class="contentTitleImg" />
+                <span class="contentTitle">공지사항</span>           
+        </div>   
+        <br><br><br>
+        <div id="centerbox1">
+            
+        </div> 
+        <br>
+
+        <div id="centerbox2">
+        <table class="table table-striped tbl-lg" id="tbl1" style="margin-top: 0px;">
+            <tr>
+                <th><input type="checkbox" name="" id="th_checkAll" onclick="checkAll();"></th>
+                <th>번호</th>
+                <th>날짜</th>
+                <th>제목</th>
+                <th>관리자</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>1</td>
+                <td>2020-03-03</td>
+                <td>2020 스프링리그 오픈 공지</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>2</td>
+                <td>2020-05-01</td>
+                <td>매너플레이 부탁드립니다</td>
+                <td>관리자3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>1</td>
+                <td>2020-03-03</td>
+                <td>2020 스프링리그 오픈 공지</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>2</td>
+                <td>2020-05-01</td>
+                <td>매너플레이 부탁드립니다</td>
+                <td>관리자3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr><tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>1</td>
+                <td>2020-03-03</td>
+                <td>2020 스프링리그 오픈 공지</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>2</td>
+                <td>2020-05-01</td>
+                <td>매너플레이 부탁드립니다</td>
+                <td>관리자3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="checkRow" id="checkbox" ></td>
+                <td>3</td>
+                <td>2020-06-18</td>
+                <td>경기장 이용 필수 수칙</td>
+                <td>관리자1</td>
+            </tr>
+        </table>
+        </div>
+
+        <div id="centerbox3">      
+            <span id="btnOption">
+                <input type="button" value="추가" class="btn btn-default btnOption">
+                <input type="button" value="수정"class="btn btn-default btnOption">
+                <input type="button" value="삭제"class="btn btn-default btnOption">
+                </span>          
+            <ul id="pagination" class="pagination" style="float: right; margin: 0;">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a class="nowPage" href="#" name="page">1</a></li>
+                <li><a href="#" name="page">2</a></li>
+                <li><a href="#" name="page">3</a></li>
+                <li><a href="#" name="page">4</a></li>
+                <li><a href="#" name="page">5</a></li>
+                <li><a href="#" name="page">6</a></li>
+                <li><a href="#" name="page">7</a></li>
+                <li><a href="#" name="page">8</a></li>
+                <li><a href="#" name="page">9</a></li>         
+                <li><a href="#" name="page">10</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>   
+        </div>
+
+        <div id="centerbox4">
+            <div style="float: right; font-size: 15px; margin: 5px;">                
+                <select style=" height: 30px;">
+                    <option value="">지역</option>
+                    <option value="">시설명</option>
+                </select>
+                <input id="searchkeyword" type="text" size="35" style="height: 30px;">
+                <a href=""><input id="searchbtn" type="button" value="검색" ></a>
+            </div>
+        </div>
+    
+    
+    </div>
+  
+<!-- 스크립트------------------------------------------------------------- -->
+<script>
+    var flag = false;
+    $(document).scroll(function () {
+        if ($(document).scrollTop() > $("#main").position().top) {
+            if (!flag) {
+                $("#main").css({
+                    position: "fixed",
+                    top: -$("#main").outerHeight(),
+                    bottom: "",
+                });
+
+                $("#main").animate(
+                    {
+                        top: "0px",
+                    },
+                    1000,
+                    function () {
+                        //alert();
+                        flag = true;
+                    }
+                );
+            }
+        }
+    });
+    // 메뉴 클릭시 발생하는 이벤트
+    $(".menu")
+        .click(function () {
+            // 어떤 메뉴를 눌렀는지 알려준다.
+
+            var menu = $(this).children().text();
+            console.log(menu);
+        })
+        .mouseover(function () {
+            // 호버. CSS 효과 줌
+            $(this).children().css({
+                // "text-shadow": "1px 1px 2px",
+                // color: "#F6BE0D",
+                // transform: "scale(1, 1)",
+                "background-color": "#0077C8",
+            });
+        })
+        .mouseout(function () {
+            // 토글
+            $(this).children().css({
+                "text-shadow": "",
+                color: "",
+                transform: "",
+                "background-color": "#25282A",
+            });
+        });
+        function checkAll(){
+                 if( $("#th_checkAll").is(':checked') ){
+                 $("input[name=checkRow]").prop("checked", true);
+                }else{
+                $("input[name=checkRow]").prop("checked", false);
+                    }
+                }
+</script>
+<script src="js/eventAdmin.js"></script>
+<script src="js/submain.js"></script>
+</body>
+</html>

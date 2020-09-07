@@ -1,0 +1,180 @@
+        /* -----------------------------마이페이지------------------------------------- */
+        .center {
+            height: 1100px;
+        }
+
+        .myPageInfoBox {
+            border: 1px solid rgb(239, 239, 239);
+            width: 505px;
+            height: 350px;
+            position: relative;
+            float: left;
+            margin-left: 110px;
+            /* background-color: #254150; */
+            margin-bottom: 60px;
+            margin-top: 50px;
+
+        }
+
+        #memberpic {
+            width: 220px;
+            height: 220px;
+            padding: 30px;
+            margin-left: 40px;
+            float: left;
+        }
+
+        #memberpic>img {
+            width: 170px;
+            height: 170px;
+        }
+
+        #membername {
+            float: left;
+            margin: 35px 0 0 7px;
+            width: 200px;
+            height: 80px;
+            text-align: left;
+            font-weight: 600;
+            line-height: 30px;
+            font-size: 16px;
+        }
+
+        #infoUpdate {
+            width: 435px;
+            height: 30px;
+            float: left;
+            position: relative;
+            left: 80px;
+        }
+
+        #infoUpdate>.btn {
+            width: 120px;
+            font-weight: bold;
+            margin-left: 35px;
+        }
+
+        #moreBtn {
+            width: 120px;
+            font-weight: bold;
+            margin-left: 200px;
+/*             margin-top:10px; */
+        }
+
+        #moreBtn2 {
+            width: 120px;
+            font-weight: bold;
+            margin-left: 200px;
+            margin-top: 15px;
+        }
+
+
+        #dmImgBox>img {
+            width: 30px;
+            height: 30px;
+            float: left;
+            border-radius: 50%;
+            margin-left: 40px;
+        }
+
+        .dmInfo {
+            float: left;
+            position: relative;
+            left: 12px;
+            height: 20px;
+            line-height: 16px;
+        }
+
+        .mypageContents {
+            width: 1300px;
+            height: 800px;
+        }
+
+        .dmInfo>div>span {
+            position: absolute;
+            left: 320px;
+        }
+
+        .DM>tbody>tr>td {
+            /* border: 1px; */
+        }
+
+        .DM>tbody>tr:nth-child(odd) {
+            font-size: 10px;
+            /* background-color: #254150; */
+        }
+
+        .DM>tbody>tr:nth-child(even) {
+            font-size: 10px;
+            /* background-color: #0C1B23; */
+        }
+
+        #container {
+            width: 400px;
+            height: 290px;
+            margin: 10px;
+            padding-left: 45px;
+        }
+
+        .topTitle {
+            border-bottom: 3px solid;
+            width: 502px;
+            height: 40px;
+            background-color: #25282a;
+            text-align: center;
+            line-height: 40px;
+            color: #92daec;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .topTitle i {
+            margin-right: 10px;
+        }
+
+        .matchTable {
+            max-width: 502px;
+            font-size: 0.9em;
+            
+        }
+
+        .DM {
+            max-width: 502px;
+        }
+
+        .matchTable>tbody>tr {
+            height: 30px;
+
+        }
+        
+      #matchTableBox::-webkit-scrollbar {
+    border: 0px;
+    width: 0px;
+}
+
+     /* 모달 */
+
+        .modal-body {
+            text-align: center;
+            font-size: 1.2em;
+
+        }
+
+        .modal {
+            text-align: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .modal:before {
+                display: inline-block;
+                vertical-align: middle;
+                content: " ";
+                height: 100%;
+            }
+        }
+
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }

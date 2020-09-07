@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../webproject/submain_1.css">
+    <link rel="stylesheet" href="../webproject/submain_2.css">
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+
+        #playerSearch th,td{
+            /* border: 1px solid black; */
+            font-size: 1.2em;
+        }
+
+        #playerSearch {
+            width: 400px;
+        }
+
+        .pageContentTitle{
+            margin-bottom: 50px;
+        }
+
+        #playerList tbody tr th{
+            text-align: center;
+
+        }
+        #playerList tbody tr td:nth-child(1n+2){
+            text-align: center;
+            /* border: gray 1px solid; */
+        }
+
+        .playerInfo{
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+    <!-- 상단부 -->
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;"><img src="../images/rogo.png" alt="" id="mainrogo"></td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu"><span class="menuLabel">구단현황</span></td>
+                <td class="menu"><span class="menuLabel">선수현황</span></td>
+                <td class="menu"><span class="menuLabel">전력분석</span></td>
+                <td class="menu"><span class="menuLabel">문자중계</span></td>
+                <td class="menu"><span class="menuLabel">게시판</span></td>
+                <td class="menu"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard">
+    </div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">선수현황</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>선수현황</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="subMenuItem"><a href="#">선수현황</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 상단부 끝 -->
+
+
+
+
+
+
+    <div class="center" style="height: auto;">
+        <div class="pageContentTitle"><img src="../images/rogowithoutletter.png" class="contentTitleImg"><span
+                class="contentTitle">전체선수목록</span></div>
+      
+        <div id="playerSearch">
+            <table class="table table-bordered" style="border: 1px solid black;">
+                <tr>
+                    <th>선수검색</th>
+                    <td>
+                        <input type="text">
+                        <input type="button" value="검색">
+                    </td>
+                </tr>
+                <tr>
+                    <th>포지션</th>
+                    <td>
+                        <select name="" id="">
+                            <option>전체</option>
+                            <option>공격수(FW)</option>
+                            <option>미드필더(MF)</option>
+                            <option>수비수(DF)</option>
+                            <option>골키퍼(GK))</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <hr style="border: 1px solid black;">
+
+        <div id="playerList">
+            <table class="table table-bordered">
+                <tr>
+                    <th>선수명</th>
+                    <th>소속팀</th>
+                    <th>생년월일</th>
+                    <th>포지션</th>
+                    <th>상세보기</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="playerInfo">
+                            <div><img src="../images/man_01.png" alt="" style="width: 100px;"> 홍길동</div>
+                        </div>
+                    </td>
+                    <td>
+                        <br>
+                        쌍용FC
+                    </td>
+                    <td>
+                        <br>
+                        1980-04-15
+                    </td>
+                    <td>
+                        <br>
+                        공격수(FW)
+                    </td>
+                    <td>
+                        <br>
+                        <input type="button" value="상세보기" class="button btn-primary"></td>
+                </tr>
+                
+            </table>
+
+            <div>
+                <nav>
+                    <ul class="pagination">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+    <!-- 하단부  -->
+
+    <nav class="sitemap">
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">경기정보조회</a></h2>
+            <li><a href="#">2020 정규리그 일정조회</a></li>
+            <li><a href="#">정규리그 결과 조회</a></li>
+            <li><a href="#">지난 정규리그 조회</a></li>
+            <li><a href="#">친선경기 결과 조회</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">구단현황</a></h2>
+            <li><a href="#">구단 정보</a></li>
+            <li><a href="#">구단 선수 정보 조회</a></li>
+            <li><a href="#">구단 경기 전적</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">선수현황</a></h2>
+            <li><a href="#">선수 검색</a></li>
+            <li><a href="#">선수 정보</a></li>
+            <li><a href="#">선수 응원댓글</a></li>
+            <li><a href="#">선수 DM</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">전력분석</a></h2>
+            <li><a href="#">팀분석</a></li>
+            <li><a href="#">선수분석</a></li>
+            <li><a href="#">시뮬레이션</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">게시판</a></h2>
+            <li><a href="#">질문게시판</a></li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">자유게시판</a></li>
+            <li><a href="#">강의게시판</a></li>
+            <li><a href="#">친선경기모집</a></li>
+            <li><a href="#">용병모집</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">공지사항</a></h2>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">문자중계</a></h2>
+        </ul>
+
+    </nav>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <div><a href="#">협회소개</a></div>
+            <div><a href="#">이용약관</a></div>
+            <div><a href="#">개인정보 취급방침</a></div>
+            <div><a href="#">제휴문의</a></div>
+            <div><a href="#">관리자 페이지</a></div>
+        </div>
+    </div>
+    <div class="footerBox2">
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 사무업무</div>
+            <div class="info">김준형(010-2370-2061)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">선수등록 및 기록문의</div>
+            <div class="info">정미선(010-9066-9495)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그일정 조정</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">시스템개발문의</div>
+            <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">한독빌딩</div>
+            <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">TEL</div>
+            <div class="info">070)4322-2918</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">FAX</div>
+            <div class="info" style="clear: both;">070)4322-2919</div>
+        </div>
+    </div>
+    <div class="footerBox3">
+        <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+        <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+    </div>
+
+
+    <!-- 하단부  끝 -->
+
+
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+
+        var flag = false;
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > $
+                ("#main").position().top) {
+
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: ""
+                    });
+
+                    $("#main").animate({
+                        top: "0px"
+                    }, 1000, function () {
+                        //alert();
+                        flag = true;
+                    });
+                }
+
+            }
+
+        });
+
+        $(".button").click(function () {
+
+            location.href="playerDetails.html"
+            
+        });
+
+
+
+    </script>
+</body>
+
+</html>

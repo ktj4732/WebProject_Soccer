@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../jquery/css/jquery-ui.css" />
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/admin_111.css" />
+        <link rel="stylesheet" href="css/submain_2.css" />
+        <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+        <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+       
+        .pageContentTitle{
+            width: 1200px;
+            /* border: 1px solid green; */
+            position: relative;
+            top: 80px;
+            height: 150px; margin: 0px auto;
+            
+        }
+        .wrapper{
+            width: 1700px;
+            height: 900px;
+            /* border: 1px solid red; */
+        }
+       
+       
+        #tbl1, #tbl2{
+            
+           width: 600px;
+           /* margin: 50px; */
+           font-size: 1.1em;
+           text-align: center;
+           position: relative;
+           /* left: 25px; */
+           margin: 0px auto;
+           
+       }
+       #tbl1 th, #tbl2 th{
+           text-align: center;
+           /* background-color: #92DAEC; */
+            color: #0C1B23;    
+            font-weight: bold;
+            font-size: .95em;
+       }
+      
+
+       #team1{
+            position: relative;
+            /* border: 1px solid orangered; */
+            /* float: left; */
+            width: 650px;
+            text-align: center;
+            table-layout: fixed;
+            min-width: 600px;
+            display: inline-block;
+            margin: 0px auto;
+        }
+        /* 특정 width 이하로 내려가면 내용이 화면맞춤 아니게 바꾸는법..*/
+       #team2{
+           position: relative;
+            /* border: 1px solid orchid; */
+            /* float: right; */
+            display: inline-block;
+            width: 650px;
+            table-layout: fixed;
+            text-align: center;
+            min-width: 600px;
+           margin: 0px auto;
+        }
+
+        #match{
+            font-size: 1.7em;
+            font-weight: bold;
+            padding-bottom: 50px;
+        }
+
+        #match > #team1{
+            color: rgb(199, 8, 8);
+        }
+        #match > #team2{
+            color: dodgerblue;
+        }
+
+        #backToMenu{
+            position: relative;
+            margin-left: 81.8%; 
+            top: 50px;
+            width: 120px;
+            height: 40px;
+            font-size: 1.3em;
+            font-weight: bolder;
+        }
+
+        #chart{
+            table-layout: fixed;
+            text-align: center;
+            /* border: 1px solid green; */
+        }
+    </style>
+</head>
+<body>
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+        <script src="../jquery/js/jquery-ui.js"></script>
+        <div class="adminPage">
+            <ul id="ul1">
+                <li style=" text-align: center;"><img id="admin_img" src="../webproject/images/rogo5.png"></li>
+                <li><a href="#">경기결과(리그)</a></li>
+                <li><a href="#">경기결과(친선)</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">블랙리스트</a></li>
+                <li><a href="#">경기장 관리</a></li>
+                <li><a href="#">경기장 일정</a></li>
+                <li><a href="#">구단관리</a></li>
+                <li><a href="#">선수관리</a></li>
+        
+        
+            </ul>
+        </div>
+        <header>
+        
+        </header>
+    <div class="center">
+        <div class="wrapper">
+        <div class="pageContentTitle">
+            <img src="../images/rogowithoutletter.png" class="contentTitleImg" />
+                <span class="contentTitle">경기장 관리</span>           
+        </div>       
+
+        <div id="chart">
+            <div id="match">
+                <span id="team1">홍길동팀</span>
+                <span id="team2">하하하팀</span>
+
+            </div>
+
+            <br>
+           
+        <div id="team1">
+            <table id="tbl1" class="table table-striped tbl-lg" style="margin-top: 0px;">
+                <tr>
+                    <th>선수이름</th>
+                    <th>도움</th>
+                    <th>득점</th>
+                    <th>태클 성공횟수</th>
+                    <th>패스 성공횟수</th>
+                    <th>선방횟수</th>
+                    <th>경고</th>
+                    <th>퇴장</th>
+                    <th>파울</th>
+                </tr>
+                <tr>
+                    <td>선수1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수2</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수4</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수5</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수6</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수7</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수8</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수9</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수10</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수11</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수12</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수13</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="team2">
+            
+            <table id="tbl2" class="table table table-striped tbl-lg" style="margin-top: 0px;">
+                <tr>
+                    <th>선수이름</th>
+                    <th>도움</th>
+                    <th>득점</th>
+                    <th>태클 성공횟수</th>
+                    <th>패스 성공횟수</th>
+                    <th>선방횟수</th>
+                    <th>경고</th>
+                    <th>퇴장</th>
+                    <th>파울</th>
+                </tr>
+                <tr>
+                    <td>선수1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수2</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수4</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수5</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수6</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수7</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수8</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수9</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수10</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수11</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수12</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>선수13</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+       </div>
+       
+        <input type="button" value="목록" class = "btn btn-default"id="backToMenu">
+    </div>
+    </div>
+  
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+        var flag = false;
+        $(document).scroll(function () {
+            if ($(document).scrollTop() > $("#main").position().top) {
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: "",
+                    });
+
+                    $("#main").animate(
+                        {
+                            top: "0px",
+                        },
+                        1000,
+                        function () {
+                            //alert();
+                            flag = true;
+                        }
+                    );
+                }
+            }
+        });
+        // 메뉴 클릭시 발생하는 이벤트
+        $(".menu")
+            .click(function () {
+                // 어떤 메뉴를 눌렀는지 알려준다.
+
+                var menu = $(this).children().text();
+                console.log(menu);
+            })
+            .mouseover(function () {
+                // 호버. CSS 효과 줌
+                $(this).children().css({
+                    // "text-shadow": "1px 1px 2px",
+                    // color: "#F6BE0D",
+                    // transform: "scale(1, 1)",
+                    "background-color": "#0077C8",
+                });
+            })
+            .mouseout(function () {
+                // 토글
+                $(this).children().css({
+                    "text-shadow": "",
+                    color: "",
+                    transform: "",
+                    "background-color": "#25282A",
+                });
+            });
+    </script>
+    <script src="js/eventAdmin.js"></script>
+    <script src="js/submain.js"></script>
+</body>
+</html>

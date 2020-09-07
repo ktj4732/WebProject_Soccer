@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <style>
+            #box1 {
+                border: 1px solid black;
+                width: 200px;
+                height: 200px;
+                background-color: gold;
+            }
+            .helper {
+                border: 5px dotted #555;
+                background-color: cornflowerblue;
+                opacity: 0.3;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ex14_resizable.html -->
+        <div id="box1"></div>
+        <h1 id="title1">제목입니다</h1>
+        <img src="../images/catty03.png" id="cat1" alt="" />
+        <img src="../images/catty04.png" class="cat" alt="" />
+        <img src="../images/catty05.png" class="cat" alt="" />
+        <img src="../images/catty06.png" class="cat" alt="" />
+        <img src="../images/catty07.png" class="cat" alt="" />
+        <img src="../images/catty08.png" class="cat" alt="" />
+
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script>
+            // $("#box1,#title1,#cat1").resizable();
+            $("#box1").resizable({
+                animate: true,
+                helper: "helper",
+                maxWidth: 300,
+                maxHeight: 300,
+                minWidth: 100,
+                minHeight: 100,
+                grid: [10, 10],
+                alsoResize: "#cat1",
+            });
+            $("#cat1").resizable({
+                //종횡비 유지 옵션
+                aspectRatio: true,
+                alsoResize: ".cat",
+            });
+        </script>
+    </body>
+</html>

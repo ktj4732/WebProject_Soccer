@@ -1,0 +1,120 @@
+  .center {
+            /* background-color: #eee; */
+            /* height: auto; */
+        }
+
+        #centerbox2 {
+            padding: 0 50px;
+        }
+
+        #centerbox1 {
+            /* border: 1px solid red; */
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        #outerBox::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #selectrow::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #outerBox {
+            position: relative;
+            left: 50px;
+            border-bottom: 1px solid black;
+            height: 50px;
+            width: 1200px;
+            padding-top: 20px;
+        }
+
+        #selectgametype {
+            position: absolute;
+        }
+
+        .dateBox {
+            position: absolute;
+            left: 10%;
+        }
+
+        .searchBox {
+            position: absolute;
+            right: 12%;
+        }
+
+        #selectrow {
+            position: absolute;
+            right: 0;
+        }
+
+        #verticalTable {
+            /* color: white; */
+            /* width: 1200px; */
+            font-size: 1.1em;
+        }
+
+        #verticalTable thead tr:first-child {
+            /* background-color: #92daec; */
+        }
+
+        #verticalTable tbody tr:nth-child(odd) {
+            /* background-color: #0c1a22; */
+        }
+
+        #verticalTable tbody tr:nth-child(even) {
+            /* background-color: #254150; */
+        }
+
+        #verticalTable tbody tr td {
+            /* border: 1px solid black; */
+        }
+
+        #centerbox3 {
+            /* border: 1px solid red; */
+            float: right;
+            margin-right: 50px;
+        }
+
+        #centerMainBox::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .textBtn {
+            height: 25px;
+            font-size: 0.9em;
+            line-height: 10px;
+        }
+
+        #pagination li a {
+            height: 25px;
+            line-height: 0.8em;
+        }
+
+        .table>thead>tr>th {
+            border-bottom: 0px;
+            color: black;
+        }
+
+        #selectgametype,
+        #endDate,
+        #startDate,
+        #selectrow,
+        #searchbtn,
+        #writebtn {
+            height: 25px;
+            /* color: white;                */
+            /* background-color: #1E3440 ;                   */
+            line-height: 1em;
+        }
+
+        #pagination .nowPage {
+            background-color: #92DAEC;
+        }

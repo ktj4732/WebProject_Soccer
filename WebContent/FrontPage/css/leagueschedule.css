@@ -1,0 +1,95 @@
+#centerMainBox {
+    /* outline: 10px solid red; */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#centerbox1 {
+    /* outline: 1px solid red; */
+    display: inline-block;
+    width: 1200px;
+    margin-top: 15px;
+}
+#outerBox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#selectrow::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#outerBox {
+    position: relative;
+    border-bottom: 1px solid black;
+    height: 50px;
+}
+
+#selectgametype {
+    position: absolute;
+}
+.dateBox {
+    position: absolute;
+    left: 10%;
+}
+
+.searchBox {
+    position: absolute;
+    right: 12%;
+}
+
+#selectrow {
+    position: absolute;
+    right: 0;
+}
+#verticalTable {
+    color: black;
+}
+#verticalTable td,
+#verticalTable th {
+    border: 0px;
+}
+#verticalTable thead tr:first-child {
+    /* background-color: #92daec; */
+}
+#verticalTable tbody tr:nth-child(odd) {
+    /* background-color: #0c1a22; */
+}
+#verticalTable tbody tr:nth-child(even) {
+    /* background-color: #254150; */
+}
+
+#centerbox3 {
+    /* border: 1px solid red; */
+    float: right;
+}
+#centerMainBox::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* 페이지 버튼 */
+#pagination li a {
+    color: black;
+    /* background-color: #1e3440; */
+    height: 25px;
+    line-height: 0.8em;
+}
+
+#selectgametype,
+#endDate,
+#startDate,
+#selectrow,
+#searchbtn,
+#writebtn {
+    height: 25px;
+    color: black;
+    /* background-color: #1e3440; */
+    line-height: 1em;
+}
+
+#pagination .nowPage {
+    background-color: #92daec;
+}

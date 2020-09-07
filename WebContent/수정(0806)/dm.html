@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/submain_1.css">
+    <link rel="stylesheet" href="css/submain_2.css">
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+
+    <style>
+        .center {
+            width: 1300px;
+            height: 1000px;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #fff;
+            --black: #000;
+            --bg: #f8f8f8;
+            --grey: #999;
+            --dark: #1a1a1a;
+            --light: #e6e6e6;
+            --wrapper: 1000px;
+            --blue: #00b0ff;
+        }
+
+        body {
+            background-color: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 400;
+            /* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/image.jpg"); */
+            background-size: cover;
+            background-repeat: none;
+        }
+
+        .wrapper {
+            float: left;
+            position: relative;
+            left: 50%;
+            width: 1000px;
+            height: 800px;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        .container {
+            float: left;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 850px;
+            height: 586px;
+            background-color: var(--white);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .container .left {
+            float: left;
+            width: 300px;
+            height: 580px;
+            border: 1px solid var(--light);
+            background-color: var(--white);
+        }
+
+        .container .left .top {
+            position: relative;
+            width: 100%;
+            height: 96px;
+            padding: 29px;
+        }
+
+        .container .left .top:after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: block;
+            width: 80%;
+            height: 1px;
+            content: "";
+            background-color: var(--light);
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        .container .left input {
+            float: left;
+            width: 188px;
+            height: 42px;
+            padding: 0 15px;
+            border: 1px solid var(--light);
+            background-color: #eceff1;
+            border-radius: 21px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 400;
+        }
+
+        .container .left input:focus {
+            outline: none;
+        }
+
+        .container .left a.search {
+            display: block;
+            float: left;
+            width: 42px;
+            height: 42px;
+            margin-left: 10px;
+            border: 1px solid var(--light);
+            background-color: var(--blue);
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/name-type.png");
+            background-repeat: no-repeat;
+            background-position: top 12px left 14px;
+            border-radius: 50%;
+        }
+
+        .container .left .people {
+            margin-left: -1px;
+            border-right: 1px solid var(--light);
+            border-left: 1px solid var(--light);
+            width: calc(100% + 2px);
+        }
+
+        .container .left .people .person {
+            position: relative;
+            width: 100%;
+            padding: 12px 10% 16px;
+            cursor: pointer;
+            background-color: var(--white);
+        }
+
+        .container .left .people .person:after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: block;
+            width: 80%;
+            height: 1px;
+            content: "";
+            background-color: var(--light);
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        .container .left .people .person img {
+            float: left;
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+            border-radius: 50%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .container .left .people .person .name {
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--dark);
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+        }
+
+        .container .left .people .person .time {
+            font-size: 14px;
+            position: absolute;
+            top: 16px;
+            right: 10%;
+            padding: 0 0 5px 5px;
+            color: var(--grey);
+            background-color: var(--white);
+        }
+
+        .container .left .people .person .preview {
+            font-size: 14px;
+            display: inline-block;
+            overflow: hidden !important;
+            width: 70%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: var(--grey);
+        }
+
+        .container .left .people .person.active,
+        .container .left .people .person:hover {
+            margin-top: -1px;
+            margin-left: -1px;
+            padding-top: 13px;
+            border: 0;
+            background-color: var(--blue);
+            width: calc(100% + 2px);
+            padding-left: calc(10% + 1px);
+        }
+
+        .container .left .people .person.active span,
+        .container .left .people .person:hover span {
+            color: var(--white);
+            background: transparent;
+        }
+
+        .container .left .people .person.active:after,
+        .container .left .people .person:hover:after {
+            display: none;
+        }
+
+        .container .right {
+            position: relative;
+            float: left;
+            width: 500px;
+            height: 580px;
+        }
+
+        .container .right .top {
+            width: 100%;
+            height: 47px;
+            padding: 15px 29px;
+            background-color: #eceff1;
+        }
+
+        .container .right .top span {
+            font-size: 15px;
+            color: var(--grey);
+        }
+
+        .container .right .top span .name {
+            color: var(--dark);
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+        }
+
+        .container .right .chat {
+            position: relative;
+            display: none;
+            overflow: hidden;
+            padding: 0 35px 92px;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: var(--light);
+            height: calc(100% - 48px);
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+
+        }
+
+        .container .right .chat.active-chat {
+            display: block;
+            display: -webkit-box;
+            display: flex;
+        }
+
+        .container .right .chat.active-chat .bubble {
+            -webkit-transition-timing-function: cubic-bezier(0.4, -0.04, 1, 1);
+            transition-timing-function: cubic-bezier(0.4, -0.04, 1, 1);
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(1) {
+            -webkit-animation-duration: 0.15s;
+            animation-duration: 0.15s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(2) {
+            -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(3) {
+            -webkit-animation-duration: 0.45s;
+            animation-duration: 0.45s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(4) {
+            -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(5) {
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(6) {
+            -webkit-animation-duration: 0.9s;
+            animation-duration: 0.9s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(7) {
+            -webkit-animation-duration: 1.05s;
+            animation-duration: 1.05s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(8) {
+            -webkit-animation-duration: 1.2s;
+            animation-duration: 1.2s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(9) {
+            -webkit-animation-duration: 1.35s;
+            animation-duration: 1.35s;
+        }
+
+        .container .right .chat.active-chat .bubble:nth-of-type(10) {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+        }
+
+        .container .right .write {
+            position: absolute;
+            bottom: 29px;
+            left: 30px;
+            height: 42px;
+            padding-left: 8px;
+            border: 1px solid var(--light);
+            background-color: #eceff1;
+            width: calc(100% - 58px);
+            border-radius: 5px;
+        }
+
+        .container .right .write input {
+            font-size: 16px;
+            float: left;
+            width: 330px;
+            height: 40px;
+            padding: 0 10px;
+            color: var(--dark);
+            border: 0;
+            outline: none;
+            background-color: #eceff1;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 400;
+        }
+
+        .container .right .write .write-link.attach:before {
+            display: inline-block;
+            float: left;
+            width: 20px;
+            height: 42px;
+            content: "";
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/attachment.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container .right .write .write-link.smiley:before {
+            display: inline-block;
+            float: left;
+            width: 20px;
+            height: 42px;
+            content: "";
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/smiley.png");
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .container .right .write .write-link.send:before {
+            display: inline-block;
+            float: left;
+            width: 20px;
+            height: 42px;
+            margin-left: 11px;
+            content: "";
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/send.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container .right .bubble {
+            font-size: 16px;
+            position: relative;
+            display: inline-block;
+            clear: both;
+            margin-bottom: 8px;
+            padding: 13px 14px;
+            vertical-align: top;
+            border-radius: 5px;
+        }
+
+        .container .right .bubble:before {
+            position: absolute;
+            top: 19px;
+            display: block;
+            width: 8px;
+            height: 6px;
+            content: "\00a0";
+            -webkit-transform: rotate(29deg) skew(-35deg);
+            transform: rotate(29deg) skew(-35deg);
+        }
+
+        .container .right .bubble.you {
+            float: left;
+            color: var(--white);
+            background-color: var(--blue);
+            align-self: flex-start;
+            -webkit-animation-name: slideFromLeft;
+            animation-name: slideFromLeft;
+        }
+
+        .container .right .bubble.you:before {
+            left: -3px;
+            background-color: var(--blue);
+        }
+
+        .container .right .bubble.me {
+            float: right;
+            color: var(--dark);
+            background-color: #eceff1;
+            align-self: flex-end;
+            -webkit-animation-name: slideFromRight;
+            animation-name: slideFromRight;
+        }
+
+        .container .right .bubble.me:before {
+            right: -3px;
+            background-color: #eceff1;
+        }
+
+        .container .right .conversation-start {
+            position: relative;
+            width: 100%;
+            margin-bottom: 27px;
+            text-align: center;
+        }
+
+        .container .right .conversation-start span {
+            font-size: 14px;
+            display: inline-block;
+            color: var(--grey);
+        }
+
+        .container .right .conversation-start span:before,
+        .container .right .conversation-start span:after {
+            position: absolute;
+            top: 10px;
+            display: inline-block;
+            width: 30%;
+            height: 1px;
+            content: "";
+            background-color: var(--light);
+        }
+
+        .container .right .conversation-start span:before {
+            left: 0;
+        }
+
+        .container .right .conversation-start span:after {
+            right: 0;
+        }
+
+        @keyframes slideFromLeft {
+            0% {
+                margin-left: -200px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes slideFromLeft {
+            0% {
+                margin-left: -200px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideFromRight {
+            0% {
+                margin-right: -200px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-right: 0;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes slideFromRight {
+            0% {
+                margin-right: -200px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-right: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;"><img src="images/rogo.png" alt="" id="mainrogo"></td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu"><span class="menuLabel">구단현황</span></td>
+                <td class="menu"><span class="menuLabel">선수현황</span></td>
+                <td class="menu"><span class="menuLabel">전력분석</span></td>
+                <td class="menu"><span class="menuLabel">문자중계</span></td>
+                <td class="menu"><span class="menuLabel">게시판</span></td>
+                <td class="menu"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard">
+    </div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">마이페이지</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>마이페이지</span>
+                    <span>></span>
+                    <span>DM</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="subMenuItem"><a href="mypage.html">마이페이지</a></li>
+                            <li class="subMenuItem"><a href="clubSummary.html">구단정보관리</a></li>
+                            <li class="subMenuItem"><a href="friends.html">친구관리</a></li>
+                            <li class="subMenuItem" style="background-color:rgb(15, 13, 13);"><a href="dm.html">DM</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="center">
+
+        <div class="pageContentTitle"><img src="images/rogowithoutletter.png" class="contentTitleImg"><span
+                class="contentTitle">DM</span></div>
+
+        <div class="wrapper">
+            <div class="container">
+                <div class="left">
+                    <div class="top">
+                        <input type="text" placeholder="Search" />
+                        <a href="javascript:;" class="search"></a>
+                    </div>
+                    <ul class="people">
+                        <li class="person" data-chat="person1">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg" alt="" />
+                            <span class="name">Thomas Bangalter</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">I was wondering...</span>
+                        </li>
+                        <li class="person" data-chat="person2">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/dog.png" alt="" />
+                            <span class="name">Dog Woofson</span>
+                            <span class="time">1:44 PM</span>
+                            <span class="preview">I've forgotten how it felt before</span>
+                        </li>
+                        <li class="person" data-chat="person3">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/louis-ck.jpeg" alt="" />
+                            <span class="name">Louis CK</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">But we’re probably gonna need a new carpet.</span>
+                        </li>
+                        <li class="person" data-chat="person4">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/bo-jackson.jpg" alt="" />
+                            <span class="name">Bo Jackson</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">It’s not that bad...</span>
+                        </li>
+                        <li class="person" data-chat="person5">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/michael-jordan.jpg" alt="" />
+                            <span class="name">Michael Jordan</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">Wasup for the third time like is
+                                you blind bitch</span>
+                        </li>
+                        <li class="person" data-chat="person6">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/drake.jpg" alt="" />
+                            <span class="name">Drake</span>
+                            <span class="time">2:09 PM</span>
+                            <span class="preview">howdoyoudoaspace</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="top"><span>To: <span class="name">Dog Woofson</span></span></div>
+                    <div class="chat" data-chat="person1">
+                        <div class="conversation-start">
+                            <span>Today, 6:48 AM</span>
+                        </div>
+                        <div class="bubble you">
+                            Hello,
+                        </div>
+                        <div class="bubble you">
+                            it's me.
+                        </div>
+                        <div class="bubble you">
+                            I was wondering...
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person2">
+                        <div class="conversation-start">
+                            <span>Today, 5:38 PM</span>
+                        </div>
+                        <div class="bubble you">
+                            Hello, can you hear me?
+                        </div>
+                        <div class="bubble you">
+                            I'm in California dreaming
+                        </div>
+                        <div class="bubble me">
+                            ... about who we used to be.
+                        </div>
+                        <div class="bubble me">
+                            Are you serious?
+                        </div>
+                        <div class="bubble you">
+                            When we were younger and free...
+                        </div>
+                        <div class="bubble you">
+                            I've forgotten how it felt before
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person3">
+                        <div class="conversation-start">
+                            <span>Today, 3:38 AM</span>
+                        </div>
+                        <div class="bubble you">
+                            Hey human!
+                        </div>
+                        <div class="bubble you">
+                            Umm... Someone took a shit in the hallway.
+                        </div>
+                        <div class="bubble me">
+                            ... what.
+                        </div>
+                        <div class="bubble me">
+                            Are you serious?
+                        </div>
+                        <div class="bubble you">
+                            I mean...
+                        </div>
+                        <div class="bubble you">
+                            It’s not that bad...
+                        </div>
+                        <div class="bubble you">
+                            But we’re probably gonna need a new carpet.
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person4">
+                        <div class="conversation-start">
+                            <span>Yesterday, 4:20 PM</span>
+                        </div>
+                        <div class="bubble me">
+                            Hey human!
+                        </div>
+                        <div class="bubble me">
+                            Umm... Someone took a shit in the hallway.
+                        </div>
+                        <div class="bubble you">
+                            ... what.
+                        </div>
+                        <div class="bubble you">
+                            Are you serious?
+                        </div>
+                        <div class="bubble me">
+                            I mean...
+                        </div>
+                        <div class="bubble me">
+                            It’s not that bad...
+                        </div>
+                    </div>
+                    <div class="chat" data-chat="person5">
+                        <div class="conversation-start">
+                            <span>Today, 6:28 AM</span>
+                        </div>
+                        <div class="bubble you">
+                            Wasup
+                        </div>
+                        <div class="bubble you">
+                            Wasup
+                        </div>
+                        <div class="bubble you">
+                            Wasup for the third time like is <br />you blind bitch
+                        </div>
+
+                    </div>
+                    <div class="chat" data-chat="person6">
+                        <div class="conversation-start">
+                            <span>Monday, 1:27 PM</span>
+                        </div>
+                        <div class="bubble you">
+                            So, how's your new phone?
+                        </div>
+                        <div class="bubble you">
+                            You finally have a smartphone :D
+                        </div>
+                        <div class="bubble me">
+                            Drake?
+                        </div>
+                        <div class="bubble me">
+                            Why aren't you answering?
+                        </div>
+                        <div class="bubble you">
+                            howdoyoudoaspace
+                        </div>
+                    </div>
+                    <div class="write">
+                        <a href="javascript:;" class="write-link attach"></a>
+                        <input type="text" />
+                        <a href="javascript:;" class="write-link smiley"></a>
+                        <a href="javascript:;" class="write-link send"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <nav class="sitemap">
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">경기정보조회</a></h2>
+            <li><a href="#">2020 정규리그 일정조회</a></li>
+            <li><a href="#">정규리그 결과 조회</a></li>
+            <li><a href="#">지난 정규리그 조회</a></li>
+            <li><a href="#">친선경기 결과 조회</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">구단현황</a></h2>
+            <li><a href="#">구단 정보</a></li>
+            <li><a href="#">구단 선수 정보 조회</a></li>
+            <li><a href="#">구단 경기 전적</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">선수현황</a></h2>
+            <li><a href="#">선수 검색</a></li>
+            <li><a href="#">선수 정보</a></li>
+            <li><a href="#">선수 응원댓글</a></li>
+            <li><a href="#">선수 DM</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">전력분석</a></h2>
+            <li><a href="#">팀분석</a></li>
+            <li><a href="#">선수분석</a></li>
+            <li><a href="#">시뮬레이션</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">게시판</a></h2>
+            <li><a href="#">질문게시판</a></li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">자유게시판</a></li>
+            <li><a href="#">강의게시판</a></li>
+            <li><a href="#">친선경기모집</a></li>
+            <li><a href="#">용병모집</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">공지사항</a></h2>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">문자중계</a></h2>
+        </ul>
+
+    </nav>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <div><a href="#">협회소개</a></div>
+            <div><a href="#">이용약관</a></div>
+            <div><a href="#">개인정보 취급방침</a></div>
+            <div><a href="#">제휴문의</a></div>
+            <div><a href="#">관리자 페이지</a></div>
+        </div>
+    </div>
+    <div class="footerBox2">
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 사무업무</div>
+            <div class="info">김준형(010-2370-2061)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">선수등록 및 기록문의</div>
+            <div class="info">정미선(010-9066-9495)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그일정 조정</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">시스템개발문의</div>
+            <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">한독빌딩</div>
+            <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">TEL</div>
+            <div class="info">070)4322-2918</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">FAX</div>
+            <div class="info" style="clear: both;">070)4322-2919</div>
+        </div>
+    </div>
+    <div class="footerBox3">
+        <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+        <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+    </div>
+
+
+
+
+
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+
+        var flag = false;
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > $
+                ("#main").position().top) {
+
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: ""
+                    });
+
+                    $("#main").animate({
+                        top: "0px"
+                    }, 1000, function () {
+                        //alert();
+                        flag = true;
+                    });
+                }
+
+            }
+
+        });
+
+
+        // ----------------------------------------------------------
+
+
+
+
+
+    </script>
+    <!-- DM -->
+    <script>
+
+        document.querySelector('.chat[data-chat=person2]').classList.add('active-chat')
+        document.querySelector('.person[data-chat=person2]').classList.add('active')
+
+        let friends = {
+            list: document.querySelector('ul.people'),
+            all: document.querySelectorAll('.left .person'),
+            name: ''
+        },
+            chat = {
+                container: document.querySelector('.container .right'),
+                current: null,
+                person: null,
+                name: document.querySelector('.container .right .top .name')
+            }
+
+        friends.all.forEach(f => {
+            f.addEventListener('mousedown', () => {
+                f.classList.contains('active') || setAciveChat(f)
+            })
+        });
+
+        function setAciveChat(f) {
+            friends.list.querySelector('.active').classList.remove('active')
+            f.classList.add('active')
+            chat.current = chat.container.querySelector('.active-chat')
+            chat.person = f.getAttribute('data-chat')
+            chat.current.classList.remove('active-chat')
+            chat.container.querySelector('[data-chat="' + chat.person + '"]').classList.add('active-chat')
+            friends.name = f.querySelector('.name').innerText
+            chat.name.innerHTML = friends.name
+        }
+    </script>
+    <script src="../webproject/js/submain.js"></script>
+    <script src="../webproject/js/event.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/submain_1.css">
+    <link rel="stylesheet" href="css/submain_2.css">
+    <link rel="stylesheet" href="css/clubmanagementFriendlyMatchResultDrawup.css">
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+    <!-- 상단부 -->
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;"><img src="images/rogo.png" alt="" id="mainrogo"></td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu"><span class="menuLabel">구단현황</span></td>
+                <td class="menu"><span class="menuLabel">선수현황</span></td>
+                <td class="menu"><span class="menuLabel">전력분석</span></td>
+                <td class="menu"><span class="menuLabel">문자중계</span></td>
+                <td class="menu"><span class="menuLabel">게시판</span></td>
+                <td class="menu"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard">
+    </div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">구단관리</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>구단관리</span>
+                    <span>></span>
+                    <span>친선결과반영</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="subMenuItem"><a href="clubmanagementClubApplicationManagement.html">구단신청관리</a></li>
+                            <li class="subMenuItem"><a href="clubmanagementPlayerManagement.html">선수관리</a></li>
+                            <li class="subMenuItem"><a href="clubmanagementEntrylistDrawup.html">엔트리작성</a></li>
+                            <li class="subMenuItem" style="background-color:rgb(15, 13, 13);"><a href="clubmanagementFriendlyMatchResultDrawup.html">경기결과반영</a></li>
+                            <li class="subMenuItem"><a href="clubmanagementFriendlyMatchRecruitManagement.html">친선경기모집관리</a></li>
+                            <li class="subMenuItem"><a href="#"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 상단부 끝 -->
+
+    <div class="center">
+        <div class="pageContentTitle"><img src="images/rogowithoutletter.png" class="contentTitleImg"><span
+                class="contentTitle">친선결과반영</span></div>
+
+                <div id="centerMainBox">
+                    <div id="centerbox1">
+                        <select name="" id="selectrow">
+                            <option value="">10개씩 보기</option>
+                            <option value="">25개씩 보기</option>
+                            <option value="">50개씩 보기</option>   
+                        </select>
+                        <span id="sortform">
+                            <a href="#" class="glyphicon glyphicon-list"></a>
+                            <a href="#" class ="glyphicon glyphicon-list-alt"></a>
+                            <a href="#" class="glyphicon glyphicon-th-large"></a>
+                        </span>            
+                    </div>
+                    <div id="centerbox2">
+                        <table class="table table-striped" id="verticalTable">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="" id="checkAll"></th>
+                                    <th>순번</th>
+                                    <th>경기</th>    
+                                    <th>날짜</th> 
+                                    <th>시간</th>
+                                    <th>장소</th>
+                                </tr>
+                            </thead>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th>1</th>
+                                    <td><a href="#">검단FC vs 화랑</a></td>            
+                                    <th>2020-07-18</th> 
+                                    <th>07:00</th>
+                                    <th>한국폴리텍</th>                                    
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th>2</th>
+                                    <td><a href="#">화랑 vs 해병대</a></td>
+                                    <th>2020-06-13</th>   
+                                    <th>09:00</th>
+                                    <th>하원초등학교</th>   
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th>3</th>
+                                    <td><a href="#">시흥FC vs 고려</a></td>
+                                    <th>2020-03-28</th>   
+                                    <th>10:00</th>
+                                    <th>가천대학교</th>       
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th></th>
+                                    <td><a href="#"></a></td>
+                                    <th></th>   
+                                    <th></th>
+                                    <th></th>      
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th></th>
+                                    <td><a href="#"></a></td>
+                                    <th></th>   
+                                    <th></th>
+                                    <th></th>     
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th></th>
+                                    <td><a href="#"></a></td>
+                                    <th></th>   
+                                    <th></th>
+                                    <th></th>       
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th></th>
+                                    <td><a href="#"></a></td>
+                                    <th></th>   
+                                    <th></th>
+                                    <th></th>        
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th></th>
+                                    <td><a href="#"></a></td>
+                                    <th></th>   
+                                    <th></th>
+                                    <th></th>       
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th></th>
+                                    <td><a href="#"></a></td>
+                                    <th></th>   
+                                    <th></th>
+                                    <th></th>       
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th></th>
+                                    <td><a href="#"></a></td>
+                                    <th></th>   
+                                    <th></th>
+                                    <th></th>      
+                                </tr>           
+                        </table>                     
+                    </div>
+
+                    <div id="centerbox4">
+                        <div style="float: right;">
+                           <input id="centerbox4Btn1" type="button" value="작성" onclick=""; class="btn btn-primary">
+                           <input id="centerbox4Btn2" type="button" value="수정" onclick=""; class="btn btn-primary">
+                           <input id="centerbox4Btn3" type="button" value="삭제" onclick=""; class="btn btn-primary">
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    
+                </div>
+
+    </div>
+
+    <style>
+
+          
+
+    </style>
+
+    <script>
+      
+        $("#centerbox4 input").mouseover(function() {
+        // alert($(this).text());
+        $(this).css("background-color", "#92DAEC").css("color", "black");
+
+        })
+
+        $("#centerbox4 input").mouseout(function() {
+        // alert($(this).text());
+        $(this).css("background-color", "").css("color", "");
+
+        })
+
+        $("#centerbox4Btn1").click(function() {                    
+            // alert($(this));
+            child = window.open(
+            "clubmanagementFriendlyMatchResultDrawupAdd.html",
+            "check",
+            "width=430, height=390, top=150, left=550"
+        );
+        }); 
+
+        // 전체선택
+        $("#checkAll").click(function () {
+            
+            //만약 전체 선택 체크박스가 체크된상태일경우 
+            if($("#checkAll").prop("checked")) { 
+                //해당화면에 전체 checkbox들을 체크해준다 
+            $("input[type=checkbox]").prop("checked",true); 
+            
+            } 
+                // 전체선택 체크박스가 해제된 경우 
+            else { 
+                //해당화면에 모든 checkbox들의 체크를해제시킨다. 
+            $("input[type=checkbox]").prop("checked",false); }
+            
+        });
+
+
+    </script>
+
+    <!-- 하단부  -->
+
+    <nav class="sitemap">
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">경기정보조회</a></h2>
+            <li><a href="#">2020 정규리그 일정조회</a></li>
+            <li><a href="#">정규리그 결과 조회</a></li>
+            <li><a href="#">지난 정규리그 조회</a></li>
+            <li><a href="#">친선경기 결과 조회</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">구단현황</a></h2>
+            <li><a href="#">구단 정보</a></li>
+            <li><a href="#">구단 선수 정보 조회</a></li>
+            <li><a href="#">구단 경기 전적</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">선수현황</a></h2>
+            <li><a href="#">선수 검색</a></li>
+            <li><a href="#">선수 정보</a></li>
+            <li><a href="#">선수 응원댓글</a></li>
+            <li><a href="#">선수 DM</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">전력분석</a></h2>
+            <li><a href="#">팀분석</a></li>
+            <li><a href="#">선수분석</a></li>
+            <li><a href="#">시뮬레이션</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="community.html">게시판</a></h2>
+            <li><a href="communityQuestionBulletinBoard.html">질문게시판</a></li>
+            <li><a href="communityGalleryBulletinBoard.html">갤러리</a></li>
+            <li><a href="communityFreeBulletinBoard.html">자유게시판</a></li>
+            <li><a href="communityLectureBulletinBoard.html">강의게시판</a></li>
+            <li><a href="#">친선경기모집</a></li>
+            <li><a href="#">용병모집</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="NoticeBoard.html">공지사항</a></h2>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">문자중계</a></h2>
+        </ul>
+
+    </nav>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <div><a href="#">협회소개</a></div>
+            <div><a href="#">이용약관</a></div>
+            <div><a href="#">개인정보 취급방침</a></div>
+            <div><a href="#">제휴문의</a></div>
+            <div><a href="#">관리자 페이지</a></div>
+        </div>
+    </div>
+    <div class="footerBox2">
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 사무업무</div>
+            <div class="info">김준형(010-2370-2061)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">선수등록 및 기록문의</div>
+            <div class="info">정미선(010-9066-9495)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그일정 조정</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">시스템개발문의</div>
+            <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">한독빌딩</div>
+            <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">TEL</div>
+            <div class="info">070)4322-2918</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">FAX</div>
+            <div class="info" style="clear: both;">070)4322-2919</div>
+        </div>
+    </div>
+    <div class="footerBox3">
+        <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+        <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+    </div>
+
+
+    <!-- 하단부  끝 -->
+
+
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+
+        var flag = false;
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > $
+                ("#main").position().top) {
+
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: ""
+                    });
+
+                    $("#main").animate({
+                        top: "0px"
+                    }, 1000, function () {
+                        //alert();
+                        flag = true;
+                    });
+                }
+
+            }
+
+        });
+
+
+
+    </script>
+    <script src="js/event.js"></script>
+    <script src="js/submain.js"></script>
+</body>
+
+</html>

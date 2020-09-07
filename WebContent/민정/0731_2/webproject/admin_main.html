@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 목록</title>
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="css/admin_111.css" />
+    <link rel="stylesheet" href="css/submain_Admin_2.css" />
+    <style>
+
+        #centerbox2{
+            position: relative;
+            /* border: 1px solid tomato; */
+            width: 1500px;
+            height: 800px;
+            /* margin: 0px auto;
+            padding-top: 200px; */
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #tbl1{
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: inline-table;
+        }
+
+        #tbl1 td{
+            /* border: 1px solid indigo; */
+        }
+
+        #table_title{ 
+            height: 10%; 
+            text-align: left; 
+            font-size: 1.3em; 
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        #table_title img{
+            width: 50px;
+            height: 50px;
+            padding-bottom: 10px;
+            margin-right: 5px;
+        }
+
+        #table_link{
+            /* background-color: saddlebrown; */
+            height: 100px;
+        }
+
+        #table_link input{
+            /* background-color: salmon; */
+            margin-bottom: 10%;
+        }
+        
+        #table_content td{
+            width: 33%;
+            height: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #tbl2 {
+            /* width: 300px; */
+            height: 350px;
+            /* border: 1px solid #ccc;   */
+        }
+
+        #tbl2 td{
+            /* border: 1px solid lawngreen; */
+            font-size: 1em;
+            height: 20px;
+            text-align: center;
+        }
+        #tbl2 th{
+            font-size: 1em;
+            text-align: center;
+        }
+
+        #tbl2 td:first-child{
+            width: 5px;
+        }
+        #tbl2 td:nth-child(2){
+            width: 10px;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <body>
+        <script src="../jquery/js/jquery-1.12.4.js"></script>
+            <script src="../jquery/js/jquery-ui.js"></script>
+            <div class="adminPage">
+                <ul id="ul1">
+                    <li style=" text-align: center;"><img id="admin_img" src="../webproject/images/rogo5.png"></li>
+                    <li><a href="#">경기결과(리그)</a></li>
+                    <li><a href="#">경기결과(친선)</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">블랙리스트</a></li>
+                    <li><a href="#">경기장 관리</a></li>
+                    <li><a href="#">경기장 일정</a></li>
+                    <li><a href="#">구단관리</a></li>
+                    <li><a href="#">선수관리</a></li>
+        
+        
+                </ul>
+            </div>
+            <header>
+        
+            </header>
+        <div class="center">
+            
+            
+    
+            <div id="centerbox2">
+            <table class="tbl1" style="margin-top: 0px;" id="tbl1">
+                <tr>
+                    <td colspan="3" id="table_title"><img src="../images/rogowithoutletter.png">관리자 모드</td>
+                </tr>
+                <tr id="table_title" style="text-align: center;">
+                    <td>리그 결과</td>
+                    <td>리그 일정</td>
+                    <td>공지사항</td>
+                </tr>
+                <tr id="table_content">
+                    <td>
+                        <table class="table table-hover"  id="tbl2" style="margin-top: 0px;">
+                            <thead>
+                            <tr>
+                                <th>날짜</th>
+                                <th>시간</th>
+                                <th>리그</th>
+                             
+                                <th>경기</th>
+                                <th>스코어</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                
+                                <td>06.13(토)</td>
+                                <td>10:00</td>
+                                <td>2020 써머 리그</td>
+                            
+                                <td>홍길동팀 VS 하하하팀</td>
+                                <td>3-2</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>06.13(토)</td>
+                                <td>16:00</td>
+                                <td>2020 써머 리그</td>
+                      
+                                <td>아무개팀 VS 하하하팀</td>
+                                <td>0-1</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>06.14(일)</td>
+                                <td>13:00</td>
+                                <td>2020 써머 리그</td>
+                       
+                                <td>아무개팀 VS 홍길동팀</td>
+                                <td>4-5</td>
+                            </tr>
+                            <tr>
+                               
+                                <td>06.17(수)</td>
+                                <td>15:00</td>
+                                <td>2020 써머 리그</td>
+        
+                                <td>하하하팀 VS 호호호팀</td>
+                                <td>3-7</td>
+                            </tr>
+                            <tr>
+                               
+                                <td>06.17(수)</td>
+                                <td>19:00</td>
+                                <td>2020 써머 리그</td>
+               
+                                <td>호호호팀 VS 아무개팀</td>
+                                <td>6-4</td>
+                            </tr>
+                            <tr>
+                           
+                                <td>06.18(목)   </td>
+                                <td>17:00</td>
+                                <td>2020 써머 리그</td>
+     
+                                <td>호호호팀 VS 홍길동팀</td>
+                                <td>5-2</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="table table-hover" id="tbl2" style="margin-top: 0px;">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>날짜</th>
+                                    <th>시간</th> 
+                                    <th>리그</th>
+                               
+                                    <th>경기</th>
+                                    <th>진행</th>
+                                </tr>
+                            </thead>
+                                <tr>
+                                  
+                                    <td>07.20(수)</td>
+                                    <td>20:00</td> 
+                                    <td>평일야간시장</td>
+                          
+                                    <td>FLEX VS 레드포터스</td>
+                                    <td>경기전</td>                                   
+                                </tr>
+                                <tr>
+                              
+                                    <td>07.20(수)</td>
+                                    <td>20:00</td> 
+                                    <td>평일야간시장</td>
+                        
+                                    <td>무적파이터스 VS 판타지아</td>
+                                    <td>경기전</td>                                     
+                                </tr>
+                                <tr>
+                         
+                                    <td>07.20(수)</td>
+                                    <td>20:00</td> 
+                                    <td>평일야간시장</td>
+                       
+                                    <td>FLEX VS 레드포터스</td>
+                                    <td>경기전</td>                                   
+                                </tr>
+                                <tr>
+                                 
+                                    <td>07.20(수)</td>
+                                    <td>20:00</td>
+                                    <td>평일야간시장</td>   
+                              
+                                    <td>FLEX VS 레드포터스</td>
+                                    <td>경기전</td> 
+                                </tr>
+                                <tr>
+                                    <td>07.20(수)</td>
+                                    <td>20:00</td>
+                                    <td>평일야간시장</td>                     
+                                    <td>FLEX VS 레드포터스</td>
+                                    <td>경기전</td> 
+                                </tr>
+                                <tr>
+                                    <td>07.20(수)</td>
+                                    <td>20:00</td>
+                                    <td>평일야간시장</td>   
+                                    <td>FLEX VS 레드포터스</td>
+                                    <td>경기전</td> 
+                                </tr>
+                            </table>
+                        </td>
+                    <td>
+                        <table class="table table-hover" id="tbl2" style="margin-top: 0px;">
+                            <tr>
+                                
+                                <th>번호</th>
+                                <th>날짜</th>
+                                <th>제목</th>
+                                <th>관리자</th>
+                            </tr>
+                            <tr>
+                                
+                                <td>1</td>
+                                <td>2020-03-03</td>
+                                <td>2020 스프링리그 오픈 공지</td>
+                                <td>관리자1</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>2</td>
+                                <td>2020-05-01</td>
+                                <td>매너플레이 부탁드립니다</td>
+                                <td>관리자3</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>3</td>
+                                <td>2020-06-18</td>
+                                <td>경기장 이용 필수 수칙</td>
+                                <td>관리자1</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>1</td>
+                                <td>2020-03-03</td>
+                                <td>2020 스프링리그 오픈 공지</td>
+                                <td>관리자1</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>2</td>
+                                <td>2020-05-01</td>
+                                <td>매너플레이 부탁드립니다</td>
+                                <td>관리자3</td>
+                            </tr>
+                            <tr>
+                                
+                                <td>3</td>
+                                <td>2020-06-18</td>
+                                <td>경기장 이용 필수 수칙</td>
+                                <td>관리자1</td>
+                            </tr>
+                        </table>
+                </tr>
+                <tr id="table_link">
+                    <td><input type="button" class="btn" value="리그 결과 페이지로 이동"></td>
+                    <td><input type="button" class="btn" value="리그 일정 페이지로 이동"></td>
+                    <td><input type="button" class="btn" value="공지사항 페이지로 이동"></td>
+                </tr>
+                
+            </table>
+            </div>
+    
+            
+            
+        
+        
+        </div>
+      
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+        var flag = false;
+        $(document).scroll(function () {
+            if ($(document).scrollTop() > $("#main").position().top) {
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: "",
+                    });
+    
+                    $("#main").animate(
+                        {
+                            top: "0px",
+                        },
+                        1000,
+                        function () {
+                            //alert();
+                            flag = true;
+                        }
+                    );
+                }
+            }
+        });
+        // 메뉴 클릭시 발생하는 이벤트
+        $(".menu")
+            .click(function () {
+                // 어떤 메뉴를 눌렀는지 알려준다.
+    
+                var menu = $(this).children().text();
+                console.log(menu);
+            })
+            .mouseover(function () {
+                // 호버. CSS 효과 줌
+                $(this).children().css({
+                    // "text-shadow": "1px 1px 2px",
+                    // color: "#F6BE0D",
+                    // transform: "scale(1, 1)",
+                    "background-color": "#0077C8",
+                });
+            })
+            .mouseout(function () {
+                // 토글
+                $(this).children().css({
+                    "text-shadow": "",
+                    color: "",
+                    transform: "",
+                    "background-color": "#25282A",
+                });
+            });
+            function checkAll(){
+                     if( $("#th_checkAll").is(':checked') ){
+                     $("input[name=checkRow]").prop("checked", true);
+                    }else{
+                    $("input[name=checkRow]").prop("checked", false);
+                        }
+                    }
+    </script>
+    <script src="js/eventAdmin.js"></script>
+    <script src="js/submain.js"></script>
+    </body>
+    </html>
+</body>
+</html>

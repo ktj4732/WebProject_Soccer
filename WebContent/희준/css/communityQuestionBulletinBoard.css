@@ -1,0 +1,105 @@
+#centerMainBox {
+    /* border: 1px solid black; */
+    width: 1200px;
+    /* height: 950px; */
+    margin: 0px auto;            
+}
+
+#centerbox1 {
+    border-bottom: 1px solid black;            
+    height: 50px;   
+    margin-bottom: 10px;         
+}
+
+#centerbox2 {
+    /* border: 1px solid black;             */
+}
+
+#centerbox3 {
+    /* border: 1px solid red;             */
+}
+
+#centerbox4 {
+    /* border: 1px solid blue; */
+    width: 1200px;
+    height: 50px;
+    display: inline-block;            
+}
+
+#verticalTable {
+    /* border: 1px solid blue; */
+}
+
+#pagination {            
+    /* border: 1px solid gold; */
+}
+
+#sortform, #selectrow {
+    float: right;     
+    /* border: 1px solid gold; */
+}
+
+#sortform {
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+#selectrow {
+    /* margin-top: 10px; */
+    background-color: #1E3440;
+    color: white;            
+}
+
+#verticalTable {
+    width: 1200px; 
+}
+
+#verticalTable th:nth-child(1) {width: 65px;}
+#verticalTable th:nth-child(2) {width: 120px;}
+#verticalTable th:nth-child(3) {width: 480px;}
+#verticalTable th:nth-child(4) {width: 100px;}
+#verticalTable th:nth-child(5) {width: 180px;}
+#verticalTable th:nth-child(6) {width: 60px;}
+
+#verticalTable th {border: 0px;}
+#verticalTable th, #verticalTable td {height: 38px; border: 0px;}
+
+#verticalTable th, #verticalTable td { text-align: center; color: white;}                
+#verticalTable td:nth-child(3){ text-align: left;}
+#verticalTable td:nth-child(3) a {color: white; }
+
+#verticalTable thead tr th{            
+    background-color: #92DAEC;
+    color: #0C1B23;           
+    /* border: 3px solid white */
+}
+
+#verticalTable tr{            
+    background-color: #1E3440  
+}
+
+#verticalTable tr:nth-child(even){            
+    background-color: #0C1B23
+}
+
+#centerbox1 select, #centerbox4 select, #searchbtn, #writebtn {
+    color: white;   
+    height: 25px;
+    line-height: 0.8em;
+    background-color: #1E3440 ;
+}
+
+#pagination li a {
+    color: white;
+    background-color: #1E3440;         
+    height: 25px;       
+    line-height: 0.8em;
+}
+
+#sortform a {
+    color: black;         
+}
+
+#pagination .nowPage {
+    background-color: #92DAEC;
+}

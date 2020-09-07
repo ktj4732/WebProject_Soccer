@@ -1,0 +1,27 @@
+#centerbox2 tr td img {
+    width: 30px;
+    margin-left: 20px;
+    /* border: 1px solid red; */
+}
+
+#centerbox2 td:nth-child(1) {
+    width: 7%;
+}
+#centerbox2 td:nth-child(2) {
+    width: 7%;
+}
+#centerbox2 td:nth-child(3) {
+    width: 12%;
+}
+#centerbox2 td:nth-child(4) {
+    width: 12%;
+}
+#centerbox2 td:nth-child(5) {
+    width: 20%;
+}
+#centerbox2 td:nth-child(6) {
+    width: 12%;
+}
+#centerbox2 td:nth-child(7) {
+    width: 30%;
+}

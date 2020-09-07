@@ -1,0 +1,150 @@
+   /* -----------------------------친구 목록 보기-------------------------------- */
+        .center {
+            height: 1100px;
+        }
+
+        .contentsBox {
+            width: 1300px;
+            height: 1000px;
+        } 
+        
+        .friends {
+            border: 1px solid #0C1B23;
+            width: 680px;
+/*             height: 600px; */
+            float: left;
+            font-size: 1.1em;
+           	overflow:auto;
+        }
+
+        .friendsBox {
+            width: 721px;
+            height: 640px;
+            overflow: auto;
+            margin-top: -10px;
+            margin-left: -10px;
+        }
+
+        .friendsBox::-webkit-scrollbar {
+            border: 0px;
+        }
+
+        .friendsBox::-webkit-scrollbar-thumb {}
+
+        .friends>tbody>tr>td>img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            float: left;
+            position: relative;
+            left: 25px;
+            border: 1px solid white;
+        }
+
+        .friends>tbody>tr>td {
+            /* border: 0px solid black; */
+            text-align: left;
+            line-height:2.3em;
+        }
+
+        .friends>tbody>tr>td:nth-child(1) {
+            text-align: center;
+        }
+
+
+        .friends>tbody>tr {
+            font-size: 1em;
+          	
+        }
+
+        .friends>tbody>tr:nth-child(odd) {
+            line-height: 20px;
+            /* background-color: #0C1B23; */
+            /* color: white; */
+        }
+
+        .friends>tbody>tr:nth-child(even) {
+            /* background-color: #254150; */
+            /* color: white; */
+        }
+
+        .friends>tbody>tr>td:nth-child(1) {
+            width: 200px;
+           
+        }
+
+        .friends>tbody>tr>td:nth-child(2) {
+            width: 350px;
+           
+        }
+
+        .friends>tbody>tr>td:nth-child(3) {
+            width: 150px;
+        }
+        
+
+        .search {
+            float: left;
+            margin-top: 50px;
+            width: 300px;
+            position: relative;
+            left: 500px;
+            margin-bottom: 50px;
+            z-index: 0;
+        }
+
+        .unfollow {
+            line-height: 14px;
+        }
+
+        .follow {
+            line-height: 14px;
+            margin-left:50px;
+        }
+
+        .contentsBox {
+            width: 1300px;
+            height: 1000px;
+        }
+
+
+        #tabs {
+            margin: 100px auto;
+            height: 700px;
+            width: 710px;
+            float: left;
+            border: 1px solid rgb(239, 239, 239);
+
+        }
+
+        .ui-widget-header {
+            border: 1px solid rgb(239, 239, 239);
+        }
+
+        .btn {
+            height: 25px;
+            margin-left: 12px;
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default,
+        .ui-button,
+        html .ui-button.ui-state-disabled:hover,
+        html .ui-button.ui-state-disabled:active {
+            border: 1px solid rgb(239, 239, 239);
+        }
+
+        .ui-tabs .ui-tabs-nav .ui-tabs-anchor:hover {
+            color: #92DAEC;
+        }
+
+        .ui-state-default a,
+        .ui-state-default a:link,
+        .ui-state-default a:visited,
+        a.ui-button,
+        a:link.ui-button,
+        a:visited.ui-button,
+        .ui-button {
+            color: #0C1B23;
+        }

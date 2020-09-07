@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기장 등록</title>
+    <script src="../bootstrap/js/jquery-1.12.4.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="../webproject/submain_Admin_1.css">
+    <link rel="stylesheet" href="../webproject/submain_Admin_2.css">
+    <link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <style>
+        /* #ground_new{
+            width: 1300px;
+            margin: 0px auto;
+           
+        }
+        
+        #tbl1{
+            border: 2px solid rgb(88, 88, 88);
+            margin: 0px auto;
+            border-collapse: separate;
+            border-spacing: 30px;
+            height: 400px;
+        }
+        #commonBtn{
+            margin-left: 73%;
+            width: 80px;
+            height: 40px;
+            border: 0;
+            background-color: #ccc;
+        } */
+    </style>
+    <style>
+
+        #text1{
+            /* border: 1px solid green; */
+            position: relative;
+            left: 100px;
+        }
+
+
+        .pageContentTitle{
+            /* border: 1px solid green; */
+            position: relative;
+            top: 60px;
+          
+            
+        }
+        .center {            
+            padding-top: 50px;
+            background-color: #eee;  
+            /* padding-bottom: 50px;                    */
+            /* text-align: center; */
+        }
+
+        #centerMainBox {
+            /* border: 1px solid black; */
+            width: 1200px;
+            height: 700px;
+            margin: 0px auto;    
+            font-size: 20px;        
+            font-weight: bold;
+            
+        }
+
+        #centerBox1 {
+            /* border: 1px solid red; */
+            width: 700px;
+            height: 50px;
+            float: left;          
+            margin-left: 15px;  
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+
+        #centerBox2 {
+            /* border: 1px solid red; */
+            
+            width: 700px;
+            height: 50px;             
+            display: inline-block;
+            margin-left: 15px;  
+            padding-top: 40px;
+            margin-bottom: 40px;
+
+        }
+
+        #centerBox3 {
+            /* border: 1px solid blue; */
+            width: 700px;
+            height: 50px; 
+            margin-left: 15px; 
+            margin-bottom: 40px;
+            padding-top: 40px;
+
+
+        }
+
+        #centerBox4 {
+            /* border: 1px solid red; */
+            width: 150px;
+            height: 50px; 
+            float: right;   
+            margin-right: 58px;       
+            padding-top: 300px;  
+            margin-bottom: 100px;
+            position: relative;
+            left: 200px;
+
+        }
+
+        #centerBox6 {
+            /* border: 1px solid blue; */
+            width: 700px;
+            height: 50px; 
+            margin-left: 15px; 
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+        #centerBox1 select, #centerBox5 input, #centerBox4 input {
+            color: white; 
+            background-color: #1E3440 ;
+            padding-bottom: 5px;
+        }
+
+        #centerBox4 input{
+            width: 80px;
+            height: 50px;
+        }
+        #centerBox1, #centerBox2, #centerBox3, #centerBox4 ,#centerBox6{
+            /* border: 1px solid green; */
+            position: relative;
+            /* margin: 0px auto; */
+        }
+
+        #mainBox{
+            /* border: 1px solid hotpink; */
+            width: 800px;
+            margin: 0px auto;
+        }
+        #centerBox7{
+            border: 1px solid #ccc;
+            width: 402px;
+            height: 302px;
+            position: relative;
+            left: 470px;
+            bottom: 150px;
+            display: inline-block;
+        }
+        #address{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+
+    <!-- 상단부 -->
+    <nav id="main">
+        <table class="table table-default" id="mainMenu">
+            <tr id="menuTop">
+                <td colspan="3"></td>
+                <td rowspan="2" id="rogo" style="width: 1px;"><img src="../images/rogo.png" alt="" id="mainrogo"></td>
+                <td colspan="4">
+                    <button type="button" class="btn btn-default">로그인</button>
+                    <button type="button" class="btn btn-default">마이페이지</button>
+                </td>
+            </tr>
+            <tr id="menuTr">
+                <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                <td class="menu"><span class="menuLabel">구단현황</span></td>
+                <td class="menu"><span class="menuLabel">선수현황</span></td>
+                <td class="menu"><span class="menuLabel">전력분석</span></td>
+                <td class="menu"><span class="menuLabel">문자중계</span></td>
+                <td class="menu"><span class="menuLabel">게시판</span></td>
+                <td class="menu"><span class="menuLabel">공지사항</span></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="topBoard">
+    </div>
+
+    <div id="scoreBoard">
+        <div id="subOuter">
+            <div class="menuTitleBox">
+                <div class="menuTitle">커뮤니티</div>
+                <div class="breadcrumb">
+                    <span>HOME</span>
+                    <span>></span>
+                    <span>관리자 메뉴</span>
+                    <span>></span>
+                    <span>경기장 등록</span>
+                </div>
+                <div class="subMenuBox">
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="subMenuItem"><a href="#">경기 결과(리그)</a></li>
+                            <li class="subMenuItem"><a href="#">경기 결과(친선)</a></li>
+                            <li class="subMenuItem"><a href="#">공지사항</a></li>
+                            <li class="subMenuItem"><a href="#">블랙리스트</a></li>
+                            <li class="subMenuItem"><a href="#">경기장 관리</a></li>
+                            <li class="subMenuItem"><a href="#">정규리그 일정</a></li>
+                            <li class="subMenuItem"><a href="#">구단관리</a></li>
+                            <li class="subMenuItem"><a href="#">선수검색</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 상단부 끝 -->
+
+    <div class="center">
+        <div class="pageContentTitle">
+            <img src="../images/rogowithoutletter.png" class="contentTitleImg">
+            <span class="contentTitle">경기장 등록</span>
+        </div>
+        <div id="centerMainBox">
+
+            <form action="ground_list.html" method="GET" >
+                <div id="mainBox">
+                <!-- 이름 입력 -->
+                <div id="centerBox1">
+                    <span>지역 : </span>
+                    <select name="" id="selectrow" >
+                        <option value="">서울</option>
+                        <option value="">경기</option>
+                        <option value="">인천</option>   
+                    </select>
+                </div>
+
+                <!-- 제목 입력 -->
+                <div id="centerBox2">
+                    <span>이름 : </span>
+                    <input type="text" name="" id="text1" size="40px">
+                </div>
+
+                <!-- 수용 인원 -->
+                <div id="centerBox3">
+                    수용 인원 : <input type="text" id="text1" class="text1" style="position: relative; left: 52px;"> 
+                </div>
+
+                <!-- 수용 인원 -->
+                <div id="centerBox6">
+                    주소 : <input type="text" id="text1"> 
+                </div>
+                <!-- 지도 -->
+                <div id="centerBox7">
+                    <img src="../images/seoul.png" alt="" id="address">
+                </div>
+
+                <!-- 확인/미리보기 버튼 -->
+                <div id="centerBox4"> 
+                    <input type="submit" value="등록" id="commonBtn" class="btn btn-default btn-sm">                  
+                </div>
+                <!-- <table id="tbl1">
+                    <tr>
+                        <td>지역</td>
+                        <td style="width: 600px;" colspan="2">
+                        <select name="지역" id="location">
+                            <option value="서울">서울</option>
+                            <option value="경기">경기</option>
+                            <option value="인천">인천</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이름</td>
+                        <td style="width: 200px;" >
+                            <input type="text" name="text" id="text">
+                        </td>
+                        <td><input type="button" value="검색"></td>
+                    </tr>
+                    <tr>
+                        <td>수용인원</td>
+                        <td style="width: 200px;" colspan="2"><input type="text" name="수용인원"></td>
+                        
+                    </tr>
+                </table> -->
+                
+                
+            
+            </form>
+        </div>
+        </div>
+    </div>
+    <!-- 하단부  -->
+
+    <nav class="sitemap">
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">경기정보조회</a></h2>
+            <li><a href="#">2020 정규리그 일정조회</a></li>
+            <li><a href="#">정규리그 결과 조회</a></li>
+            <li><a href="#">지난 정규리그 조회</a></li>
+            <li><a href="#">친선경기 결과 조회</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">구단현황</a></h2>
+            <li><a href="#">구단 정보</a></li>
+            <li><a href="#">구단 선수 정보 조회</a></li>
+            <li><a href="#">구단 경기 전적</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">선수현황</a></h2>
+            <li><a href="#">선수 검색</a></li>
+            <li><a href="#">선수 정보</a></li>
+            <li><a href="#">선수 응원댓글</a></li>
+            <li><a href="#">선수 DM</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">전력분석</a></h2>
+            <li><a href="#">팀분석</a></li>
+            <li><a href="#">선수분석</a></li>
+            <li><a href="#">시뮬레이션</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">게시판</a></h2>
+            <li><a href="#">질문게시판</a></li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">자유게시판</a></li>
+            <li><a href="#">강의게시판</a></li>
+            <li><a href="#">친선경기모집</a></li>
+            <li><a href="#">용병모집</a></li>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">공지사항</a></h2>
+        </ul>
+        <ul class="siteList">
+            <h2 class="listName"><a href="#">문자중계</a></h2>
+        </ul>
+
+    </nav>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <div><a href="#">협회소개</a></div>
+            <div><a href="#">이용약관</a></div>
+            <div><a href="#">개인정보 취급방침</a></div>
+            <div><a href="#">제휴문의</a></div>
+            <div><a href="#">관리자 페이지</a></div>
+        </div>
+    </div>
+    <div class="footerBox2">
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그운영 및 사무업무</div>
+            <div class="info">김준형(010-2370-2061)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">선수등록 및 기록문의</div>
+            <div class="info">정미선(010-9066-9495)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">리그일정 조정</div>
+            <div class="info">정성원(010-3151-5582)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">시스템개발문의</div>
+            <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">한독빌딩</div>
+            <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">TEL</div>
+            <div class="info">070)4322-2918</div>
+        </div>
+        <div class="footerInfo">
+            <div class="infoItem">FAX</div>
+            <div class="info" style="clear: both;">070)4322-2919</div>
+        </div>
+    </div>
+    <div class="footerBox3">
+        <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+        <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+    </div>
+
+
+    <!-- 하단부  끝 -->
+
+
+    <!-- 스크립트------------------------------------------------------------- -->
+    <script>
+
+        var flag = false;
+        $(document).scroll(function () {
+
+            if ($(document).scrollTop() > $
+                ("#main").position().top) {
+
+                if (!flag) {
+                    $("#main").css({
+                        position: "fixed",
+                        top: -$("#main").outerHeight(),
+                        bottom: ""
+                    });
+
+                    $("#main").animate({
+                        top: "0px"
+                    }, 1000, function () {
+                        //alert();
+                        flag = true;
+                    });
+                }
+
+            }
+
+        });
+
+
+
+    </script>
+    <script>
+
+    </script>
+</body>
+</html>

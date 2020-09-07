@@ -1,0 +1,31 @@
+#mainBox {
+    /* border: 1px solid #0C1B23; */
+    width: 400px;            
+    margin: 0 auto;                   
+}
+
+#box1 {
+    border: 3px solid #0C1B23;
+    width: 320px;
+    height: 130px;
+    margin: 0 auto;
+    margin-top: 10px;      
+    font-size: 1.1em;      
+    padding: 20px;
+    font-weight: bold;
+}
+
+#box2 {
+    /* border: 1px solid #0C1B23;                         */
+    float: right;
+    margin-right: 40px;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+#box2 input {
+    color: white; 
+    background-color: #1E3440 ;
+    height: 25px;
+    line-height: 0.8em;
+}

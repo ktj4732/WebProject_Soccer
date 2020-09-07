@@ -1,0 +1,95 @@
+#centerMainBox {
+    /* border: 1px solid black; */
+    width: 1200px;
+    /* height: 950px; */
+    margin: 0px auto;             
+}
+
+#centerbox1 {
+    display: inline-block;
+    /* border-bottom: 1px solid black;             */
+    height: 40px;   
+    margin-bottom: 10px;         
+    width: 1200px;
+}
+
+#centerbox2 {
+    /* border: 1px solid black; */            
+}
+#centerbox4 {
+    /* border: 1px solid blue; */
+    /* margin-top: 10px;    */
+    float: right;
+    margin-bottom: 25px;
+}
+
+#centerbox1 span, #centerbox1 select  {
+    /* border: 1px solid red; */
+}
+
+#pagination {            
+    /* border: 1px solid gold; */
+}
+
+#sortform, #selectrow {
+    float: right;                 
+    /* border: 1px solid gold; */
+}
+
+#sortform {
+    margin-right: 10px;
+    /* margin-top: 14px; */
+}
+
+#selectrow {
+    /* margin-top: 10px; */
+    /* background-color: #1E3440; */
+    /* color: white; */
+}
+
+#verticalTable {
+    width: 1200px;             
+    font-size: 1.1em;   
+}
+
+#verticalTable th:nth-child(1) {width: 25px;}
+#verticalTable th:nth-child(2) {width: 25px;}
+#verticalTable th:nth-child(3) {width: 50px;}
+#verticalTable th:nth-child(4) {width: 50px;}
+#verticalTable th:nth-child(5) {width: 65px;}
+#verticalTable th:nth-child(6) {width: 100px;}
+#verticalTable th:nth-child(7) {width: 100px;}
+
+#verticalTable th, #verticalTable tr td { text-align: center;  border: 1px solid black; }             
+#verticalTable td:nth-child(4) a {color: black;}
+
+#verticalTable thead tr th{            
+    /* background-color: #92DAEC; */
+    /* color: #0C1B23;            */
+    /* border: 3px solid white */            
+}
+
+#verticalTable tr{            
+    /* background-color: #1E3440;                   */
+}
+
+#verticalTable tr:nth-child(even){             
+    /* background-color: #0C1B23 */
+}
+
+#centerbox4Btn {
+    /* border: 1px solid red;             */
+    /* color: white;                */
+    /* background-color: #1E3440 ;                         */
+}
+
+#sortform a {
+    color: black;         
+    /* border: 1px solid black; */
+    margin-top: 6px;
+}
+
+#centerMainBox select, #centerbox4Btn {
+    height: 25px;
+    line-height: 0.8em;
+}

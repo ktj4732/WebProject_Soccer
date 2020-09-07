@@ -1,0 +1,109 @@
+/* 서브메인------------------------------------------------------------ */
+
+.center {
+    width: 1300px;
+    margin: 0px auto;
+    padding-top: 50px;
+    background-color: #eee;
+}
+
+#subOuter {
+    width: 1300px;
+    height: 150px;
+    position: absolute;
+    top: 370px;
+}
+
+.menuTitleBox {
+    width: 1300px;
+    height: 150px;
+    z-index: 2;
+}
+#crumbOuter {
+    background-color: #254150;
+    width: 1300px;
+    height: 90px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.menuTitle {
+    color: #92daec;
+    position: absolute;
+    font-size: 30px;
+    width: 280px;
+    height: 90px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 95px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 30px;
+    z-index: 2;
+}
+.breadCrumb {
+    color: #92daec;
+    position: absolute;
+    right: 2%;
+    top: 40px;
+    z-index: 2;
+}
+
+.subMenuBox {
+    width: 1300px;
+    height: 60px;
+    background-color: #25282a;
+    float: left;
+}
+
+.subMenuBox .subMenu > ul {
+    float: left;
+    margin-left: 50px;
+}
+
+.subMenuBox .subMenu > ul > li {
+    width: 160px;
+    height: 60px;
+    float: left;
+    color: #92daec;
+    font-size: 18px;
+    text-align: center;
+    line-height: 55px;
+}
+
+.subMenuBox .subMenu > ul > li > a {
+    list-style-type: none;
+    padding-left: 10px;
+    color: #92daec;
+}
+
+.subMenuBox .subMenu > ul > li > a:link {
+    text-decoration: none;
+}
+
+.subMenuBox .subMenu > ul > li > a:hover {
+    text-decoration: none;
+}
+
+.pageContentTitle {
+    width: 1300px;
+    height: 100px;
+    margin-left: 50px;
+    /* float: left;
+            padding: 40px 40px; */
+}
+
+.contentTitleImg {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.contentTitle {
+    float: left;
+    width: 400px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}

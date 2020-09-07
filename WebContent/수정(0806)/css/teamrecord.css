@@ -1,0 +1,100 @@
+#centerMainBox {
+    /* outline: 10px solid red; */
+}
+#centerbox1 {
+    /* outline: 10px solid red; */
+    height: 70px;
+    /* position: relative; */
+}
+#outerBox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#selectrow::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#outerBox {
+    position: relative;
+    border-bottom: 2px solid black;
+    width: 1200px;
+    height: 50px;
+    top: 100px;
+}
+
+#selectgametype {
+    position: absolute;
+}
+.dateBox {
+    position: absolute;
+    left: 0%;
+    top: 10px;
+}
+
+.searchBox {
+    position: absolute;
+    left: 40%;
+    top: 10px;
+    height: 25px;
+}
+#searchkeyword {
+    height: 25px;
+}
+#selectrow {
+    position: absolute;
+    left: 78%;
+    top: 10px;
+    height: 25px;
+}
+#verticalTable {
+    color: black;
+    width: 1200px;
+}
+#verticalTable td {
+    border: 0px;
+}
+#verticalTable thead tr:first-child {
+    /* background-color: #92daec; */
+}
+#verticalTable tbody tr:nth-child(odd) {
+    /* background-color: #0c1a22; */
+}
+#verticalTable tbody tr:nth-child(even) {
+    /* background-color: #254150; */
+}
+
+#centerbox3 {
+    /* border: 1px solid red; */
+    float: right;
+}
+#centerbox2 {
+    position: relative;
+    top: 50px;
+}
+#centerMainBox::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#vs {
+    display: inline-block;
+    margin-right: 2em;
+    color: red;
+}
+
+.inputDate {
+    height: 25px;
+    padding: 0px;
+}
+#selectgametype {
+    height: 25px;
+    top: 10px;
+    left: 90%;
+}
+
+.subMenuItem:nth-child(3) {
+    background-color: #0f0d0d;
+}

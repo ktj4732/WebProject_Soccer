@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/submain_1.css" />
+        <link rel="stylesheet" href="css/submain_2.css" />
+        <link rel="stylesheet" href="css/teamrecord.css" />
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <style></style>
+    </head>
+
+    <body>
+        
+        <!-- 상단부 -->
+        <nav id="main">
+            <table class="table table-default" id="mainMenu">
+                <tr id="menuTop">
+                    <td colspan="3"></td>
+                    <td rowspan="2" id="rogo" style="width: 1px;">
+                        <img src="images/rogo.png" alt="" id="mainrogo" />
+                    </td>
+                    <td colspan="4">
+                        <button type="button" class="btn btn-default">로그인</button>
+                        <button type="button" class="btn btn-default">마이페이지</button>
+                    </td>
+                </tr>
+                <tr id="menuTr">
+                    <td class="menu"><span class="menuLabel">정규리그일정</span></td>
+                    <td class="menu"><span class="menuLabel">구단현황</span></td>
+                    <td class="menu"><span class="menuLabel">선수현황</span></td>
+                    <td class="menu"><span class="menuLabel">전력분석</span></td>
+                    <td class="menu"><span class="menuLabel">문자중계</span></td>
+                    <td class="menu"><span class="menuLabel">게시판</span></td>
+                    <td class="menu"><span class="menuLabel">공지사항</span></td>
+                </tr>
+            </table>
+        </nav>
+
+        <div id="topBoard"></div>
+
+        <div id="scoreBoard">
+            <div id="subOuter">
+                <div class="menuTitleBox">
+                    <div class="menuTitle">구단 현황</div>
+                    <div class="breadcrumb">
+                        <span>HOME</span>
+                        <span>&#62</span>
+                        <span>구단현황</span>
+                        <span>></span>
+                        <span>구단경기전적</span>
+                    </div>
+                    <div class="subMenuBox">
+                        <nav class="subMenu">
+                            <ul>
+                                <li class="subMenuItem"><a href=""></a>구단정보</a></li>
+                                <li class="subMenuItem">구단선수정보</a></li>
+                                <li class="subMenuItem">구단경기전적</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 상단부 끝 -->
+
+        <div class="center">
+            <div class="pageContentTitle">
+                <img src="images/rogowithoutletter.png" class="contentTitleImg" /><span class="contentTitle"
+                    >구단경기전적</span
+                >
+            </div>
+
+            <div id="centerMainBox">
+                <div id="centerbox1">
+                    <div id="outerBox">
+                        <select name="" id="selectgametype" >
+                            <option value="0">전체</option>
+                            <option value="1">정규리그</option>
+                            <option value="2">친선경기</option>
+                        </select>
+                        <div class="dateBox">
+                            <span>시작일 : </span>
+                            <input type="date" class="inputDate" id="startDate" />
+                            <span>종료일 : </span>
+                            <input type="date" class="inputDate" id="endDate" />
+                        </div>
+                        <div class="searchBox">
+                            <span id="searchcontent">대전 상대 검색</span>
+                            <input id="searchkeyword" type="text"/>
+                            <input id="searchbtn" type="button" value="검색" class="btns"/>
+                            <input id="writebtn" type="button" value="글쓰기"  class="btns" />
+                        </div>
+                        <select name="" id="selectrow">
+                            <option value="10">10개씩 보기</option>
+                            <option value="25">25개씩 보기</option>
+                            <option value="50">50개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="centerbox2">
+                    <table class="table table-striped" id="verticalTable" style="margin-top: 0px;">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>상대</th>
+                                <th>득점</th>
+                                <th>리그</th>
+                                <th>경기일</th>
+                                <th>경기장</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>쌍용FC</td>
+                                <td><span class="score teamA">3</span><span class="score teamB">1</span>
+                                <span id="resultDomain"></span></td>
+                                <td>2020</td>
+                                <td>2020. 07. 05.(일) <span class="beginTime">14:00</span></td>
+                                <td>역삼초등학교</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="score teamA"></span>
+                                    <span class="score teamB"></span>
+                                    <span id="resultDomain"></span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="beginTime"></span>
+                                    <td></td>
+                                </td>
+                            </tr>
+                           
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="centerbox3">
+                    <ul id="pagination" class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a class="nowPage" href="#" name="page">1</a></li>
+                        <li><a href="#" name="page">2</a></li>
+                        <li><a href="#" name="page">3</a></li>
+                        <li><a href="#" name="page">4</a></li>
+                        <li><a href="#" name="page">5</a></li>
+                        <li><a href="#" name="page">6</a></li>
+                        <li><a href="#" name="page">7</a></li>
+                        <li><a href="#" name="page">8</a></li>
+                        <li><a href="#" name="page">9</a></li>
+                        <li><a href="#" name="page">10</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div style="clear: both;"></div> -->
+            </div>
+        </div>
+
+        <!-- 하단부  -->
+
+        <nav class="sitemap">
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">경기정보조회</a></h2>
+                <li><a href="#">2020 정규리그 일정조회</a></li>
+                <li><a href="#">정규리그 결과 조회</a></li>
+                <li><a href="#">지난 정규리그 조회</a></li>
+                <li><a href="#">친선경기 결과 조회</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">구단현황</a></h2>
+                <li><a href="#">구단 정보</a></li>
+                <li><a href="#">구단 선수 정보 조회</a></li>
+                <li><a href="#">구단 경기 전적</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">선수현황</a></h2>
+                <li><a href="#">선수 검색</a></li>
+                <li><a href="#">선수 정보</a></li>
+                <li><a href="#">선수 응원댓글</a></li>
+                <li><a href="#">선수 DM</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">전력분석</a></h2>
+                <li><a href="#">팀분석</a></li>
+                <li><a href="#">선수분석</a></li>
+                <li><a href="#">시뮬레이션</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">게시판</a></h2>
+                <li><a href="#">질문게시판</a></li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">강의게시판</a></li>
+                <li><a href="#">친선경기모집</a></li>
+                <li><a href="#">용병모집</a></li>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">공지사항</a></h2>
+            </ul>
+            <ul class="siteList">
+                <h2 class="listName"><a href="#">문자중계</a></h2>
+            </ul>
+        </nav>
+
+        <div class="footer">
+            <div class="footerBox">
+                <div><a href="#">협회소개</a></div>
+                <div><a href="#">이용약관</a></div>
+                <div><a href="#">개인정보 취급방침</a></div>
+                <div><a href="#">제휴문의</a></div>
+                <div><a href="#">관리자 페이지</a></div>
+            </div>
+        </div>
+        <div class="footerBox2">
+            <div class="footerInfo">
+                <div class="infoItem">리그운영 및 총괄 / 대관 문의</div>
+                <div class="info">정성원(010-3151-5582)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">리그운영 및 사무업무</div>
+                <div class="info">김준형(010-2370-2061)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">선수등록 및 기록문의</div>
+                <div class="info">정미선(010-9066-9495)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">리그일정 조정</div>
+                <div class="info">정성원(010-3151-5582)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">시스템개발문의</div>
+                <div class="info">(주)쌍용소프트(070-4322-2918)</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">한독빌딩</div>
+                <div class="info">서울시 강남구 테헤란로 132 한독빌딩 8층</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">TEL</div>
+                <div class="info">070)4322-2918</div>
+            </div>
+            <div class="footerInfo">
+                <div class="infoItem">FAX</div>
+                <div class="info" style="clear: both;">070)4322-2919</div>
+            </div>
+        </div>
+        <div class="footerBox3">
+            <div>본 사이트는 IT기업 (주)쌍용소프트가 시흥축구협회리그 선수들을 위해 운영하는 공식사이트입니다.</div>
+            <div>Copyrightⓒ ssangyongsoft All Rights reserved.</div>
+        </div>
+
+        <!-- 하단부  끝 -->
+
+        <!-- 스크립트------------------------------------------------------------- -->
+        <script>
+            var flag = false;
+            $(document).scroll(function () {
+                if ($(document).scrollTop() > $("#main").position().top) {
+                    if (!flag) {
+                        $("#main").css({
+                            position: "fixed",
+                            top: -$("#main").outerHeight(),
+                            bottom: "",
+                        });
+
+                        $("#main").animate(
+                            {
+                                top: "0px",
+                            },
+                            1000,
+                            function () {
+                                //alert();
+                                flag = true;
+                            }
+                        );
+                    }
+                }
+            });
+            // main page
+
+            $("#pagination > li >a").click(function () {
+                // alert($(this).text());
+                $("#pagination > li>a").removeClass("nowPage");
+                $(this).addClass("nowPage");
+            });
+
+            $("#searchbtn").mouseover(function () {
+                // alert($(this).text());
+                $(this).css("background-color", "#92DAEC").css("color", "black");
+            });
+
+            $("#searchbtn").mouseout(function () {
+                // alert($(this).text());
+                $(this).css("background-color", "").css("color", "");
+            });
+
+            $("#writebtn").mouseover(function () {
+                // alert($(this).text());
+                $(this).css("background-color", "#92DAEC").css("color", "black");
+            });
+
+            $("#writebtn").mouseout(function () {
+                // alert($(this).text());
+                $(this).css("background-color", "").css("color", "");
+            });
+            // <span class="glyphicon glyphicon-map-marker"></span>
+            console.log($("#verticalTable tbody td:nth-child(3)").contents());
+
+            // 지도마크 넣고 연결시키기
+            $("#verticalTable tbody td:nth-child(6)").append("<span class='glyphicon glyphicon-map-marker'></span>");
+            $("#verticalTable tbody td:nth-child(6)")
+                .children()
+                .mouseover(function () {
+                    $(this).css({ cursor: "pointer" });
+                })
+                .click(function () {
+                    console.log($(this).parent().text());
+                });
+
+                var list=$("#verticalTable td:nth-child(2)");
+                
+                
+                for(var i=0;i<list.length;i++){
+                    if(list[i].innerHTML!=""){
+                        $(`#verticalTable tbody tr:nth-child(${i+1}) td:nth-child(2)`).prepend(`<img src='images/chelsea.png' style="width:30px">`)
+                        $(`#verticalTable tbody tr:nth-child(${i+1}) td:nth-child(2)`).prepend("<span id='vs'>vs</span>")
+                    }   
+                }
+                
+                
+                    $(".teamA").append("<span>:<span>")
+                // 점수 입력하면 승무패 작성
+                for(var i=0;i<list.length;i++){
+                    var teamA=$(".teamA").text();
+                    var teamB=$(".teamB").text();
+                    var score=teamA[i]=teamB[i];
+                    if(score>0){//A팀 승리
+                    $("#resultDomain").append("승")
+                        $("#resultDomain").css("color","cornflowerblue")
+                    }else if(score==0){//무승부
+                    $("#resultDomain").append("무")
+                        $("#resultDomain").css(color,"green")
+                    }else if(score<0){//B팀 승리
+                    $("#resultDomain").append("패")
+                        $("#resultDomain").css("color","tomato")
+                    }
+                }
+           
+        </script>
+        <script src="js/submain.js"></script>
+        <script src="js/event.js"></script>
+        <!-- <script src="js/구단현황.js"></script> -->
+    </body>
+</html>

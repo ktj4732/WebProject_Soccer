@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../jquery/css/jquery-ui.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+	<style>
+
+        #mainForm {
+           width: 600px;
+           margin: 0px auto;
+           margin-top: -100px;
+        }
+
+        #input div{
+            font-size: 1.2em;
+        }
+
+        #agreeform{
+            width: 600px;
+            margin: 0px auto;
+        }
+        #agreeform > div{
+            width: 500px;
+        }
+        h3{
+            margin-top: -70px;
+            font-weight: bold;
+        }
+
+        label{
+            margin-left: -20px;
+        }
+        textarea{
+            width: 500px;
+        }
+
+        #agreeButton{
+            width: 600px;
+            margin: 0px auto;
+            padding-bottom: 100px;
+        }
+
+        .import{
+            font-weight: bold;
+            color: royalblue;
+            font-size: 1.2em;
+        }
+
+        .inputText{
+            opacity: .7;
+            margin-bottom: 20px;
+            height: 35px;
+        }
+
+
+	</style>
+</head>
+<body>
+    <script src="../jquery/js/jquery-1.12.4.js"></script>
+    <script src="../jquery/js/jquery-ui.js"></script>
+    
+    <div id="mainForm">
+        <div><img src="../images/rogo.png" alt=""></div>
+        <div id="input">
+            <h3><span class="glyphicon glyphicon-plus"></span>선수등록/이적 신청서</h3>
+            <hr>
+            <form action="" autocomplete="off">
+                
+                <div>등록할 팀번호</div>
+                <input type="text" id="name" size="50px" class="inputText" value="1" style="opacity: 1;" disabled>
+                <div>이름</div>
+                <input type="text" id="name" size="50px" class="inputText" value="이름을 입력해주세요">
+                <div>포지션</div> 
+                <input type="text" id="id" size="50px" class="inputText" value="포지션을 입력해주세요">
+                <div>신장(cm)</div> 
+                <input type="text" id="id" size="50px" class="inputText" value="신장을 입력해주세요">
+                <div>몸무게(kg)</div> 
+                <input type="text" id="id" size="50px" class="inputText" value="몸무게를 입력해주세요">
+                <div>생년월일</div>
+                <input type="text" id="date" size="50px" class="inputText" value="생년월일을 입력해주세요">
+                <div>전화번호</div>
+                <input type="text" id="tel" size="50px" class="inputText" value="전화번호를 입력해주세요">
+                <div>각오</div>
+                <input type="text" id="tel" size="50px" class="inputText" value="각오를 입력해주세요">
+            </form>
+        </div>
+        <hr >
+    </div>
+
+
+
+    <div id="agreeButton">
+        <button type="button" class="btn btn-primary">작성완료</button>
+    </div>
+
+	<script>
+        $("#date").datepicker({
+			dateFormat: "yy-mm-dd",
+        });
+        
+        $(".inputText").click(function () {
+
+            $(this).val("")
+            $(this).css("opacity","1")
+
+        });
+
+        $("#agreeButton").click(function () {
+            window.open()
+        })
+
+
+	</script>
+</body>
+</html>

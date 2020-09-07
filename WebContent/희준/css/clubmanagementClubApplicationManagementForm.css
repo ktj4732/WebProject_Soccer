@@ -1,0 +1,62 @@
+body {
+    background-color: #eee;      
+}
+
+#mainBox {    
+    margin-top: 20px;   
+    /* border: 1px solid black; */
+    font-size: 1.1em;
+}
+
+#box1 {
+    /* border: 1px solid black; */
+    width: 300px;
+    margin: 0px auto;   
+}
+
+#box2 {
+    /* border: 1px solid black;             */
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+table {
+   border: 1px solid #1E3440;
+   width: 300px;
+   height: 100px;                 
+}
+
+table th {
+    border: 1px solid #1E3440;
+    text-align: center;  
+    font-size: 1.1em;
+}
+
+table tr, table td {
+   border: 1px solid #1E3440;
+   text-align: center;  
+   color: white;
+   padding: 5px;
+}
+
+
+table th {
+   background-color: #92DAEC;
+   color: #0C1B23;
+}
+
+table tr{
+   background-color: #0C1B23;
+}
+
+table tr:nth-child(odd){
+   background-color: #1E3440;
+}
+
+#box2 input {
+    color: white; 
+    background-color: #1E3440 ;
+    padding: 5px;
+   
+}

@@ -1,0 +1,27 @@
+
+var ftGUID_4195233="44693962F85AF5";
+var ftConfID_4195233="0";
+var ftParams_4195233="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fgoogleads.g.doubleclick.net%2Fpagead%2Fads%3Fclient%3Dca-pub-8806842758252812%26output%3Dhtml%26h%3D90%26slotname%3D1129585289%26adk%3D2569797596%26adf%3D3574913033%26w%3D1140%26fwrn%3D4%26fwrnh%3D100%26lmt%3D1598116768%26rafmt%3D2%26psa%3D1%26guci%3D2.2.0.0.2.2.0.0%26format%3D1140x90%26url%3Dhttps%253A%252F%252Fwww.acmicpc.net%252Fsubmit%252F1000%26flash%3D0%26fwr%3D0%26rpe%3D1%26resp_fmts%3D2%26wgl%3D1%26dt%3D1598116768064%26bpp%3D11%26bdt%3D210%26idt%3D164%26shv%3Dr20200818%26cbv%3Dr20190131%26ptt%3D9%26saldr%3Daa%26abxe%3D1%26cookie%3DID%253Dc46d3d8cebfb1d38%253AT%253D1592463891%253AS%253DALNI_MZ8Xd6_lYcefUE_MFEodU_SRk7GGg%26prev_fmts%3D0x0%26nras%3D1%26correlator%3D3130976589000%26frm%3D20%26pv%3D1%26ga_vid%3D879596666.1592463819%26ga_sid%3D1598116768%26ga_hid%3D900963115%26ga_fc%3D0%26iag%3D0%26icsg%3D714682558054400%26dssz%3D52%26mdo%3D0%26mso%3D0%26u_tz%3D540%26u_his%3D33%26u_java%3D0%26u_h%3D1067%26u_w%3D1707%26u_ah%3D1036%26u_aw%3D1707%26u_cd%3D24%26u_nplug%3D3&cachebuster=85363.14668708744";
+var ftKeyword_4195233="";
+var ftCustom_4195233="";
+var ftSection_4195233="";
+var ftSegment_4195233="xp6,w2c,um2";
+var ftSegmentList_4195233=[{s:'xp6'},{s:'w2c'},{s:'um2'}];
+var ftRuleMatch_4195233="0";
+var ftTimestamp_4195233="1598116912";
+var ftImp4195233 = {};
+ftImp4195233.privacy = "x";
+ftImp4195233.guidAge = "148";
+ftImp4195233.impID = "E5E5F329-EDBF-2A19-9A57-703887F8ABAC";
+ftImp4195233.duid = "FT:44693962F85AF5";
+
+ftImp4195233.ft_tpplid = "";
+ftImp4195233.ft_c = {};
+ftImp4195233.gdpr = "";
+ftImp4195233.gdpr_consent = "";
+ftImp4195233.gdpr_pd = "";
+ftImp4195233.oob_consent = "";
+ftImp4195233.gdprStoredConsent = "";
+ftImp4195233.us_privacy = "";
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/419/4195233/3080919/js/j-4195233-3080919.js" id="ftscript_m4195233" name="ftscript_m4195233"></scr'+'ipt>');

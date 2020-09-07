@@ -1,0 +1,142 @@
+.outerBox {
+    /* border: 4px solid black; */
+    /* height: 800px; */
+    overflow: hidden;
+    width: 1200px;
+    margin-left: 50px;
+}
+
+.outerBox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.boxContainer {
+    /* border: 10px solid red; */
+    width: 2500px;
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+#boxContainer {
+    transform: translate(0px, 0px);
+}
+.boxContainer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.sideBox {
+    width: 45%;
+    /* border: 4px solid black; */
+    position: relative;
+}
+.sideBox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.leftSideBox {
+    float: left;
+    height: 800px;
+    width: 1200px;
+}
+.rightSideBox {
+    float: right;
+    height: 800px;
+    width: 1200px;
+}
+.tableBox {
+    position: relative;
+    /* margin-top: 1px; */
+    color: black;
+    height: 80%;
+    border: 2px solid black;
+    border-top: 0px;
+    z-index: 1;
+}
+
+.tableBox th {
+    height: 37px;
+}
+
+.rightSideBox .tableBox {
+    overflow-y: scroll;
+}
+.rightSideBox .tableBox::-webkit-scrollbar {
+    border: 0px;
+    width: 0px;
+}
+
+.lefttbl .righttbl {
+    overflow: hidden;
+}
+
+.smallTitle {
+    /* text-align: center; */
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    /* border: 10px solid blue; */
+    width: 350px;
+    top: 3px;
+    left: 10px;
+}
+.tab {
+    width: 1300px;
+    position: relative;
+    margin-top: 20px;
+    height: 42px;
+    top: 0px;
+
+    border-bottom: 2px solid black;
+}
+.tab::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#tab1 {
+    border: 2px solid black;
+    border-bottom: 0px;
+    width: 350px;
+    height: 42px;
+    position: absolute;
+    z-index: 2;
+    /* background-color: #92daec; */
+}
+#tab2 {
+    border: 2px solid black;
+    border-bottom: 0px;
+    width: 350px;
+    height: 42px;
+    position: absolute;
+    left: 30%;
+    z-index: 2;
+}
+
+#selLeague {
+    position: absolute;
+    left: 18%;
+    width: 100px;
+    height: 25px;
+    font-size: 1em;
+    top: 8px;
+    z-index: 3;
+}
+#selSort {
+    /* border: 1px solid black; */
+    position: absolute;
+    left: 48%;
+    width: 100px;
+    height: 25px;
+    font-size: 1em;
+    top: 8px;
+    z-index: 3;
+}
+
+.table-bordered {
+    border-top: 0px;
+}
